@@ -1,5 +1,7 @@
 import type { FAQEntry } from "./types";
 
+// Common English words filtered out during slug generation and tag extraction.
+// These add noise without helping match user queries to FAQ entries.
 const STOP_WORDS = new Set([
   "my", "i", "im", "ive", "me", "the", "a", "an", "is", "are", "was", "were",
   "do", "does", "did", "can", "could", "would", "should", "will", "what", "why",
@@ -15,6 +17,9 @@ const STOP_WORDS = new Set([
   "after", "between", "through", "use", "using", "used", "make", "made",
 ]);
 
+// Generates a URL-friendly slug from a question string.
+// Strips stop words, takes the first 4 meaningful words, joins with hyphens.
+// Example: "My account was banned! What can I do?" -> "account-banned"
 export function generateSlug(question: string): string {
   const words = question
     .toLowerCase()
@@ -24,21 +29,22 @@ export function generateSlug(question: string): string {
   return words.slice(0, 4).join("-") || "untitled";
 }
 
+// Extracts keyword tags from the question, subcategory, and answer text.
+// Uses frequency analysis: words that appear more often across these fields
+// are considered more relevant as search tags.
+// Returns up to 15 tags sorted by frequency (most common first).
 function extractTags(question: string, subcategory: string, answer: string): string[] {
-  // Pull meaningful keywords from question, subcategory, and first ~500 chars of answer
   const source = `${question} ${subcategory} ${answer.slice(0, 500)}`.toLowerCase();
   const words = source
     .replace(/[^a-z0-9\s]/g, "")
     .split(/\s+/)
     .filter(w => w.length > 2 && !STOP_WORDS.has(w));
 
-  // Frequency-based: words that appear more are more relevant
   const freq = new Map<string, number>();
   for (const w of words) {
     freq.set(w, (freq.get(w) || 0) + 1);
   }
 
-  // Sort by frequency, deduplicate
   return [...freq.entries()]
     .sort((a, b) => b[1] - a[1])
     .slice(0, 15)
@@ -50,6 +56,8 @@ interface ParsedAnswer {
   hasContent: boolean;
 }
 
+// Cleans raw answer text. Filters out stub entries (empty or "</>") and
+// strips [temp answer] prefixes used during content drafting.
 function parseAnswer(raw: string): ParsedAnswer {
   const trimmed = raw.trim();
 
@@ -57,7 +65,6 @@ function parseAnswer(raw: string): ParsedAnswer {
     return { text: "", hasContent: false };
   }
 
-  // Strip [temp answer] prefixes
   const cleaned = trimmed
     .replace(/^\*\*\[temp answer\]\*\*\s*/i, "")
     .replace(/^\[temp answer\]\s*/i, "")
@@ -66,6 +73,19 @@ function parseAnswer(raw: string): ParsedAnswer {
   return { text: cleaned, hasContent: cleaned.length > 0 };
 }
 
+// Parses a FAQ markdown file into structured FAQ entries.
+//
+// Expected markdown structure:
+//   # Category Name            -> sets category
+//   ## Subcategory Name        -> sets subcategory (or question in general-faq.md)
+//   ### Question text?         -> starts a new entry
+//   Answer content...          -> collected until next heading
+//
+// Special handling:
+// - general-faq.md uses H2 headings as questions (no H3 subcategories)
+// - "Still Need Help?" sections are ignored (breaks parse loop)
+// - Entries with no answer content (stubs) are filtered out
+// - Slug and tags are assigned later by assignSlugs()
 export function parseMarkdownFile(content: string, filename: string): FAQEntry[] {
   const lines = content.split("\n");
   const entries: FAQEntry[] = [];
@@ -82,7 +102,6 @@ export function parseMarkdownFile(content: string, filename: string): FAQEntry[]
     const rawAnswer = currentAnswerLines.join("\n").trim();
     const { text, hasContent } = parseAnswer(rawAnswer);
 
-    // Skip entries with no answer content
     if (!hasContent) return;
 
     const sub = isGeneralFaq ? category : subcategory;
@@ -142,6 +161,10 @@ export function parseMarkdownFile(content: string, filename: string): FAQEntry[]
   return entries;
 }
 
+// Assigns unique slugs to all entries after parsing.
+// If two entries generate the same slug (e.g. similar questions across files),
+// the source filename is appended to disambiguate.
+// If duplicates still exist after that, a numeric suffix is added.
 export function assignSlugs(entries: FAQEntry[]): void {
   const slugCounts = new Map<string, number>();
   const baseSlugs = entries.map(e => generateSlug(e.question));

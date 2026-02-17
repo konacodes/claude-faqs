@@ -2,9 +2,12 @@ import type { Env, FAQEntry, DiscordEmbed, RateLimitData, ApiKeyData } from "./t
 import { FAQ_DATA } from "./data";
 import { tagSearch, embeddingSearch } from "./search";
 
-const DISCORD_COLOR = 0x7855FA;
+const DISCORD_COLOR = 0x7855FA; // Brand purple, used in all Discord embeds
 const EMBEDDING_CACHE_KEY = "faq:embeddings:v1";
 
+// Converts a FAQ entry into Discord's embed object format.
+// description is capped at 4096 chars (Discord's embed description limit).
+// The result can be sent directly as an embed in discord.py or discord.js.
 function toDiscordEmbed(entry: FAQEntry): DiscordEmbed {
   const description = entry.answer.length > 4096
     ? entry.answer.slice(0, 4093) + "..."
@@ -47,6 +50,9 @@ function cors(response: Response): Response {
   return new Response(response.body, { status: response.status, headers });
 }
 
+// Sliding window rate limiter using Cloudflare KV.
+// Tracks two windows per key: per-minute and per-day.
+// KV entries auto-expire slightly after the window closes (expirationTtl).
 async function checkRateLimit(
   kv: KVNamespace,
   key: string,
@@ -94,13 +100,14 @@ async function checkRateLimit(
   };
 }
 
-// Get or compute FAQ embeddings, cached in KV
+// Computes embedding vectors for all FAQ entries using Cloudflare's EmbeddingGemma-300M model.
+// Results are cached in KV for 1 hour to avoid recomputing on every semantic search request.
+// Each entry is embedded as: "tags question first-300-chars-of-answer".
+// Returns null if the AI model is unavailable (semantic search falls back to tag search).
 async function getEmbeddings(env: Env): Promise<number[][] | null> {
-  // Try cache first
   const cached = await env.FAQ_EMBEDDINGS.get<number[][]>(EMBEDDING_CACHE_KEY, "json");
   if (cached) return cached;
 
-  // Compute embeddings for all entries
   const texts = FAQ_DATA.entries.map(e =>
     `${e.tags.join(" ")} ${e.question} ${e.answer.slice(0, 300)}`
   );
@@ -109,7 +116,6 @@ async function getEmbeddings(env: Env): Promise<number[][] | null> {
     const result = await env.AI.run("@cf/google/embeddinggemma-300m", { text: texts }) as {
       data: number[][];
     };
-    // Cache for 1 hour
     await env.FAQ_EMBEDDINGS.put(EMBEDDING_CACHE_KEY, JSON.stringify(result.data), {
       expirationTtl: 3600,
     });
@@ -124,16 +130,17 @@ export default {
     const url = new URL(request.url);
     const path = url.pathname;
 
+    // CORS preflight
     if (request.method === "OPTIONS") {
       return cors(new Response(null, { status: 204 }));
     }
 
-    // /ask accepts POST with JSON body
     if (request.method !== "GET" && request.method !== "POST") {
       return cors(json({ error: "Method not allowed." }, 405));
     }
 
-    // Normalize path
+    // Strip the route prefix to get the endpoint path.
+    // Handles both routed requests (/claude-faqs/v1/...) and direct worker requests (/v1/...).
     const subPath = path.startsWith("/claude-faqs/v1")
       ? path.slice("/claude-faqs/v1".length)
       : path.startsWith("/v1")
@@ -142,6 +149,7 @@ export default {
     const format = url.searchParams.get("format");
 
     // ── Auth ──
+    // API key is required for all requests. Accepts Bearer token or ?apikey= query param.
     const authHeader = request.headers.get("authorization");
     const apiKey = authHeader?.startsWith("Bearer ")
       ? authHeader.slice(7)
@@ -172,6 +180,9 @@ export default {
       return cors(new Response(resp.body, { status: 429, headers: h }));
     }
 
+    // All successful responses go through respond() to attach rate limit headers.
+    // X-RateLimit-Remaining-Minute and X-RateLimit-Remaining-Day let clients
+    // track their budget. X-Authenticated-As shows which key name was used.
     function respond(data: object, status = 200): Response {
       const resp = json(data, status);
       const h = new Headers(resp.headers);
@@ -183,7 +194,7 @@ export default {
 
     // ── Routes ──
 
-    // API info
+    // Root: API info and self-documenting endpoint list
     if (subPath === "" || subPath === "/") {
       return respond({
         name: "Claude FAQ API",
@@ -209,7 +220,12 @@ export default {
       });
     }
 
-    // ── Search (tag-based or semantic) ──
+    // ── Search ──
+    // mode=tags: Fast keyword matching against slugs, tags, questions, categories.
+    //   Returns results ranked by a weighted score (see search.ts for scoring).
+    // mode=semantic: Uses EmbeddingGemma-300M to compare query meaning against all entries.
+    //   Falls back to tag search if AI is unavailable.
+    // Both modes return previews (first 200 chars of answer), not full entries.
     if (subPath === "/search") {
       const query = url.searchParams.get("q");
       if (!query) {
@@ -222,10 +238,8 @@ export default {
       let results: FAQEntry[];
 
       if (mode === "semantic") {
-        // AI-powered embedding search
         const embeddings = await getEmbeddings(env);
         if (!embeddings) {
-          // Fallback to tag search if embeddings fail
           results = tagSearch(FAQ_DATA.entries, query, limit);
         } else {
           const qResult = await env.AI.run("@cf/google/embeddinggemma-300m", { text: [query] }) as {
@@ -238,10 +252,12 @@ export default {
         results = tagSearch(FAQ_DATA.entries, query, limit);
       }
 
+      // ?format=discord returns full embed objects for each result
       if (format === "discord") {
         return respond({ query, count: results.length, results: results.map(toDiscordEmbed) });
       }
 
+      // Default: return lightweight result objects with answer previews
       return respond({
         query,
         mode,
@@ -257,7 +273,12 @@ export default {
       });
     }
 
-    // ── Ask (LLM-powered contextual answer) ──
+    // ── Ask ──
+    // Accepts a natural language question, finds the 3 most relevant FAQ entries
+    // via embeddings (or tag search fallback), then passes them as context to
+    // Llama 3.1 8B to generate a conversational answer.
+    // Response always includes `sources` so the client can link to the original FAQs.
+    // If the LLM fails, falls back to returning the best FAQ match verbatim.
     if (subPath === "/ask") {
       let question: string | null = null;
 
@@ -272,7 +293,6 @@ export default {
         return respond({ error: "Missing question", usage: "POST { question: '...' } or GET ?q=..." }, 400);
       }
 
-      // Find relevant FAQ entries using embeddings (or tag fallback)
       let context: FAQEntry[];
       const embeddings = await getEmbeddings(env);
       if (embeddings) {
@@ -293,7 +313,6 @@ export default {
         });
       }
 
-      // Build context for the LLM
       const faqContext = context.map((e, i) =>
         `[FAQ ${i + 1}] ${e.question}\n${e.answer}`
       ).join("\n\n---\n\n");
@@ -317,7 +336,7 @@ export default {
           sources: context.map(e => ({ slug: e.slug, question: e.question })),
         });
       } catch (err) {
-        // Fallback: return the best matching FAQ entry directly
+        // LLM unavailable — return the top FAQ match directly instead of an AI summary
         return respond({
           question,
           answer: context[0].answer,
@@ -328,6 +347,7 @@ export default {
     }
 
     // ── Categories ──
+    // Returns each category with its entry count and list of subcategories.
     if (subPath === "/categories") {
       return respond({
         count: FAQ_DATA.categories.length,
@@ -343,6 +363,9 @@ export default {
     }
 
     // ── Entries ──
+    // Returns summary of all entries (no full answers — use /{slug} for that).
+    // Optional ?category= filter does partial, case-insensitive match on both
+    // category and subcategory fields.
     if (subPath === "/entries") {
       let entries = FAQ_DATA.entries;
       const category = url.searchParams.get("category")?.toLowerCase();
@@ -367,11 +390,15 @@ export default {
     }
 
     // ── Slugs ──
+    // Flat list of all slug strings. Useful for autocomplete or validation.
     if (subPath === "/slugs") {
       return respond({ count: FAQ_DATA.entry_count, slugs: Object.keys(FAQ_DATA.slugs) });
     }
 
     // ── Slug lookup (catch-all) ──
+    // Anything that doesn't match a named route is treated as a slug lookup.
+    // On 404, returns up to 3 "did_you_mean" suggestions by running the slug
+    // through tag search (hyphens converted to spaces).
     const slug = subPath.replace(/^\//, "");
     if (!slug || slug.includes("/")) {
       return respond({ error: "Not Found", message: `Unknown endpoint: ${path}` }, 404);
@@ -389,10 +416,12 @@ export default {
 
     const entry = FAQ_DATA.entries[entryIndex];
 
+    // ?format=discord returns the entry as a Discord embed object
     if (format === "discord") {
       return respond(toDiscordEmbed(entry));
     }
 
+    // Default: return the full FAQEntry object
     return respond(entry);
   },
 };
