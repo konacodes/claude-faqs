@@ -34,7 +34,7 @@ We welcome all kinds of contributions to make this FAQ more helpful:
 All contributors will be recognized here. Thank you for making our community more helpful and welcoming!
 
 ### Maintainers
-[col](https://github.com/coldielb)
+[kona](https://github.com/konacodes)
 
 
 ---
