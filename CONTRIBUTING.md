@@ -11,12 +11,30 @@ We welcome all kinds of contributions to make this FAQ more helpful for the Clau
 - **Add examples** to help explain complex topics
 - **Reorganize content** for better navigation
 
-## How to Contribute
+## Pull Request Workflow
 
-1. **Open an issue** on this repository to discuss your suggestion
-2. **Submit a pull request** with your changes
-3. **Message the community team on Discord** if you're not sure about GitHub
-4. **Share feedback** in our Reddit community
+1. Fork the repository to your own GitHub account
+2. Clone your fork and create a feature branch (`faq/<topic>`)
+3. Make your FAQ edits in `faq-content/*.md`
+4. Run `bun run check:faq`
+5. Run `bun scripts/build-faq-index.ts` to regenerate `faq-index.json`
+6. Commit your changes and push your branch
+7. Open a pull request to this repository
+8. In the PR description, include what changed, why it changed, and any official sources used
+
+## PR Checklist
+
+- `bun run check:faq` passes
+- `faq-index.json` is rebuilt and committed with your content changes
+- Answer text is clear and actionable
+- Links point to official docs/support pages where possible
+- Optional per-answer credit is set when desired (`Answered by: YourName`)
+
+## Need Help Contributing?
+
+- Open an issue on this repository
+- Ask in community channels if you are unsure about GitHub flow
+- Share feedback in Reddit/Discord communities
 
 ## FAQ Content Guidelines
 
@@ -57,9 +75,10 @@ links, lists, and code blocks.
 Answer content goes here.
 ```
 
-After editing, rebuild the index:
+After editing, run:
 
 ```bash
+bun run check:faq
 bun scripts/build-faq-index.ts
 ```
 

@@ -55,29 +55,41 @@ Getting started, context and memory, sub-agents and MCPs, troubleshooting
 ### [Capabilities & Usage](faq-content/claude-usage.md)
 Model comparisons, API pricing, privacy and data safety
 
-## Development
+## Contributing Quick Start
 
 ```bash
-# Install dependencies
+# 1) Fork this repo on GitHub, then clone your fork
+git clone https://github.com/<your-username>/claude-faqs.git
+cd claude-faqs
+
+# 2) Create a branch for your change
+git checkout -b faq/<short-topic>
+
+# 3) Install dependencies
 bun install
 
-# Rebuild the FAQ index after editing markdown files
-bun scripts/build-faq-index.ts
-
-# Any new .md file added to faq-content/ is auto-discovered
-# (no need to edit the build script)
-
-# Optional per-question credit line:
+# 4) Edit FAQ markdown in faq-content/
+# Optional per-question credit line inside an answer:
 # Answered by: YourName
 
-# Validate FAQ content (detect unanswered placeholders / duplicate questions)
+# 5) Validate FAQ content
 bun run check:faq
 
-# Run locally
-bun run dev
+# 6) Rebuild faq-index.json
+bun scripts/build-faq-index.ts
 
-# Deploy
-bun run deploy
+# 7) Commit and push
+git add .
+git commit -m "Add/update FAQ: <topic>"
+git push -u origin faq/<short-topic>
+```
+
+Then open a pull request from your fork to this repo's default branch.
+
+## Local Preview (Optional)
+
+```bash
+bun run dev
 ```
 
 ## Contributing
