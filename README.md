@@ -56,8 +56,20 @@ Getting started, context and memory, sub-agents and MCPs, troubleshooting
 ### [Capabilities & Usage](faq-content/claude-usage.md)
 Model comparisons, API pricing, privacy and data safety
 
-### [Community Ingested Questions](faq-content/community-ingested-faq.md)
-Frequently requested troubleshooting, support, integration, caching, and backend guidance from community submissions
+### [Support and Access](faq-content/support-and-access-faq.md)
+Support workflows, billing dispute handling, and access/permission issues
+
+### [Claude Code Operations](faq-content/claude-code-operations-faq.md)
+Installation/runtime troubleshooting, session workflows, permissions, and project operations
+
+### [Models, Safety, and Updates](faq-content/models-safety-and-updates-faq.md)
+Model differences, release cadence, vision capabilities, and safety/governance topics
+
+### [Context, Caching, Streaming, and Batch](faq-content/context-caching-streaming-and-batch-faq.md)
+Token strategy, prompt caching, streaming responses, and batch reliability/cost controls
+
+### [Backend and Integrations](faq-content/backend-and-integrations-faq.md)
+Database choices, Firebase security patterns, MCP ecosystem, and external app integrations
 
 ## Contributing Quick Start
 
