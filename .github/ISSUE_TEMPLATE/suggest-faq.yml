@@ -1,0 +1,83 @@
+name: Suggest FAQ
+description: Suggest a new FAQ or improve an existing one for the Claude Community FAQ API
+title: "[FAQ Suggestion] "
+labels:
+  - faq-suggestion
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve the FAQ.  
+        Use this form if you are not submitting a code pull request.
+
+  - type: dropdown
+    id: faq_area
+    attributes:
+      label: FAQ area
+      description: Which section best matches your suggestion?
+      options:
+        - Account Issues
+        - Billing & Plans
+        - Claude Code
+        - Capabilities & Usage
+        - General Questions
+        - API/Integration
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: question
+    attributes:
+      label: Proposed question
+      description: Write the exact FAQ question text.
+      placeholder: "Example: Can I transfer my Claude subscription from iOS to Web?"
+    validations:
+      required: true
+
+  - type: textarea
+    id: answer
+    attributes:
+      label: Proposed answer
+      description: A concise answer draft (plain language).
+      placeholder: "Write your proposed answer..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: sources
+    attributes:
+      label: Official sources (URLs)
+      description: Include Anthropic/Claude docs, support pages, or status links that support this answer.
+      placeholder: |
+        https://docs.anthropic.com/...
+        https://support.claude.com/...
+    validations:
+      required: true
+
+  - type: input
+    id: answered_by
+    attributes:
+      label: Credit name (optional)
+      description: If accepted, we can add "Answered by: <name>" to the FAQ.
+      placeholder: "your_handle"
+    validations:
+      required: false
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context (optional)
+      description: Why this should be added or updated (common issue, stale answer, recurring community question).
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Confirmations
+      options:
+        - label: I did not include private account data, API keys, or payment details.
+          required: true
+        - label: I understand maintainers may edit wording before publishing.
+          required: true

@@ -21,17 +21,29 @@ function cleanAnswer(raw: string): string {
     .trim();
 
   const lines = cleaned.split("\n");
-  const firstContentIndex = lines.findIndex(line => line.trim().length > 0);
-  if (firstContentIndex >= 0) {
-    const first = lines[firstContentIndex].trim();
-    const hasCredit = /^(?:\*\*)?answered by(?:\*\*)?\s*:\s*(.+)$/i.test(first)
-      || /^_?answered by\s*:\s*(.+)_?$/i.test(first)
-      || /^answered_by\s*:\s*(.+)$/i.test(first);
-    if (hasCredit) {
-      lines.splice(firstContentIndex, 1);
-      cleaned = lines.join("\n").trim();
-    }
+  let cursor = 0;
+  while (cursor < lines.length && lines[cursor].trim().length === 0) {
+    cursor++;
   }
+
+  while (cursor < lines.length) {
+    const line = lines[cursor].trim();
+    if (!line) {
+      cursor++;
+      continue;
+    }
+
+    const isMetadata = /^(?:\*\*)?answered by(?:\*\*)?\s*:\s*(.+)$/i.test(line)
+      || /^_?answered by\s*:\s*(.+)_?$/i.test(line)
+      || /^answered_by\s*:\s*(.+)$/i.test(line)
+      || /^(?:\*\*)?last verified(?:\*\*)?\s*:\s*(.+)$/i.test(line)
+      || /^last_verified_at\s*:\s*(.+)$/i.test(line)
+      || /^(?:\*\*)?sources?(?:\*\*)?\s*:\s*(.+)$/i.test(line);
+    if (!isMetadata) break;
+    cursor++;
+  }
+
+  cleaned = lines.slice(cursor).join("\n").trim();
 
   return cleaned;
 }

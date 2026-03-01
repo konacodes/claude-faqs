@@ -35,6 +35,7 @@ curl -X POST -H "Authorization: Bearer $KEY" -H "Content-Type: application/json"
 | `GET /search?q={query}&mode=semantic` | AI semantic search |
 | `POST /ask` | AI-powered natural language answer |
 | `GET /categories` | List all categories |
+| `GET /category/{category_slug}` | List entries in a category slug |
 | `GET /entries` | List all entries (filterable) |
 | `GET /slugs` | List all slug identifiers |
 
@@ -55,6 +56,9 @@ Getting started, context and memory, sub-agents and MCPs, troubleshooting
 ### [Capabilities & Usage](faq-content/claude-usage.md)
 Model comparisons, API pricing, privacy and data safety
 
+### [Community Ingested Questions](faq-content/community-ingested-faq.md)
+Frequently requested troubleshooting, support, integration, caching, and backend guidance from community submissions
+
 ## Contributing Quick Start
 
 ```bash
@@ -71,6 +75,10 @@ bun install
 # 4) Edit FAQ markdown in faq-content/
 # Optional per-question credit line inside an answer:
 # Answered by: YourName
+# Optional source metadata line:
+# Sources: https://docs.anthropic.com/...
+# last_verified_at is auto-stamped at build time in HQ timezone (America/Los_Angeles)
+# Category and subcategory slugs are auto-generated from headings
 
 # 5) Validate FAQ content
 bun run check:faq
@@ -85,6 +93,8 @@ git push -u origin faq/<short-topic>
 ```
 
 Then open a pull request from your fork to this repo's default branch.
+
+If you are not opening a PR, use the GitHub issue form: `Suggest FAQ`.
 
 ## Local Preview (Optional)
 

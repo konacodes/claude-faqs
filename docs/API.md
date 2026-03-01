@@ -74,15 +74,20 @@ curl -H "Authorization: Bearer $KEY" https://api.kcodes.me/claude-faqs/v1/
 {
   "name": "Claude FAQ API",
   "version": "1.0.0",
-  "generated_at": "2026-02-17T06:45:13.349Z",
-  "entry_count": 71,
+  "generated_at": "2026-03-01T07:11:00.000Z",
+  "entry_count": 134,
   "categories": [
     "Account Issues FAQ",
     "General Questions About Claude",
     "Billing & Plans FAQ",
     "Claude Code FAQ",
-    "Claude's Capabilities & Usage"
+    "Claude's Capabilities & Usage",
+    "Community Ingested Questions FAQ"
   ],
+  "category_slugs": {
+    "account-issues-faq": "Account Issues FAQ",
+    "billing-plans-faq": "Billing & Plans FAQ"
+  },
   "endpoints": { "..." },
   "auth": { "..." }
 }
@@ -104,10 +109,17 @@ curl -H "Authorization: Bearer $KEY" https://api.kcodes.me/claude-faqs/v1/accoun
   "slug": "account-banned",
   "tags": ["account", "disabled", "review", "systems", "policy", "..."],
   "category": "Account Issues FAQ",
+  "category_slug": "account-issues-faq",
   "subcategory": "Account Bans and Suspensions",
+  "subcategory_slug": "account-bans-and-suspensions",
   "question": "My account was banned! What can I do?",
   "answer": "If your account has been disabled, you will typically see a message stating...",
   "answered_by": "konacodes",
+  "source_urls": [
+    "https://support.claude.com",
+    "https://www.anthropic.com/usage"
+  ],
+  "last_verified_at": "2026-03-01",
   "source_file": "account-issues-faqs.md"
 }
 ```
@@ -119,10 +131,14 @@ curl -H "Authorization: Bearer $KEY" https://api.kcodes.me/claude-faqs/v1/accoun
 | `slug` | string | Unique identifier for this entry |
 | `tags` | string[] | Keywords associated with this entry (up to 15). Used for search matching |
 | `category` | string | Top-level category (e.g. "Billing & Plans FAQ") |
+| `category_slug` | string | Stable slug for category filtering |
 | `subcategory` | string | More specific grouping within the category |
+| `subcategory_slug` | string | Stable slug for subcategory filtering |
 | `question` | string | The FAQ question |
 | `answer` | string | Full answer text. May contain markdown formatting (`**bold**`, links, lists) |
 | `answered_by` | string \| null | Optional credit for who wrote the answer |
+| `source_urls` | string[] | Extracted source links from answer metadata/content |
+| `last_verified_at` | string | Verification date in `YYYY-MM-DD` (Anthropic HQ timezone: America/Los_Angeles) |
 | `source_file` | string | Which markdown file this entry was parsed from |
 
 **If the slug doesn't exist (404):**
@@ -184,7 +200,7 @@ curl -H "Authorization: Bearer $KEY" https://api.kcodes.me/claude-faqs/v1/accoun
 | `title` | string | The FAQ question (max 256 chars per Discord limits) |
 | `description` | string | The answer text, truncated to 4096 chars if needed |
 | `color` | number | Embed accent color as decimal integer (7886330 = `#7855FA`, our purple) |
-| `fields` | array | Category and tags as inline fields, plus optional "Answered By" |
+| `fields` | array | Category and tags as inline fields, plus optional "Answered By" and "Last Verified" |
 | `footer.text` | string | Attribution footer |
 
 **Usage in discord.py:**
@@ -235,6 +251,12 @@ curl -H "Authorization: Bearer $KEY" "https://api.kcodes.me/claude-faqs/v1/searc
       "question": "Can I get a refund for my subscription?",
       "tags": ["subscription", "billing", "refunds", "anthropics", "service"],
       "answered_by": "konacodes",
+      "category_slug": "billing-plans-faq",
+      "subcategory_slug": "payment-and-billing-issues",
+      "source_urls": [
+        "https://support.claude.com/en/articles/9836398-how-do-i-request-a-refund-for-my-claude-subscription"
+      ],
+      "last_verified_at": "2026-03-01",
       "answer_preview": "Refunds are **generally not provided** for Claude subscriptions. Anthropic's terms of service typically state that subscription fees are non-refundable. However, there are some circumstances where ref...",
       "category": "Billing & Plans FAQ",
       "subcategory": "Payment and Billing Issues"
@@ -251,6 +273,10 @@ curl -H "Authorization: Bearer $KEY" "https://api.kcodes.me/claude-faqs/v1/searc
 | `question` | string | The FAQ question |
 | `tags` | string[] | Top 5 tags for this entry |
 | `answered_by` | string \| null | Optional answer credit |
+| `category_slug` | string | Category slug |
+| `subcategory_slug` | string | Subcategory slug |
+| `source_urls` | string[] | Extracted source links for this FAQ |
+| `last_verified_at` | string | Verification date in `YYYY-MM-DD` (HQ PT) |
 | `answer_preview` | string | First 200 characters of the answer, truncated with `...` |
 | `category` | string | Top-level category |
 | `subcategory` | string | Subcategory within the category |
@@ -324,7 +350,7 @@ curl -H "Authorization: Bearer $KEY" "https://api.kcodes.me/claude-faqs/v1/ask?q
 
 ### GET `/categories` — List Categories
 
-Returns all FAQ categories with their subcategories and entry counts.
+Returns all FAQ categories with slugs, entry counts, and subcategory metadata.
 
 ```bash
 curl -H "Authorization: Bearer $KEY" https://api.kcodes.me/claude-faqs/v1/categories
@@ -337,21 +363,31 @@ curl -H "Authorization: Bearer $KEY" https://api.kcodes.me/claude-faqs/v1/catego
   "categories": [
     {
       "name": "Account Issues FAQ",
+      "slug": "account-issues-faq",
       "entry_count": 13,
       "subcategories": [
-        "Account Bans and Suspensions",
-        "Login and Access Problems",
-        "Account Recovery",
-        "Profile and Settings"
+        { "name": "Account Bans and Suspensions", "slug": "account-bans-and-suspensions", "entry_count": 3 },
+        { "name": "Login and Access Problems", "slug": "login-and-access-problems", "entry_count": 5 }
       ]
-    },
-    {
-      "name": "Billing & Plans FAQ",
-      "entry_count": 14,
-      "subcategories": ["Plan Comparisons and Pricing", "Payment and Billing Issues", "Usage and Features", "Account Management"]
     }
   ]
 }
+```
+
+Optional filter by category slug:
+
+```bash
+curl -H "Authorization: Bearer $KEY" "https://api.kcodes.me/claude-faqs/v1/categories?slug=billing-plans-faq"
+```
+
+---
+
+### GET `/category/{category_slug}` — Entries by Category Slug
+
+Returns summary entries for one category slug.
+
+```bash
+curl -H "Authorization: Bearer $KEY" https://api.kcodes.me/claude-faqs/v1/category/billing-plans-faq
 ```
 
 ---
@@ -364,7 +400,7 @@ Returns a summary of all FAQ entries. Useful for building menus, autocomplete, o
 
 | Param | Required | Default | Description |
 |-------|----------|---------|-------------|
-| `category` | No | — | Filter by category or subcategory name (partial match, case-insensitive) |
+| `category` | No | — | Filter by category/subcategory name (partial match) or slug (exact) |
 
 ```bash
 # All entries
@@ -383,12 +419,32 @@ curl -H "Authorization: Bearer $KEY" "https://api.kcodes.me/claude-faqs/v1/entri
       "slug": "free-pro-max-plans",
       "question": "What are the differences between Free, Pro, and Max plans?",
       "tags": ["plans", "free", "pro", "max", "pricing"],
+      "answered_by": "konacodes",
+      "source_urls": ["https://claude.com/pricing"],
+      "last_verified_at": "2026-03-01",
       "category": "Billing & Plans FAQ",
-      "subcategory": "Plan Comparisons and Pricing"
+      "category_slug": "billing-plans-faq",
+      "subcategory": "Plan Comparisons and Pricing",
+      "subcategory_slug": "plan-comparisons-and-pricing"
     }
   ]
 }
 ```
+
+**Entry summary fields:**
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `slug` | string | Entry slug for direct lookup |
+| `question` | string | FAQ question text |
+| `tags` | string[] | Top 5 tags |
+| `answered_by` | string \| null | Optional answer credit |
+| `source_urls` | string[] | Extracted source links for this FAQ |
+| `last_verified_at` | string | Verification date in `YYYY-MM-DD` (HQ PT) |
+| `category` | string | Top-level category |
+| `category_slug` | string | Category slug |
+| `subcategory` | string | Subcategory within the category |
+| `subcategory_slug` | string | Subcategory slug |
 
 Note: This returns summaries (no full answers). Use `GET /{slug}` to get the full entry.
 

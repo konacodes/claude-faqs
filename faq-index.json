@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "generated_at": "2026-03-01T07:16:49.741Z",
-  "entry_count": 86,
+  "generated_at": "2026-03-01T08:01:46.009Z",
+  "entry_count": 134,
   "entries": [
     {
       "slug": "account-banned",
@@ -24,8 +24,12 @@
       ],
       "category": "Account Issues FAQ",
       "subcategory": "Account Bans and Suspensions",
+      "category_slug": "account-issues-faq",
+      "subcategory_slug": "account-bans-and-suspensions",
       "question": "My account was banned! What can I do?",
       "answer": "If your account has been disabled, you will typically see a message stating \"Your account has been disabled after an automatic review of your recent activities.\" Anthropic uses automated systems to detect violations of their **Acceptable Use Policy (AUP)** and **Terms of Service (ToS)**, and these systems may flag accounts based on usage patterns, content, or behavioral signals. The first step is to carefully review Anthropic's Usage Policy to understand what may have triggered the action. Common reasons for bans include generating content that violates the AUP, using VPNs or proxies that make your traffic appear suspicious, accessing Claude from unsupported regions, bot-like or automated usage patterns on consumer plans, sharing account credentials, or routing third-party tool requests through a consumer Claude account. If you believe the ban was issued in error, you should submit an appeal (see below).",
+      "source_urls": [],
+      "last_verified_at": "2026-03-01",
       "source_file": "account-issues-faqs.md"
     },
     {
@@ -49,8 +53,14 @@
       ],
       "category": "Account Issues FAQ",
       "subcategory": "Account Bans and Suspensions",
+      "category_slug": "account-issues-faq",
+      "subcategory_slug": "account-bans-and-suspensions",
       "question": "How do I appeal an account ban?",
       "answer": "To appeal a ban, visit the **Anthropic Support Center** at [support.claude.com](https://support.claude.com) and fill out the official appeal form with your account information, so the Safeguards team can investigate. You can also email **support@anthropic.com** directly. When submitting your appeal, include your account email address, a detailed and honest explanation of your use case, and any context that might clarify why the automated system flagged your account. Be transparent about your activities -- making false claims can harm your appeal. Do **not** send multiple follow-up emails, as this will not speed up the process and may be considered harassment. Official processing typically takes **5 to 15 business days**, though complex cases or high-volume periods can extend the timeline to several weeks. Whether your account can be reinstated depends on the severity of the violation -- minor or accidental violations may be reversible, while serious policy violations often result in permanent bans.",
+      "source_urls": [
+        "https://support.claude.com"
+      ],
+      "last_verified_at": "2026-03-01",
       "source_file": "account-issues-faqs.md"
     },
     {
@@ -74,8 +84,12 @@
       ],
       "category": "Account Issues FAQ",
       "subcategory": "Account Bans and Suspensions",
+      "category_slug": "account-issues-faq",
+      "subcategory_slug": "account-bans-and-suspensions",
       "question": "My account is temporarily suspended. How long will it last?",
       "answer": "Temporary suspensions are different from permanent bans and are typically issued for less severe or first-time policy violations. The duration varies based on the nature of the violation and is determined by Anthropic's Safeguards team. During a suspension, you will not be able to access Claude or any associated services. You should receive an email or notification explaining the reason for the suspension. If no timeline is provided, you can contact **support@anthropic.com** for clarification. Response times may be extended during periods of high support volume, particularly following major product launches or updates. To avoid future suspensions, carefully review the **Acceptable Use Policy** and ensure your usage patterns do not trigger automated detection systems.",
+      "source_urls": [],
+      "last_verified_at": "2026-03-01",
       "source_file": "account-issues-faqs.md"
     },
     {
@@ -99,8 +113,16 @@
       ],
       "category": "Account Issues FAQ",
       "subcategory": "Login and Access Problems",
+      "category_slug": "account-issues-faq",
+      "subcategory_slug": "login-and-access-problems",
       "question": "I can't log into my account. What should I try?",
       "answer": "Start by confirming you are using the correct email address and password combination at [claude.ai](https://claude.ai). Check if you are using the right authentication method -- Claude supports email/password login, Google OAuth, and Apple Sign-In, and you must use the same method you originally signed up with. Clear your browser cache and cookies, or try a different browser or incognito/private window. Ensure you are not using a VPN or proxy, as some IP addresses and regions may be blocked or flagged. If you are on a corporate or school network, firewall rules may be blocking access to Claude's servers. Check [status.anthropic.com](https://status.anthropic.com) to see if there is an ongoing service outage. If none of these steps resolve the issue, contact support at [support.claude.com](https://support.claude.com) with details about the error message you are receiving.",
+      "source_urls": [
+        "https://claude.ai",
+        "https://status.anthropic.com",
+        "https://support.claude.com"
+      ],
+      "last_verified_at": "2026-03-01",
       "source_file": "account-issues-faqs.md"
     },
     {
@@ -124,8 +146,15 @@
       ],
       "category": "Account Issues FAQ",
       "subcategory": "Login and Access Problems",
+      "category_slug": "account-issues-faq",
+      "subcategory_slug": "login-and-access-problems",
       "question": "How do I check if Claude.ai is down or having system issues?",
       "answer": "Use Anthropic's official status page first: [status.anthropic.com](https://status.anthropic.com). It shows current status and incident history for Claude services. If status is green but your issue persists, collect your error message, timestamp, region/network details, and browser/app version, then contact support: [support.claude.com/en/articles/9017053-how-can-i-contact-support](https://support.claude.com/en/articles/9017053-how-can-i-contact-support).",
+      "source_urls": [
+        "https://status.anthropic.com",
+        "https://support.claude.com/en/articles/9017053-how-can-i-contact-support"
+      ],
+      "last_verified_at": "2026-03-01",
       "source_file": "account-issues-faqs.md"
     },
     {
@@ -149,8 +178,14 @@
       ],
       "category": "Account Issues FAQ",
       "subcategory": "Login and Access Problems",
+      "category_slug": "account-issues-faq",
+      "subcategory_slug": "login-and-access-problems",
       "question": "I forgot my password. How do I reset it?",
       "answer": "On the Claude login page at [claude.ai](https://claude.ai), click the **\"Forgot password?\"** link. Enter the email address associated with your account, and Anthropic will send a password reset link to that email. The reset link is time-sensitive, so use it promptly after receiving it. Check your spam or junk folder if you do not see the email within a few minutes. If you signed up using Google OAuth or Apple Sign-In, you do not have a Claude-specific password -- use the respective \"Continue with Google\" or \"Continue with Apple\" button instead. If you no longer have access to the email address on your account, you will need to contact Anthropic support for manual account recovery assistance.",
+      "source_urls": [
+        "https://claude.ai"
+      ],
+      "last_verified_at": "2026-03-01",
       "source_file": "account-issues-faqs.md"
     },
     {
@@ -174,8 +209,12 @@
       ],
       "category": "Account Issues FAQ",
       "subcategory": "Login and Access Problems",
+      "category_slug": "account-issues-faq",
+      "subcategory_slug": "login-and-access-problems",
       "question": "I'm getting an \"Invalid email or password\" error",
       "answer": "This error usually means the credentials you entered do not match an existing account. Double-check that you are typing your email exactly as registered, including any periods, underscores, or domain variations (e.g., gmail.com vs. googlemail.com). Verify you are using the correct sign-in method -- if you signed up with Google OAuth, the email/password login will not work because no password was set for that account. Try resetting your password through the \"Forgot password?\" link to confirm your email is registered. If you recently changed your password, make sure you are using the new one and that your browser's saved password has not auto-filled the old one. Contact support if the issue persists after these steps.",
+      "source_urls": [],
+      "last_verified_at": "2026-03-01",
       "source_file": "account-issues-faqs.md"
     },
     {
@@ -199,8 +238,12 @@
       ],
       "category": "Account Issues FAQ",
       "subcategory": "Login and Access Problems",
+      "category_slug": "account-issues-faq",
+      "subcategory_slug": "login-and-access-problems",
       "question": "Claude says I don't have access. What does this mean?",
       "answer": "An \"access denied\" or \"you don't have access\" message can appear for several reasons. You may be trying to use a feature that requires a paid subscription (such as certain models or Claude Code features) while on the Free plan. If you are on a Team or Enterprise plan, your administrator may not have provisioned access for your account. Some features may be region-restricted or in limited rollout, meaning they are not yet available in your geographic area. If you recently upgraded your plan, try logging out and back in to refresh your session. If you believe you should have access based on your plan, check your account settings to confirm your subscription is active and contact support with the specific error message and the feature you are trying to access.",
+      "source_urls": [],
+      "last_verified_at": "2026-03-01",
       "source_file": "account-issues-faqs.md"
     },
     {
@@ -224,8 +267,14 @@
       ],
       "category": "Account Issues FAQ",
       "subcategory": "Login and Access Problems",
+      "category_slug": "account-issues-faq",
+      "subcategory_slug": "login-and-access-problems",
       "question": "I can't reply to messages in a channel. Is this a Claude permission issue?",
       "answer": "Usually this is a **workspace/channel permission** issue in the host platform (for example Slack/Discord), not a Claude model failure. Check:\n\n- Your role and posting permissions in that specific channel\n- Whether a workspace admin restricted replies, bots, or app actions\n- Whether your Claude plan/workspace entitlement includes that integration feature\n\nIf this only fails inside Claude surfaces (web/app) and not the host platform itself, treat it as an access issue and contact support with the exact error text and screenshot. Official support path: [support.claude.com/en/articles/9017053-how-can-i-contact-support](https://support.claude.com/en/articles/9017053-how-can-i-contact-support).",
+      "source_urls": [
+        "https://support.claude.com/en/articles/9017053-how-can-i-contact-support"
+      ],
+      "last_verified_at": "2026-03-01",
       "source_file": "account-issues-faqs.md"
     },
     {
@@ -249,8 +298,14 @@
       ],
       "category": "Account Issues FAQ",
       "subcategory": "Account Recovery",
+      "category_slug": "account-issues-faq",
+      "subcategory_slug": "account-recovery",
       "question": "I can't access my account because I changed email addresses",
       "answer": "If you changed your email address outside of Claude's settings (e.g., changed your Google email), you may lose access. Contact Anthropic support at [support.claude.com](https://support.claude.com) with both your **old email address** and **new email address**, along with any identifying information about your account (such as your subscription plan or approximate sign-up date). Anthropic's team will verify your identity before making changes to your account email. This process may take several business days. To prevent this issue in the future, always update your email through Claude's account settings first before making changes to your email provider. If you used Google or Apple sign-in, the email change must be reflected with that identity provider, not directly with Anthropic.",
+      "source_urls": [
+        "https://support.claude.com"
+      ],
+      "last_verified_at": "2026-03-01",
       "source_file": "account-issues-faqs.md"
     },
     {
@@ -274,8 +329,12 @@
       ],
       "category": "Account Issues FAQ",
       "subcategory": "Account Recovery",
+      "category_slug": "account-issues-faq",
+      "subcategory_slug": "account-recovery",
       "question": "I deleted my account by accident. Can I recover it?",
       "answer": "Account deletion is generally **permanent** once confirmed. When you delete your account, your conversation history, settings, and associated data are removed according to Anthropic's data retention policies. If you recently initiated deletion and believe there may be a grace period, contact **support@anthropic.com** immediately with your account email and explain the situation. There is no guarantee of recovery, but acting quickly may help. If you had an active paid subscription at the time of deletion, the billing is handled according to the terms of your plan -- contact support for specifics about any remaining charges or credits. Creating a new account with the same email address is possible, but none of your previous data or conversations will be restored.",
+      "source_urls": [],
+      "last_verified_at": "2026-03-01",
       "source_file": "account-issues-faqs.md"
     },
     {
@@ -299,8 +358,14 @@
       ],
       "category": "Account Issues FAQ",
       "subcategory": "Account Recovery",
+      "category_slug": "account-issues-faq",
+      "subcategory_slug": "account-recovery",
       "question": "Someone else is using my account. What should I do?",
       "answer": "If you suspect unauthorized access to your account, take immediate action. First, **reset your password** through the login page. If you use Google or Apple sign-in, change your password with that provider and revoke any suspicious sessions. Then contact Anthropic support at [support.claude.com](https://support.claude.com) and report the unauthorized access with any details you have, including suspicious conversations you did not initiate, unexpected usage patterns, or changes to your account settings. Anthropic can investigate and may be able to show you recent login activity. If your account was compromised and used in ways that violated the Usage Policy, explain this in your report so that any resulting flags or bans are reviewed in the proper context. Enable two-factor authentication if available, and avoid reusing passwords from other services.",
+      "source_urls": [
+        "https://support.claude.com"
+      ],
+      "last_verified_at": "2026-03-01",
       "source_file": "account-issues-faqs.md"
     },
     {
@@ -324,8 +389,14 @@
       ],
       "category": "Account Issues FAQ",
       "subcategory": "Profile and Settings",
+      "category_slug": "account-issues-faq",
+      "subcategory_slug": "profile-and-settings",
       "question": "How do I delete my account permanently?",
       "answer": "To permanently delete your Claude account, go to your **account settings** on [claude.ai](https://claude.ai) and look for the account deletion option. You will be asked to confirm the deletion, and the process is typically **irreversible**. Before deleting, download or save any important conversations, as all data including chat history, Projects, uploaded files, and preferences will be permanently removed. If you have an active paid subscription, you should cancel it first to avoid further charges -- account deletion does not automatically stop billing in all cases. After deletion, your email becomes available for creating a new account, but no previous data will carry over. If you are on a Team or Enterprise plan, contact your administrator, as individual account deletion may be managed differently.",
+      "source_urls": [
+        "https://claude.ai"
+      ],
+      "last_verified_at": "2026-03-01",
       "source_file": "account-issues-faqs.md"
     },
     {
@@ -349,8 +420,14 @@
       ],
       "category": "Account Issues FAQ",
       "subcategory": "Profile and Settings",
+      "category_slug": "account-issues-faq",
+      "subcategory_slug": "profile-and-settings",
       "question": "How do I change my email address?",
       "answer": "You can update your email address through the **account settings** page on [claude.ai](https://claude.ai). Navigate to your profile settings and look for the email change option. You will need to verify the new email address by clicking a confirmation link sent to it. If you signed up with Google or Apple sign-in, your email is tied to that identity provider and cannot be changed directly within Claude -- you would need to contact support for assistance. Keep in mind that changing your email will affect how you log in going forward. If you encounter issues during the process, contact Anthropic support with your current and desired email addresses for assistance.",
+      "source_urls": [
+        "https://claude.ai"
+      ],
+      "last_verified_at": "2026-03-01",
       "source_file": "account-issues-faqs.md"
     },
     {
@@ -374,8 +451,15 @@
       ],
       "category": "Account Issues FAQ",
       "subcategory": "Profile and Settings",
+      "category_slug": "account-issues-faq",
+      "subcategory_slug": "profile-and-settings",
       "question": "Why can't I access certain features?",
       "answer": "Feature access depends on several factors: your **subscription plan** (Free, Pro, Max, Team, or Enterprise), your **geographic region**, and whether a feature is in **general availability or limited rollout**. Free plan users have access to basic Claude chat but may not have access to advanced models like Opus, Claude Code, Projects, or certain integrations. Some features are released gradually and may not be available to all users simultaneously. If you recently upgraded your plan, log out and back in to refresh your session and permissions. Check the [Claude changelog](https://claude.ai/changelog) and [Anthropic's blog](https://www.anthropic.com/news) for announcements about new feature availability. If a feature should be available on your plan but is not, contact support with your account details and the specific feature in question.",
+      "source_urls": [
+        "https://claude.ai/changelog",
+        "https://www.anthropic.com/news"
+      ],
+      "last_verified_at": "2026-03-01",
       "source_file": "account-issues-faqs.md"
     },
     {
@@ -399,8 +483,14 @@
       ],
       "category": "Billing & Plans FAQ",
       "subcategory": "Plan Comparisons and Pricing",
+      "category_slug": "billing-plans-faq",
+      "subcategory_slug": "plan-comparisons-and-pricing",
       "question": "What are the different Claude plans and how much do they cost?",
       "answer": "Anthropic offers several plan tiers for Claude. Note that pricing may change -- always check the official pricing page at [claude.com/pricing](https://claude.com/pricing) for current information.\n\n- **Free Plan**: $0/month. Access to Claude on web, iOS, Android, and desktop. Includes basic access to Claude Sonnet with strict daily message limits that vary based on system demand. Limited feature access.\n- **Claude Pro**: $20/month. Provides approximately **5x more usage** than the free tier, priority access during high-traffic periods, access to all Claude models (including Opus), early access to new features, and the ability to use Projects and Claude Code.\n- **Claude Max 5x**: $100/month. Provides **5x the usage of Pro** (approximately 25x the free tier). Full access to Claude Code, all models, and premium features. Designed for power users and professional developers.\n- **Claude Max 20x**: $200/month. Provides **20x the usage of Pro** (approximately 100x the free tier). The highest individual usage tier, intended for heavy professional use and extensive Claude Code sessions.\n- **Claude Team**: $30/per seat/month (billed monthly) or $25/per seat/month (billed annually). Minimum of 5 users. Includes everything in Pro, plus team collaboration features, centralized billing, admin controls, and a higher usage limit per seat than Pro.\n- **Claude Enterprise**: Custom pricing (contact Anthropic sales). Includes SSO/SAML, SCIM provisioning, enhanced security and compliance certifications, dedicated support, custom usage limits, and guaranteed SLAs. Typically starts at $500-1,000/month for small deployments and scales based on organization size and requirements.",
+      "source_urls": [
+        "https://claude.com/pricing"
+      ],
+      "last_verified_at": "2026-03-01",
       "source_file": "billing-faq.md"
     },
     {
@@ -424,8 +514,12 @@
       ],
       "category": "Billing & Plans FAQ",
       "subcategory": "Plan Comparisons and Pricing",
+      "category_slug": "billing-plans-faq",
+      "subcategory_slug": "plan-comparisons-and-pricing",
       "question": "Is the Pro or Max plan worth it? What are the real differences?",
       "answer": "Whether to upgrade depends on your usage patterns and needs. **Pro ($20/month)** is worth it if you hit free-tier limits regularly, use Claude for work or professional tasks, need reliable access during peak times, or want access to all models including Opus. The free tier's daily limits are quite restrictive for regular use -- most active users will hit them within a few conversations. **Max ($100 or $200/month)** is primarily designed for heavy **Claude Code** users and power users who exhaust Pro limits. Both Max tiers include the same features as Pro, but with substantially more usage capacity. The 5x tier works well for developers who use Claude Code several hours daily, while the 20x tier is for those running Claude Code extensively throughout the workday, often with multiple sessions or long-running background tasks. If you primarily use Claude through the web interface for conversations and do not use Claude Code heavily, Pro is typically sufficient. If you consistently hit Pro limits, especially through Claude Code usage, Max provides meaningful additional headroom.",
+      "source_urls": [],
+      "last_verified_at": "2026-03-01",
       "source_file": "billing-faq.md"
     },
     {
@@ -449,8 +543,12 @@
       ],
       "category": "Billing & Plans FAQ",
       "subcategory": "Plan Comparisons and Pricing",
+      "category_slug": "billing-plans-faq",
+      "subcategory_slug": "plan-comparisons-and-pricing",
       "question": "Is there a cheaper plan, or a mid-tier option between Pro and Max?",
       "answer": "Currently, there is **no mid-tier option** between Pro ($20/month) and Max 5x ($100/month). The jump from $20 to $100 is significant, and this is a common piece of feedback from the community. Your options are: stick with **Pro** and manage your usage carefully, jump to **Max 5x** if you need the additional capacity, use the **Team plan** ($25-30/seat/month) which provides higher per-seat limits than Pro and may be cost-effective if you have a small group, or use the **API** directly through the Anthropic Console for pay-as-you-go pricing if your usage is variable and you have the technical ability to integrate it. There are no student or educational discounts for individual plans at this time, though Anthropic does offer **Claude for Education** programs for qualifying academic institutions.",
+      "source_urls": [],
+      "last_verified_at": "2026-03-01",
       "source_file": "billing-faq.md"
     },
     {
@@ -474,8 +572,12 @@
       ],
       "category": "Billing & Plans FAQ",
       "subcategory": "Plan Comparisons and Pricing",
+      "category_slug": "billing-plans-faq",
+      "subcategory_slug": "plan-comparisons-and-pricing",
       "question": "How do Claude's usage limits work?",
       "answer": "Claude uses **session-based limits** that reset every few hours (typically on a rolling window), not a fixed monthly allotment. The exact number of messages you can send depends on multiple factors: the **model** you are using (Opus consumes more than Sonnet, which consumes more than Haiku), the **length of your messages** and Claude's responses (longer conversations use more tokens), whether you are uploading **files or images** (which consume additional tokens), and your **plan tier**. Anthropic does not publish exact message counts because the limits are token-based and vary significantly based on conversation complexity. When you approach your limit, Claude will warn you, and once reached, you will need to wait for the rolling window to reset. Using Claude Code consumes limits from the same pool as web conversations on consumer plans (Pro/Max).",
+      "source_urls": [],
+      "last_verified_at": "2026-03-01",
       "source_file": "billing-faq.md"
     },
     {
@@ -499,8 +601,12 @@
       ],
       "category": "Billing & Plans FAQ",
       "subcategory": "Payment and Billing Issues",
+      "category_slug": "billing-plans-faq",
+      "subcategory_slug": "payment-and-billing-issues",
       "question": "What happens when I hit my usage limit?",
       "answer": "When you reach your usage limit, Claude will notify you that you have exceeded your current allocation. On the **Free plan**, you will be unable to send new messages until your limit resets and will be encouraged to upgrade to Pro. On **Pro**, you may be temporarily restricted to smaller/faster models or given reduced message capacity until the rolling window resets. On **Max**, the same applies but with much higher thresholds before you hit the wall. Your existing conversations and history remain fully accessible -- you just cannot send new messages. The limits reset on a **rolling basis** (not at a fixed calendar time), so waiting a few hours will typically restore some capacity. If you consistently hit limits, it may be worth upgrading to a higher tier or optimizing your usage patterns.",
+      "source_urls": [],
+      "last_verified_at": "2026-03-01",
       "source_file": "billing-faq.md"
     },
     {
@@ -524,8 +630,12 @@
       ],
       "category": "Billing & Plans FAQ",
       "subcategory": "Payment and Billing Issues",
+      "category_slug": "billing-plans-faq",
+      "subcategory_slug": "payment-and-billing-issues",
       "question": "What payment methods does Anthropic accept?",
       "answer": "For consumer plans (Pro, Max), Anthropic accepts major **credit and debit cards** (Visa, Mastercard, American Express) through their payment processor. For Team plans, credit card payment is standard. For Enterprise plans, Anthropic can typically accommodate invoicing and other payment arrangements as part of the custom contract process. API usage through the Anthropic Console is billed to a credit card on file, with charges based on token consumption. Payments are processed in **US dollars**. If your payment fails, Anthropic will typically retry and notify you before suspending access. Cryptocurrency, PayPal, and bank transfers are not currently available for individual plans.",
+      "source_urls": [],
+      "last_verified_at": "2026-03-01",
       "source_file": "billing-faq.md"
     },
     {
@@ -549,8 +659,12 @@
       ],
       "category": "Billing & Plans FAQ",
       "subcategory": "Payment and Billing Issues",
+      "category_slug": "billing-plans-faq",
+      "subcategory_slug": "payment-and-billing-issues",
       "question": "Can I get a refund for my subscription?",
       "answer": "Refunds are **generally not provided** for Claude subscriptions. Anthropic's terms of service typically state that subscription fees are non-refundable. However, there are some circumstances where refunds may be considered: if you were charged after canceling your subscription due to a billing error, if a technical issue on Anthropic's end prevented you from using the service for a significant period, or if your account was wrongly suspended and you were paying for a plan you could not access. To request a refund, contact **support@anthropic.com** with your account email, the charge in question, and a clear explanation of the circumstances. Do not expect a refund for \"I didn't use it enough this month\" -- the subscription provides access regardless of usage volume.",
+      "source_urls": [],
+      "last_verified_at": "2026-03-01",
       "source_file": "billing-faq.md"
     },
     {
@@ -574,8 +688,12 @@
       ],
       "category": "Billing & Plans FAQ",
       "subcategory": "Payment and Billing Issues",
+      "category_slug": "billing-plans-faq",
+      "subcategory_slug": "payment-and-billing-issues",
       "question": "Why was I charged after canceling my subscription?",
       "answer": "If you see a charge after canceling, it is most likely because your cancellation takes effect at the **end of the current billing cycle**, not immediately. When you cancel, you retain access to your paid plan features until the end of the period you already paid for, and no further charges should occur after that. If you were charged for a new billing cycle after canceling, this may be a billing error -- contact **support@anthropic.com** with your cancellation confirmation and the unexpected charge details. Also verify that you canceled the correct subscription, as having both a consumer plan and API billing can sometimes cause confusion about which charges belong to which service.",
+      "source_urls": [],
+      "last_verified_at": "2026-03-01",
       "source_file": "billing-faq.md"
     },
     {
@@ -599,8 +717,16 @@
       ],
       "category": "Billing & Plans FAQ",
       "subcategory": "Payment and Billing Issues",
+      "category_slug": "billing-plans-faq",
+      "subcategory_slug": "payment-and-billing-issues",
       "question": "Can I transfer my Claude subscription from iOS to Web and upgrade to Max without getting double-charged?",
       "answer": "As of **March 1, 2026**, Anthropic does not publish a one-click \"subscription transfer\" flow between Apple in-app billing and direct web billing. Officially, subscriptions are managed on the platform where they were purchased:\n\n- If purchased on iOS, manage/cancel via Apple subscriptions\n- If purchased on web, manage through Claude account settings\n\nBest-practice migration path:\n\n1. Cancel the iOS subscription first (it usually remains active until period end)\n2. Wait for that billing period to end\n3. Start the new web subscription/upgrade on Claude web\n\nIf you overlap periods and see unexpected charges, request review through support/refund channels. References: [support.claude.com/en/articles/8325617-how-do-i-cancel-my-paid-claude-subscription](https://support.claude.com/en/articles/8325617-how-do-i-cancel-my-paid-claude-subscription), [support.claude.com/en/articles/10177702-how-do-i-upgrade-my-claude-plan](https://support.claude.com/en/articles/10177702-how-do-i-upgrade-my-claude-plan), [support.claude.com/en/articles/9836398-how-do-i-request-a-refund-for-my-claude-subscription](https://support.claude.com/en/articles/9836398-how-do-i-request-a-refund-for-my-claude-subscription).",
+      "source_urls": [
+        "https://support.claude.com/en/articles/8325617-how-do-i-cancel-my-paid-claude-subscription",
+        "https://support.claude.com/en/articles/10177702-how-do-i-upgrade-my-claude-plan",
+        "https://support.claude.com/en/articles/9836398-how-do-i-request-a-refund-for-my-claude-subscription"
+      ],
+      "last_verified_at": "2026-03-01",
       "source_file": "billing-faq.md"
     },
     {
@@ -624,8 +750,15 @@
       ],
       "category": "Billing & Plans FAQ",
       "subcategory": "Payment and Billing Issues",
+      "category_slug": "billing-plans-faq",
+      "subcategory_slug": "payment-and-billing-issues",
       "question": "I have unexpected charges or a billing dispute. What is the official process?",
       "answer": "Use Anthropic's documented support/refund path:\n\n1. Contact support with your account email, charge date/amount, receipt, and last 4 card digits\n2. Include whether the charge came from web billing, API usage, or Apple/Google app-store billing\n3. Request refund review if applicable\n\nOfficial references: [support.claude.com/en/articles/9836398-how-do-i-request-a-refund-for-my-claude-subscription](https://support.claude.com/en/articles/9836398-how-do-i-request-a-refund-for-my-claude-subscription), [support.claude.com/en/articles/9017053-how-can-i-contact-support](https://support.claude.com/en/articles/9017053-how-can-i-contact-support).",
+      "source_urls": [
+        "https://support.claude.com/en/articles/9836398-how-do-i-request-a-refund-for-my-claude-subscription",
+        "https://support.claude.com/en/articles/9017053-how-can-i-contact-support"
+      ],
+      "last_verified_at": "2026-03-01",
       "source_file": "billing-faq.md"
     },
     {
@@ -649,8 +782,14 @@
       ],
       "category": "Billing & Plans FAQ",
       "subcategory": "Payment and Billing Issues",
+      "category_slug": "billing-plans-faq",
+      "subcategory_slug": "payment-and-billing-issues",
       "question": "Support has not responded about very large unknown charges. Is there an escalation path?",
       "answer": "Anthropic's public support docs do not list a separate \"high-dollar fast lane\" escalation tier. The official path is still the support messenger/email workflow. To improve triage:\n\n- Keep one ticket thread (avoid fragmented duplicates)\n- Include a concise charge table (date, amount, provider, receipt ID)\n- Attach supporting evidence (invoices, screenshots, bank statement excerpts)\n- Explicitly state risk and urgency (for example: \"multiple unauthorized charges totaling $10,000+\")\n\nIf a charge appears fraudulent, contact your payment provider immediately in parallel with support. Official contact guidance: [support.claude.com/en/articles/9017053-how-can-i-contact-support](https://support.claude.com/en/articles/9017053-how-can-i-contact-support).",
+      "source_urls": [
+        "https://support.claude.com/en/articles/9017053-how-can-i-contact-support"
+      ],
+      "last_verified_at": "2026-03-01",
       "source_file": "billing-faq.md"
     },
     {
@@ -674,8 +813,12 @@
       ],
       "category": "Billing & Plans FAQ",
       "subcategory": "Usage and Features",
+      "category_slug": "billing-plans-faq",
+      "subcategory_slug": "usage-and-features",
       "question": "What counts toward my usage limits?",
       "answer": "Usage on consumer plans (Free, Pro, Max) is measured in **tokens**, which include:\n\n- **Input tokens**: Everything you send to Claude -- your messages, uploaded files, images, and the accumulated conversation history that gets re-sent with each message\n- **Output tokens**: Everything Claude generates in response\n- **System/context tokens**: The system prompt, Project instructions, and any background processing\n- **Extended thinking tokens**: When Claude uses extended thinking for complex reasoning, the thinking process consumes additional tokens\n\nActivities that consume disproportionately high token counts include uploading large documents or images, maintaining very long conversations (as the entire history is re-sent each turn), using Claude Code (which reads files, runs commands, and often uses subagents that each consume tokens), and using Opus models (which are allocated fewer messages than Sonnet due to higher computational cost). Activities that do **not** count toward limits include reading your conversation history, navigating the UI, changing settings, or managing your account.",
+      "source_urls": [],
+      "last_verified_at": "2026-03-01",
       "source_file": "billing-faq.md"
     },
     {
@@ -699,8 +842,12 @@
       ],
       "category": "Billing & Plans FAQ",
       "subcategory": "Usage and Features",
+      "category_slug": "billing-plans-faq",
+      "subcategory_slug": "usage-and-features",
       "question": "How can I optimize my usage to stay within limits?",
       "answer": "Here are practical strategies for making the most of your token allocation:\n\n- **Start fresh conversations** for new topics rather than continuing one long thread, as the growing context window consumes more tokens with each message\n- **Be concise and specific** in your requests -- a clear 2-sentence prompt often gets better results than a rambling paragraph\n- **Use the right model for the task**: Select Haiku for simple questions, Sonnet for general work, and Opus only when you need peak reasoning capability\n- **Avoid re-uploading** the same large files repeatedly; use Projects to store reference documents\n- **In Claude Code**, use targeted file access rather than letting Claude scan your entire codebase, use `/compact` to compress conversation context, and break large tasks into focused sessions\n- **Save important responses** externally so you do not need to re-generate them\n- **Use Projects** to set persistent context and instructions rather than repeating them in every conversation",
+      "source_urls": [],
+      "last_verified_at": "2026-03-01",
       "source_file": "billing-faq.md"
     },
     {
@@ -724,8 +871,14 @@
       ],
       "category": "Billing & Plans FAQ",
       "subcategory": "Usage and Features",
+      "category_slug": "billing-plans-faq",
+      "subcategory_slug": "usage-and-features",
       "question": "How do I check my remaining usage or when my limit resets?",
       "answer": "For consumer plans (Free, Pro, Max), Claude does **not** currently provide a precise usage meter or countdown. You will receive a notification when you are approaching or have reached your limit, but there is no dashboard showing \"X messages remaining.\" The limits reset on a **rolling window** (approximately every 5 hours), not at a fixed time. For **API users**, detailed usage tracking is available in the **Anthropic Console** at [console.anthropic.com](https://console.anthropic.com), where you can see token consumption, costs, and rate limit status in real time. If you need more precise control over your usage, the API's pay-as-you-go model with explicit token tracking may be more suitable than consumer plans, especially for predictable workloads.",
+      "source_urls": [
+        "https://console.anthropic.com"
+      ],
+      "last_verified_at": "2026-03-01",
       "source_file": "billing-faq.md"
     },
     {
@@ -749,8 +902,14 @@
       ],
       "category": "Billing & Plans FAQ",
       "subcategory": "Account Management",
+      "category_slug": "billing-plans-faq",
+      "subcategory_slug": "account-management",
       "question": "Can I downgrade my plan if I'm not using it enough?",
       "answer": "Yes, you can downgrade your plan at any time through your **account settings** on [claude.ai](https://claude.ai). When you downgrade:\n\n- The change takes effect at the **end of your current billing cycle** -- you retain access to your current plan's features until then\n- You will **not** receive a prorated refund for the remaining time on your current plan\n- Once the downgrade takes effect, you will lose access to features exclusive to your previous plan (such as higher usage limits, specific model access, or Claude Code access if dropping below Pro)\n- Your conversation history and Projects remain accessible, but your ability to create new content may be limited based on your new plan\n\nBefore downgrading, review your actual usage over the past few billing cycles to confirm you genuinely do not need the higher tier. Usage patterns can vary -- you may have a quiet month followed by a busy one.",
+      "source_urls": [
+        "https://claude.ai"
+      ],
+      "last_verified_at": "2026-03-01",
       "source_file": "billing-faq.md"
     },
     {
@@ -774,8 +933,14 @@
       ],
       "category": "Billing & Plans FAQ",
       "subcategory": "Account Management",
+      "category_slug": "billing-plans-faq",
+      "subcategory_slug": "account-management",
       "question": "How do I cancel my subscription completely?",
       "answer": "To cancel your subscription, go to **account settings** on [claude.ai](https://claude.ai) and navigate to the billing or subscription section. Select the option to cancel your plan. Your access to paid features will continue until the end of your current billing period, after which your account will revert to the **Free tier**. You will retain access to your conversation history and can continue using Claude with free-tier limits. No further charges will be processed. If you are on a **Team plan**, the team administrator manages billing, and individual members cannot cancel the team subscription independently. If you want to fully delete your account (not just cancel the subscription), see the Account Issues FAQ for instructions.",
+      "source_urls": [
+        "https://claude.ai"
+      ],
+      "last_verified_at": "2026-03-01",
       "source_file": "billing-faq.md"
     },
     {
@@ -799,8 +964,14 @@
       ],
       "category": "Billing & Plans FAQ",
       "subcategory": "Account Management",
+      "category_slug": "billing-plans-faq",
+      "subcategory_slug": "account-management",
       "question": "How do I upgrade my plan?",
       "answer": "To upgrade, visit your **account settings** on [claude.ai](https://claude.ai) and select the plan you want to move to. Upgrades take effect **immediately** -- you gain instant access to higher limits and additional features. You will be charged a prorated amount for the remainder of your current billing cycle at the new plan's rate. If you are upgrading from Free to Pro, you will need to provide payment information. If moving from Pro to Max, or between Max tiers, the price difference is applied to your existing billing cycle. Team plan upgrades require administrator action and may involve minimum seat requirements.",
+      "source_urls": [
+        "https://claude.ai"
+      ],
+      "last_verified_at": "2026-03-01",
       "source_file": "billing-faq.md"
     },
     {
@@ -824,9 +995,17 @@
       ],
       "category": "Billing & Plans FAQ",
       "subcategory": "Account Management",
+      "category_slug": "billing-plans-faq",
+      "subcategory_slug": "account-management",
       "question": "How do I manage a Claude Max subscription?",
       "answer": "Manage Max from Claude account billing settings (or from Apple/Google subscriptions if purchased in-app). Typical actions:\n\n- Upgrade from Pro to Max\n- Switch Max tiers (5x <-> 20x)\n- Downgrade from Max to Pro at period end\n- Cancel renewal\n\nOfficial docs: [support.claude.com/en/articles/10177702-how-do-i-upgrade-my-claude-plan](https://support.claude.com/en/articles/10177702-how-do-i-upgrade-my-claude-plan), [support.claude.com/en/articles/8325617-how-do-i-cancel-my-paid-claude-subscription](https://support.claude.com/en/articles/8325617-how-do-i-cancel-my-paid-claude-subscription), [support.claude.com/en/articles/8570727-what-payment-methods-can-i-use](https://support.claude.com/en/articles/8570727-what-payment-methods-can-i-use).",
       "answered_by": "claude-faqs maintainers",
+      "source_urls": [
+        "https://support.claude.com/en/articles/10177702-how-do-i-upgrade-my-claude-plan",
+        "https://support.claude.com/en/articles/8325617-how-do-i-cancel-my-paid-claude-subscription",
+        "https://support.claude.com/en/articles/8570727-what-payment-methods-can-i-use"
+      ],
+      "last_verified_at": "2026-03-01",
       "source_file": "billing-faq.md"
     },
     {
@@ -850,8 +1029,14 @@
       ],
       "category": "Claude Code FAQ",
       "subcategory": "Getting Started & Best Practices",
+      "category_slug": "claude-code-faq",
+      "subcategory_slug": "getting-started-best-practices",
       "question": "I'm new to Claude Code. What are the best workflows for building projects?",
       "answer": "**Claude Code** is an agentic coding tool that reads your codebase, edits files, runs commands, and integrates with your development tools. It is available in your terminal, IDE (VS Code, Cursor, JetBrains), as a standalone desktop app, and in the browser at [claude.ai/code](https://claude.ai/code). The best workflow for beginners is to start by navigating to your project directory and running `claude` in your terminal. Begin with small, focused tasks like \"explain the structure of this project\" or \"write tests for the auth module.\" Use plain language to describe what you want -- Claude Code will plan its approach, write code across multiple files, and verify it works. For larger projects, establish a **CLAUDE.md** file at your project root (you can bootstrap one by running `/init`) that documents your coding standards, architecture decisions, preferred libraries, and common commands. This gives Claude Code persistent context about your project conventions. As you grow comfortable, you can leverage more advanced features like sub-agents, background tasks, custom slash commands, and MCP integrations.",
+      "source_urls": [
+        "https://claude.ai/code"
+      ],
+      "last_verified_at": "2026-03-01",
       "source_file": "claude-code-faq.md"
     },
     {
@@ -875,8 +1060,12 @@
       ],
       "category": "Claude Code FAQ",
       "subcategory": "Getting Started & Best Practices",
+      "category_slug": "claude-code-faq",
+      "subcategory_slug": "getting-started-best-practices",
       "question": "Should I start with small, iterative tasks or give Claude the full project scope at once?",
       "answer": "Start with **small, iterative tasks**. This approach is strongly recommended for several reasons:\n\n- **Verification**: You can confirm Claude understands your requirements correctly before it builds on potentially wrong assumptions\n- **Error catching**: Issues are caught early before they compound across multiple files\n- **Context management**: Smaller tasks keep the conversation context focused, reducing the chance of \"context rot\" in long sessions\n- **Learning**: You develop an intuition for how Claude Code interprets different types of instructions\n\nOnce you are comfortable with Claude Code's capabilities and your CLAUDE.md is well-established, you can give it larger scope tasks like \"implement the user authentication flow with signup, login, password reset, and session management.\" For truly large tasks, consider using **plan mode** first (accessible via `/plan` or by asking Claude to \"make a plan\") to have Claude research your codebase and present an implementation plan before writing any code. You can also use the `/todo` feature to break down large tasks into trackable subtasks.",
+      "source_urls": [],
+      "last_verified_at": "2026-03-01",
       "source_file": "claude-code-faq.md"
     },
     {
@@ -900,8 +1089,16 @@
       ],
       "category": "Claude Code FAQ",
       "subcategory": "Getting Started & Best Practices",
+      "category_slug": "claude-code-faq",
+      "subcategory_slug": "getting-started-best-practices",
       "question": "What is the best IDE setup for Claude Code (e.g., VS Code vs. Cursor)?",
       "answer": "Claude Code is a standalone tool that works across multiple environments, and the best setup depends on your workflow:\n\n- **Terminal CLI** (recommended starting point): The full-featured experience. Install via `curl -fsSL https://claude.ai/install.sh | bash` on macOS/Linux or via Homebrew with `brew install --cask claude-code`. Run `claude` in any project directory. This gives you the complete feature set with maximum flexibility.\n- **VS Code / Cursor**: Install the \"Claude Code\" extension from the Extensions marketplace. Provides inline diffs, @-mentions for file references, plan review, and conversation history directly in your editor. Great for developers who prefer staying in their IDE.\n- **JetBrains** (IntelliJ, PyCharm, WebStorm, etc.): Install the Claude Code plugin from the JetBrains Marketplace. Offers interactive diff viewing and selection context sharing.\n- **Desktop App**: A standalone application for running Claude Code outside your IDE. Useful for visual diff review and running multiple sessions side by side. Download from [claude.ai](https://claude.ai) for macOS or Windows.\n- **Web**: Run Claude Code in your browser at [claude.ai/code](https://claude.ai/code) with no local setup required. Ideal for long-running tasks, working on repos you do not have locally, or running tasks from mobile.\n\nAll surfaces connect to the same underlying Claude Code engine, so your CLAUDE.md files, settings, and MCP servers work across all of them.",
+      "source_urls": [
+        "https://claude.ai",
+        "https://claude.ai/code",
+        "https://claude.ai/install.sh"
+      ],
+      "last_verified_at": "2026-03-01",
       "source_file": "claude-code-faq.md"
     },
     {
@@ -925,8 +1122,12 @@
       ],
       "category": "Claude Code FAQ",
       "subcategory": "Getting Started & Best Practices",
+      "category_slug": "claude-code-faq",
+      "subcategory_slug": "getting-started-best-practices",
       "question": "How can I make Claude less agreeable and more of a critical coding partner?",
       "answer": "Claude Code (and Claude in general) has historically been criticized for **sycophancy** -- being overly agreeable and saying things like \"You're absolutely right!\" too frequently. Anthropic has been actively working to reduce this behavior, and recent models are significantly less sycophantic. To get more critical, honest feedback from Claude Code:\n\n- Add instructions to your **CLAUDE.md** file such as: \"Be direct and critical in code reviews. Point out issues, anti-patterns, and potential bugs without sugarcoating. Do not agree with the user unless the approach is genuinely correct.\"\n- Ask explicitly for critiques: \"What are the weaknesses of this approach?\" or \"Challenge my assumptions about this architecture\"\n- Request **alternative approaches**: \"What are 3 different ways to implement this, and what are the trade-offs of each?\"\n- Use a code review subagent with a system prompt specifically designed for critical review (see the subagents documentation)\n- When Claude agrees too readily, push back: \"I don't think that's right. Can you think more carefully about edge cases?\"",
+      "source_urls": [],
+      "last_verified_at": "2026-03-01",
       "source_file": "claude-code-faq.md"
     },
     {
@@ -950,8 +1151,12 @@
       ],
       "category": "Claude Code FAQ",
       "subcategory": "Getting Started & Best Practices",
+      "category_slug": "claude-code-faq",
+      "subcategory_slug": "getting-started-best-practices",
       "question": "How do I prevent Claude from over-engineering my code?",
       "answer": "Claude Code can sometimes produce unnecessarily complex solutions when a simpler approach would suffice. To keep things pragmatic:\n\n- Be explicit about simplicity: \"Implement the simplest solution that works\" or \"Keep this minimal -- no abstractions unless they're clearly needed\"\n- Specify constraints: \"Use only the standard library,\" \"Maximum 50 lines,\" or \"No new dependencies\"\n- Ask for an **MVP first**: \"Build the minimum viable version first, and we can add complexity later if needed\"\n- Add a directive to your **CLAUDE.md**: \"Prefer simple, readable code over clever abstractions. Only add complexity when there is a clear, immediate need.\"\n- When Claude suggests a complex pattern, ask: \"Do we actually need this abstraction right now, or is there a simpler way?\"\n- Specify the scale: \"This is a small personal project\" vs. \"This needs to scale to millions of users\" -- context about scope helps Claude calibrate the appropriate level of engineering",
+      "source_urls": [],
+      "last_verified_at": "2026-03-01",
       "source_file": "claude-code-faq.md"
     },
     {
@@ -975,8 +1180,12 @@
       ],
       "category": "Claude Code FAQ",
       "subcategory": "Getting Started & Best Practices",
+      "category_slug": "claude-code-faq",
+      "subcategory_slug": "getting-started-best-practices",
       "question": "I'm not a developer. How can I use Claude Code to build simple apps or for creative projects?",
       "answer": "Claude Code is surprisingly accessible for non-developers because you can describe what you want in plain language. Here are ways to get started:\n\n- **Simple web pages**: \"Create a personal portfolio website with my name, a bio section, and links to my projects\" -- Claude Code will generate HTML, CSS, and JavaScript files\n- **Automation scripts**: \"Write a script that renames all photos in this folder by their date taken\"\n- **Data processing**: \"Create a tool that reads this CSV file and generates a summary report\"\n- **Learning**: \"Explain what each line of this code does\" -- use Claude Code as a patient teacher that explains concepts as it builds\n- **Creative projects**: \"Build a simple interactive story game in the browser\" or \"Create a webpage that generates random color palettes\"\n\nStart by installing Claude Code, navigating to an empty folder, and describing what you want to create. Claude will set up the project, create files, and guide you through running it. You do not need to understand the code it generates -- but asking it to explain what it did is a great way to learn. A **Pro** or **Max** subscription (or an API account) is required to use Claude Code.",
+      "source_urls": [],
+      "last_verified_at": "2026-03-01",
       "source_file": "claude-code-faq.md"
     },
     {
@@ -1000,8 +1209,12 @@
       ],
       "category": "Claude Code FAQ",
       "subcategory": "Context, Memory, and Limits",
+      "category_slug": "claude-code-faq",
+      "subcategory_slug": "context-memory-and-limits",
       "question": "How can I make Claude remember things across sessions (persistent memory)?",
       "answer": "Claude Code has two types of persistent memory:\n\n- **Auto memory**: Claude automatically saves useful context as it works, including project patterns, build commands, test conventions, code style preferences, debugging insights, and your workflow preferences. This is stored at `~/.claude/projects/<project>/memory/` and the first 200 lines of the main `MEMORY.md` file are loaded into every new session. You can ask Claude to save specific things: \"Remember that we use pnpm, not npm\" or \"Save to memory that the API tests require a local Redis instance.\"\n- **CLAUDE.md files**: Markdown files you write and maintain with instructions for Claude to follow. These are loaded at the start of every session. You can place them at multiple levels:\n  - **Project level**: `./CLAUDE.md` or `./.claude/CLAUDE.md` -- shared with your team via version control\n  - **User level**: `~/.claude/CLAUDE.md` -- your personal preferences across all projects\n  - **Local level**: `./CLAUDE.local.md` -- your personal project-specific preferences (auto-added to .gitignore)\n  - **Modular rules**: `.claude/rules/*.md` -- organized, topic-specific instructions for larger projects\n\nUse `/memory` during a session to open any memory file in your editor for direct editing. Use `/init` to bootstrap a new CLAUDE.md for your project. CLAUDE.md files also support `@path/to/file` imports for referencing other documents.",
+      "source_urls": [],
+      "last_verified_at": "2026-03-01",
       "source_file": "claude-code-faq.md"
     },
     {
@@ -1025,8 +1238,12 @@
       ],
       "category": "Claude Code FAQ",
       "subcategory": "Context, Memory, and Limits",
+      "category_slug": "claude-code-faq",
+      "subcategory_slug": "context-memory-and-limits",
       "question": "What is \"context rot\" and how can I prevent Claude from losing context in long sessions?",
       "answer": "**Context rot** occurs when very long conversations cause Claude to gradually lose track of earlier information, instructions, or decisions. This happens because Claude has a finite context window (200K tokens by default), and as the conversation grows, older content gets less attention or is eventually compacted. To prevent context rot:\n\n- **Start fresh conversations** for genuinely new topics or tasks rather than piling everything into one session\n- **Use `/compact`** periodically to compress the conversation context while preserving key information\n- **Save important decisions** to your CLAUDE.md or ask Claude to save them to auto memory, rather than relying on conversation history\n- **Reference files directly** with `@/path/to/file` instead of relying on Claude remembering what you said earlier about a file\n- **Break large projects** into focused sessions: one for planning, one for implementation, one for testing\n- **Use subagents** for tasks that produce large amounts of output (like running tests or exploring a codebase), as their verbose results stay in the subagent's context while only a summary returns to your main conversation",
+      "source_urls": [],
+      "last_verified_at": "2026-03-01",
       "source_file": "claude-code-faq.md"
     },
     {
@@ -1050,8 +1267,12 @@
       ],
       "category": "Claude Code FAQ",
       "subcategory": "Context, Memory, and Limits",
+      "category_slug": "claude-code-faq",
+      "subcategory_slug": "context-memory-and-limits",
       "question": "What is \"auto-compaction\" and how does it affect my conversation?",
       "answer": "**Auto-compaction** is a feature that automatically triggers when your conversation approaches approximately 95% of Claude's context window capacity. When it activates, Claude summarizes the older parts of your conversation to free up context space while preserving the most important information. Effects of auto-compaction include:\n\n- Earlier conversation details may be **summarized** rather than preserved verbatim -- specific code snippets, exact instructions, or nuanced discussions from early in the session may lose detail\n- The **most recent** exchanges and the **most important** context are prioritized for retention\n- Performance remains consistent because the context window does not overflow\n- You can adjust the trigger threshold by setting the `CLAUDE_AUTOCOMPACT_PCT_OVERRIDE` environment variable (e.g., setting it to `50` triggers compaction at 50% capacity instead of 95%)\n\nTo mitigate information loss from compaction: save critical instructions in CLAUDE.md files (which are loaded fresh each session and are not affected by compaction), use auto memory for important project insights, and proactively run `/compact` before the automatic trigger to control what gets summarized.",
+      "source_urls": [],
+      "last_verified_at": "2026-03-01",
       "source_file": "claude-code-faq.md"
     },
     {
@@ -1075,8 +1296,12 @@
       ],
       "category": "Claude Code FAQ",
       "subcategory": "Context, Memory, and Limits",
+      "category_slug": "claude-code-faq",
+      "subcategory_slug": "context-memory-and-limits",
       "question": "Why am I hitting my usage limit so quickly on the Pro/Max plan?",
       "answer": "Claude Code can consume usage limits faster than regular Claude chat because of several factors:\n\n- **Large codebases**: When Claude Code reads files, each file's content counts as input tokens. Scanning a large project can consume thousands of tokens before any work begins\n- **Long conversations**: Each message in a conversation includes the entire prior history, so token consumption accelerates as conversations grow\n- **Subagent usage**: Built-in subagents like Explore and general-purpose agents each run in their own context, consuming additional tokens. Parallel subagents multiply this effect\n- **Complex operations**: Detailed code analysis, multi-file refactoring, and extensive test suites all require significant token processing\n- **Opus model usage**: The Opus model consumes more of your allocation per message than Sonnet due to higher computational cost\n\nTo manage usage: start new sessions for new tasks, use `/compact` proactively, use Sonnet or Haiku for simpler tasks instead of defaulting to Opus, avoid uploading or scanning files unnecessarily, and break large tasks into focused sessions. See the Billing FAQ for more details on usage limits and optimization.",
+      "source_urls": [],
+      "last_verified_at": "2026-03-01",
       "source_file": "claude-code-faq.md"
     },
     {
@@ -1100,8 +1325,14 @@
       ],
       "category": "Claude Code FAQ",
       "subcategory": "Context, Memory, and Limits",
+      "category_slug": "claude-code-faq",
+      "subcategory_slug": "context-memory-and-limits",
       "question": "How do I check my remaining usage or when my limit resets?",
       "answer": "Unfortunately, Claude Code does **not** currently provide a built-in way to check your remaining usage or exact reset time for consumer plans (Pro/Max). You will receive a notification when you hit your limit, but there is no progress bar or usage dashboard for consumer plans. The limits operate on a **rolling window** (approximately every 5 hours), not a fixed monthly or daily reset. For **API users**, detailed usage tracking is available at [console.anthropic.com](https://console.anthropic.com) where you can monitor token consumption and costs in real time. If precise usage tracking is important to your workflow, consider using Claude Code with an API key (via the Anthropic Console) instead of a consumer subscription, as the API provides exact token counts per request.",
+      "source_urls": [
+        "https://console.anthropic.com"
+      ],
+      "last_verified_at": "2026-03-01",
       "source_file": "claude-code-faq.md"
     },
     {
@@ -1125,8 +1356,12 @@
       ],
       "category": "Claude Code FAQ",
       "subcategory": "Advanced Features (Agents & MCPs)",
+      "category_slug": "claude-code-faq",
+      "subcategory_slug": "advanced-features-agents-mcps",
       "question": "How do I effectively use subagents with Claude Code?",
       "answer": "**Subagents** are specialized AI assistants that handle specific types of tasks within Claude Code. Each runs in its own context window with a custom system prompt and independent permissions. Claude Code includes several built-in subagents:\n\n- **Explore**: A fast, read-only agent using Haiku that searches and analyzes codebases without making changes. Claude automatically delegates exploration tasks to it\n- **Plan**: A research agent used during plan mode to gather context before presenting an implementation plan\n- **General-purpose**: A capable agent for complex, multi-step tasks that require both reading and modifying code\n\nYou can also create **custom subagents** by placing markdown files with YAML frontmatter in `.claude/agents/` (project-level) or `~/.claude/agents/` (user-level), or by using the interactive `/agents` command. Custom subagents let you define specialized system prompts, restrict tool access, choose specific models, and add lifecycle hooks. Best practices: use subagents to isolate high-volume operations (like running test suites) so verbose output stays out of your main conversation, spawn multiple subagents in parallel for independent research tasks, and design each subagent for one specific purpose rather than making it generalist.",
+      "source_urls": [],
+      "last_verified_at": "2026-03-01",
       "source_file": "claude-code-faq.md"
     },
     {
@@ -1150,8 +1385,14 @@
       ],
       "category": "Claude Code FAQ",
       "subcategory": "Advanced Features (Agents & MCPs)",
+      "category_slug": "claude-code-faq",
+      "subcategory_slug": "advanced-features-agents-mcps",
       "question": "What are MCPs and how do I connect them to Claude Code?",
       "answer": "**MCP (Model Context Protocol)** is an open standard for connecting AI tools to external data sources and services. With MCP servers connected, Claude Code can interact with your tools, databases, APIs, and third-party services. To add an MCP server:\n\n- **Remote HTTP server** (recommended for cloud services): `claude mcp add --transport http <name> <url>` (e.g., `claude mcp add --transport http notion https://mcp.notion.com/mcp`)\n- **Local stdio server**: `claude mcp add --transport stdio <name> -- <command>` (e.g., `claude mcp add --transport stdio db -- npx -y @bytebase/dbhub --dsn \"postgresql://...\"`)\n\nPopular MCP servers include GitHub, Sentry, Notion, Jira, Slack, PostgreSQL, Figma, and many more. Use `/mcp` within Claude Code to view connected servers and manage authentication. MCP servers can be scoped to **local** (just you, current project), **project** (shared via `.mcp.json` in version control), or **user** (available across all your projects). When Claude Code has many MCP tools configured, it automatically enables **Tool Search** to load tools on-demand instead of preloading all of them.",
+      "source_urls": [
+        "https://mcp.notion.com/mcp`"
+      ],
+      "last_verified_at": "2026-03-01",
       "source_file": "claude-code-faq.md"
     },
     {
@@ -1175,8 +1416,12 @@
       ],
       "category": "Claude Code FAQ",
       "subcategory": "Advanced Features (Agents & MCPs)",
+      "category_slug": "claude-code-faq",
+      "subcategory_slug": "advanced-features-agents-mcps",
       "question": "How can I get subagents to run in parallel instead of one by one?",
       "answer": "Claude Code supports both **foreground** (blocking) and **background** (concurrent) subagents. Claude decides whether to run subagents in the foreground or background based on the task, but you can influence this:\n\n- Ask explicitly: \"Run these tasks in parallel\" or \"Research the authentication, database, and API modules in parallel using separate subagents\"\n- Press **Ctrl+B** to background a currently running task\n- Ask Claude to \"run this in the background\"\n\nBackground subagents run concurrently while you continue working in your main conversation. Before launching, Claude Code prompts for any tool permissions the subagent will need upfront. When background subagents complete, their results return to your main conversation. Keep in mind that running many subagents that each return detailed results can consume significant context. For tasks requiring sustained parallelism or exceeding your context window, consider using **agent teams** (separate from subagents) which give each worker its own independent context. You can disable background tasks entirely by setting `CLAUDE_CODE_DISABLE_BACKGROUND_TASKS=1`.",
+      "source_urls": [],
+      "last_verified_at": "2026-03-01",
       "source_file": "claude-code-faq.md"
     },
     {
@@ -1200,8 +1445,15 @@
       ],
       "category": "Claude Code FAQ",
       "subcategory": "Advanced Features (Agents & MCPs)",
+      "category_slug": "claude-code-faq",
+      "subcategory_slug": "advanced-features-agents-mcps",
       "question": "How do I connect my own custom MCP server to Claude Code?",
       "answer": "To connect a custom MCP server, use the `claude mcp add` command with the appropriate transport type. For a **local stdio server** (runs as a process on your machine):\n\n```bash\nclaude mcp add --transport stdio my-server -- /path/to/your/server --any-flags\n```\n\nFor a **remote HTTP server**:\n\n```bash\nclaude mcp add --transport http my-server https://your-server-url.com/mcp\n```\n\nYou can pass environment variables with `--env KEY=value`, set authentication headers with `--header \"Authorization: Bearer token\"`, and choose the scope with `--scope` (local, project, or user). For JSON-based configuration, use `claude mcp add-json my-server '{\"type\":\"stdio\",\"command\":\"/path/to/server\",\"args\":[\"--config\",\"config.json\"]}'`. If you already have MCP servers configured in Claude Desktop, import them with `claude mcp add-from-claude-desktop`. Build custom MCP servers using the [MCP SDK](https://modelcontextprotocol.io/quickstart/server) in Python, TypeScript, or other supported languages.",
+      "source_urls": [
+        "https://modelcontextprotocol.io/quickstart/server",
+        "https://your-server-url.com/mcp"
+      ],
+      "last_verified_at": "2026-03-01",
       "source_file": "claude-code-faq.md"
     },
     {
@@ -1225,8 +1477,12 @@
       ],
       "category": "Claude Code FAQ",
       "subcategory": "Troubleshooting, Bugs, and Performance Issues",
+      "category_slug": "claude-code-faq",
+      "subcategory_slug": "troubleshooting-bugs-and-performance-issues",
       "question": "Why has Claude's personality changed? It feels colder/more robotic.",
       "answer": "Perceived personality changes in Claude Code can stem from several sources. **Model updates** are the most common cause -- Anthropic regularly releases updated model versions that may adjust tone, verbosity, or response style. The model powering your session depends on your plan and settings, and it can change without explicit notification. **System prompt changes** by Anthropic can also affect how Claude presents itself. **Conversation context** matters too -- if your session is long and has gone through auto-compaction, earlier context about conversational style may have been summarized away. Try starting a **fresh session**, checking which model you are using, and adding style preferences to your CLAUDE.md (e.g., \"Be conversational and friendly, use a casual but professional tone\"). If the change feels significant and persistent, it may correlate with a recent model update -- check Anthropic's release notes or community channels for confirmation.",
+      "source_urls": [],
+      "last_verified_at": "2026-03-01",
       "source_file": "claude-code-faq.md"
     },
     {
@@ -1250,8 +1506,12 @@
       ],
       "category": "Claude Code FAQ",
       "subcategory": "Troubleshooting, Bugs, and Performance Issues",
+      "category_slug": "claude-code-faq",
+      "subcategory_slug": "troubleshooting-bugs-and-performance-issues",
       "question": "Why does Claude say \"You're absolutely right!\" all the time, and how can I stop it?",
       "answer": "This is **sycophancy** -- a well-documented tendency in language models to agree with users rather than push back or provide critical feedback. Anthropic has actively worked to reduce sycophancy in recent Claude models, and the latest versions are described as the least sycophantic of any frontier model. However, it can still occur, especially when you present an opinion alongside a question. To reduce it:\n\n- Add to your CLAUDE.md: \"Never say phrases like 'You're absolutely right' or 'Great question.' Be direct and skip pleasantries. If I'm wrong, tell me.\"\n- Frame questions neutrally: Instead of \"I think we should use Redux, right?\" ask \"What are the pros and cons of using Redux vs. Context API for this use case?\"\n- Explicitly ask for disagreement: \"Play devil's advocate\" or \"What would a senior engineer criticize about this approach?\"\n- Use **custom subagents** with system prompts designed for critical code review rather than general assistance",
+      "source_urls": [],
+      "last_verified_at": "2026-03-01",
       "source_file": "claude-code-faq.md"
     },
     {
@@ -1275,8 +1535,12 @@
       ],
       "category": "Claude Code FAQ",
       "subcategory": "Troubleshooting, Bugs, and Performance Issues",
+      "category_slug": "claude-code-faq",
+      "subcategory_slug": "troubleshooting-bugs-and-performance-issues",
       "question": "How do I stop Claude from \"lying\" or falsely claiming a task is complete?",
       "answer": "Claude Code can sometimes report that a task is \"done\" when it has not actually finished or has only partially completed the work. This typically happens because of context limitations (Claude lost track of what was left), over-optimistic completion signals, or genuine hallucination about the state of the code. To mitigate this:\n\n- **Ask for verification**: \"Run the tests to confirm everything passes\" or \"Show me the diff of all changes you made\"\n- **Use concrete acceptance criteria**: \"The task is done when all tests pass, the linter shows no errors, and the feature works with these specific inputs\"\n- **Break tasks into small, verifiable steps** rather than one large task that is hard to verify\n- **Check the actual file changes** yourself after Claude claims completion -- review diffs before committing\n- **Use the `/commit` skill** or ask Claude to commit changes with a descriptive message, which forces it to summarize what was actually done\n- Add to your CLAUDE.md: \"Never claim a task is complete without verifying. Always run tests or demonstrate the result before reporting completion.\"",
+      "source_urls": [],
+      "last_verified_at": "2026-03-01",
       "source_file": "claude-code-faq.md"
     },
     {
@@ -1300,8 +1564,12 @@
       ],
       "category": "Claude Code FAQ",
       "subcategory": "Troubleshooting, Bugs, and Performance Issues",
+      "category_slug": "claude-code-faq",
+      "subcategory_slug": "troubleshooting-bugs-and-performance-issues",
       "question": "My Claude Code is running slowly or lagging. How can I fix it?",
       "answer": "Performance issues in Claude Code can have several causes:\n\n- **Long conversation context**: The most common cause. As your conversation grows, each new message must process the entire history. Use `/compact` to compress the context or start a fresh session.\n- **Large codebase scanning**: If Claude Code is reading many files in your project, this takes time and tokens. Add a `.claudeignore` file (similar to `.gitignore`) to exclude directories like `node_modules`, `dist`, `build`, or large data files.\n- **Network latency**: Claude Code communicates with Anthropic's servers for every interaction. Slow or unstable internet connections will cause delays.\n- **MCP server issues**: Malfunctioning or slow MCP servers can bottleneck Claude Code. Use `/mcp` to check server status and disconnect problematic ones.\n- **Multiple concurrent sessions**: Running several Claude Code instances simultaneously can hit rate limits, causing each session to slow down.\n- **High server demand**: During peak usage periods, response times may increase. Max plan subscribers receive priority access.",
+      "source_urls": [],
+      "last_verified_at": "2026-03-01",
       "source_file": "claude-code-faq.md"
     },
     {
@@ -1325,8 +1593,12 @@
       ],
       "category": "Claude Code FAQ",
       "subcategory": "Troubleshooting, Bugs, and Performance Issues",
+      "category_slug": "claude-code-faq",
+      "subcategory_slug": "troubleshooting-bugs-and-performance-issues",
       "question": "Why does Claude execute dangerous commands (like rm -rf) without asking permission?",
       "answer": "Claude Code has a **permission system** designed to prevent unauthorized dangerous actions. By default, it should prompt you for confirmation before running destructive commands. If Claude executed a dangerous command without permission, this may have happened because:\n\n- You are running in **`bypassPermissions`** mode or used the `--dangerously-skip-permissions` flag, which disables all permission checks\n- You previously approved a broad permission rule (like \"allow all Bash commands\") that persisted in your settings\n- A custom subagent was configured with `permissionMode: bypassPermissions`\n\nTo ensure safety: review your permission settings with `/permissions`, never use `--dangerously-skip-permissions` unless you fully understand the risks, be careful about granting broad \"always allow\" permissions, and use the `acceptEdits` permission mode if you want auto-approval for file edits only while still requiring approval for shell commands. If Claude executes a destructive command unexpectedly, report it as a bug through Anthropic's feedback channels. You can also use **hooks** (PreToolUse) to add custom validation before commands execute.",
+      "source_urls": [],
+      "last_verified_at": "2026-03-01",
       "source_file": "claude-code-faq.md"
     },
     {
@@ -1350,8 +1622,12 @@
       ],
       "category": "Claude Code FAQ",
       "subcategory": "Troubleshooting, Bugs, and Performance Issues",
+      "category_slug": "claude-code-faq",
+      "subcategory_slug": "troubleshooting-bugs-and-performance-issues",
       "question": "Why is my request being blocked for a \"Usage Policy violation\" for harmless topics?",
       "answer": "Claude's safety filters can sometimes produce **false positives**, blocking legitimate requests that contain keywords or patterns associated with harmful use cases. This is more likely when discussing topics like security research, medical information, historical events involving violence, creative writing with mature themes, or technical topics that overlap with restricted areas (like cryptography or network security). To work around false positives:\n\n- **Rephrase your request** with more context about your benign intent: \"For my cybersecurity course assignment, explain how SQL injection works so I can write defensive code\"\n- **Provide professional context**: Mention that you are a researcher, student, or professional working on a specific project\n- **Break the request into smaller parts** that are less likely to trigger filters individually\n- **Avoid red-flag keywords** that might be associated with harmful intent, even in benign contexts\n- If the issue persists and you believe it is a genuine false positive, **report it** through Anthropic's support channels or the feedback button -- this helps improve the filters for everyone",
+      "source_urls": [],
+      "last_verified_at": "2026-03-01",
       "source_file": "claude-code-faq.md"
     },
     {
@@ -1375,8 +1651,18 @@
       ],
       "category": "Claude Code FAQ",
       "subcategory": "Troubleshooting, Bugs, and Performance Issues",
+      "category_slug": "claude-code-faq",
+      "subcategory_slug": "troubleshooting-bugs-and-performance-issues",
       "question": "What are best practices for Remote Control when Claude Code runs on an Ubuntu box?",
       "answer": "Anthropic's official **Remote Control** workflow is to run Claude Code on a remote machine and control it from your local device. Recommended setup:\n\n- Follow the official setup guide for Linux first, then enable remote control: [docs.anthropic.com/en/docs/claude-code/setup](https://docs.anthropic.com/en/docs/claude-code/setup) and [docs.anthropic.com/en/docs/claude-code/remote-control](https://docs.anthropic.com/en/docs/claude-code/remote-control)\n- Use one repo checkout per task (via `git worktree`) so concurrent sessions do not mutate the same working tree\n- Keep long-running remote sessions inside `tmux`/`screen` so connection drops do not kill your active run\n- Use strict permissions (`/permissions`) and avoid broad \"always allow\" shell rules on shared or production boxes\n- Prefer a stable network path (SSH/VPN) and confirm service health at [status.anthropic.com](https://status.anthropic.com) when remote calls fail\n\nIf your workflow is primarily automation (non-interactive), use Anthropic's official CI/automation docs first: [docs.anthropic.com/en/docs/claude-code/github-actions](https://docs.anthropic.com/en/docs/claude-code/github-actions) and [docs.anthropic.com/en/docs/claude-code/sdk](https://docs.anthropic.com/en/docs/claude-code/sdk).",
+      "source_urls": [
+        "https://docs.anthropic.com/en/docs/claude-code/setup",
+        "https://docs.anthropic.com/en/docs/claude-code/remote-control",
+        "https://status.anthropic.com",
+        "https://docs.anthropic.com/en/docs/claude-code/github-actions",
+        "https://docs.anthropic.com/en/docs/claude-code/sdk"
+      ],
+      "last_verified_at": "2026-03-01",
       "source_file": "claude-code-faq.md"
     },
     {
@@ -1400,8 +1686,14 @@
       ],
       "category": "Claude Code FAQ",
       "subcategory": "Troubleshooting, Bugs, and Performance Issues",
+      "category_slug": "claude-code-faq",
+      "subcategory_slug": "troubleshooting-bugs-and-performance-issues",
       "question": "What is the proper branching setup for parallel agent workstreams?",
       "answer": "Anthropic's official tutorial recommends **parallel Claude sessions with Git worktrees**. The safest pattern is:\n\n1. Keep your main branch clean (`main`/`develop`)\n2. Create one feature branch per task\n3. Create one worktree per branch\n4. Run one Claude session per worktree\n5. Merge each branch via PR after tests pass\n\nThis avoids cross-task file collisions and is the most reliable way to run multiple agents in parallel. Reference: [docs.anthropic.com/en/docs/claude-code/tutorials](https://docs.anthropic.com/en/docs/claude-code/tutorials) (parallel sessions with worktrees).",
+      "source_urls": [
+        "https://docs.anthropic.com/en/docs/claude-code/tutorials"
+      ],
+      "last_verified_at": "2026-03-01",
       "source_file": "claude-code-faq.md"
     },
     {
@@ -1425,8 +1717,14 @@
       ],
       "category": "Claude Code FAQ",
       "subcategory": "Troubleshooting, Bugs, and Performance Issues",
+      "category_slug": "claude-code-faq",
+      "subcategory_slug": "troubleshooting-bugs-and-performance-issues",
       "question": "We saw Git index corruption after parallel agent setups. How should we handle it?",
       "answer": "There is no Claude-specific official doc for \"Git index corruption,\" but the usual root cause is multiple processes writing to the **same** `.git/index` in one working tree. The practical fix is to adopt Anthropic's worktree pattern for parallel runs so each agent has an isolated Git index: [docs.anthropic.com/en/docs/claude-code/tutorials](https://docs.anthropic.com/en/docs/claude-code/tutorials).\n\nIf corruption already happened:\n\n- Stop all concurrent sessions touching that repo\n- Validate repo health (`git fsck`)\n- Rebuild index from `HEAD` if needed (`rm .git/index && git reset`)\n- Move future parallel tasks to separate worktrees",
+      "source_urls": [
+        "https://docs.anthropic.com/en/docs/claude-code/tutorials"
+      ],
+      "last_verified_at": "2026-03-01",
       "source_file": "claude-code-faq.md"
     },
     {
@@ -1450,8 +1748,16 @@
       ],
       "category": "Claude Code FAQ",
       "subcategory": "Troubleshooting, Bugs, and Performance Issues",
+      "category_slug": "claude-code-faq",
+      "subcategory_slug": "troubleshooting-bugs-and-performance-issues",
       "question": "I'm getting \"upstream connect error or disconnect/reset before headers.\" What should I do?",
       "answer": "This usually indicates a network path or upstream service failure, not an application-level code error. Triage in this order:\n\n1. Check Anthropic service health first: [status.anthropic.com](https://status.anthropic.com)\n2. Retry from a clean session and stable network (disable flaky VPN/proxy hops)\n3. Run Claude Code diagnostics (`claude doctor`) and collect environment details\n4. If the issue persists, file a bug report with logs (`/bug`) and contact support with timestamps\n\nOfficial troubleshooting paths: [docs.anthropic.com/en/docs/claude-code/troubleshooting](https://docs.anthropic.com/en/docs/claude-code/troubleshooting), [support.claude.com/en/articles/9017053-how-can-i-contact-support](https://support.claude.com/en/articles/9017053-how-can-i-contact-support).",
+      "source_urls": [
+        "https://status.anthropic.com",
+        "https://docs.anthropic.com/en/docs/claude-code/troubleshooting",
+        "https://support.claude.com/en/articles/9017053-how-can-i-contact-support"
+      ],
+      "last_verified_at": "2026-03-01",
       "source_file": "claude-code-faq.md"
     },
     {
@@ -1475,8 +1781,15 @@
       ],
       "category": "Claude Code FAQ",
       "subcategory": "Troubleshooting, Bugs, and Performance Issues",
+      "category_slug": "claude-code-faq",
+      "subcategory_slug": "troubleshooting-bugs-and-performance-issues",
       "question": "I'm seeing segmentation faults or system-specific crashes in Claude Code. What are the official next steps?",
       "answer": "Use the official troubleshooting flow:\n\n- Update Claude Code to the latest version\n- Run `claude doctor`\n- Reproduce in a minimal shell/session (to isolate local environment issues)\n- Capture logs and open a bug report with repro steps\n\nOfficial references: [docs.anthropic.com/en/docs/claude-code/troubleshooting](https://docs.anthropic.com/en/docs/claude-code/troubleshooting), [github.com/anthropics/claude-code/issues/new/choose](https://github.com/anthropics/claude-code/issues/new/choose).",
+      "source_urls": [
+        "https://docs.anthropic.com/en/docs/claude-code/troubleshooting",
+        "https://github.com/anthropics/claude-code/issues/new/choose"
+      ],
+      "last_verified_at": "2026-03-01",
       "source_file": "claude-code-faq.md"
     },
     {
@@ -1500,8 +1813,15 @@
       ],
       "category": "Claude Code FAQ",
       "subcategory": "Troubleshooting, Bugs, and Performance Issues",
+      "category_slug": "claude-code-faq",
+      "subcategory_slug": "troubleshooting-bugs-and-performance-issues",
       "question": "The 1S8XB4M error persists. Is there an official fix?",
       "answer": "As of **March 1, 2026**, there is no public Anthropic document that maps `1S8XB4M` to a published root cause or one-click fix. Treat it as a support/debug signal and escalate with full context:\n\n- Exact timestamp and timezone\n- Surface used (CLI, desktop, web, remote control, API)\n- Repro steps and frequency\n- Output of `claude doctor`\n- Relevant logs and request IDs\n\nThen submit through `/bug` and support: [docs.anthropic.com/en/docs/claude-code/troubleshooting](https://docs.anthropic.com/en/docs/claude-code/troubleshooting), [support.claude.com/en/articles/9017053-how-can-i-contact-support](https://support.claude.com/en/articles/9017053-how-can-i-contact-support).",
+      "source_urls": [
+        "https://docs.anthropic.com/en/docs/claude-code/troubleshooting",
+        "https://support.claude.com/en/articles/9017053-how-can-i-contact-support"
+      ],
+      "last_verified_at": "2026-03-01",
       "source_file": "claude-code-faq.md"
     },
     {
@@ -1525,8 +1845,15 @@
       ],
       "category": "Claude Code FAQ",
       "subcategory": "Troubleshooting, Bugs, and Performance Issues",
+      "category_slug": "claude-code-faq",
+      "subcategory_slug": "troubleshooting-bugs-and-performance-issues",
       "question": "Where should I submit Claude Code feature requests, wishlists, and bug reports?",
       "answer": "Use these official channels:\n\n- **Claude Code product bugs/features**: GitHub issues and feature requests at [github.com/anthropics/claude-code/issues/new/choose](https://github.com/anthropics/claude-code/issues/new/choose)\n- **Runtime bug report from the CLI**: use `/bug` and include reproducible steps\n- **Account, subscription, or billing matters**: Anthropic support messenger at [support.claude.com/en/articles/9017053-how-can-i-contact-support](https://support.claude.com/en/articles/9017053-how-can-i-contact-support)",
+      "source_urls": [
+        "https://github.com/anthropics/claude-code/issues/new/choose",
+        "https://support.claude.com/en/articles/9017053-how-can-i-contact-support"
+      ],
+      "last_verified_at": "2026-03-01",
       "source_file": "claude-code-faq.md"
     },
     {
@@ -1550,8 +1877,12 @@
       ],
       "category": "Claude's Capabilities & Usage",
       "subcategory": "Model Comparisons and Capabilities",
+      "category_slug": "claudes-capabilities-usage",
+      "subcategory_slug": "model-comparisons-and-capabilities",
       "question": "Which Claude model is best for my task (Opus vs. Sonnet vs. Haiku)?",
       "answer": "Claude comes in three model tiers, each designed for different use cases. Here is a comparison of the latest models:\n\n**Claude Opus 4.6** (most intelligent):\n- Anthropic's flagship model for the most complex tasks, especially agent workflows and coding\n- **API pricing**: $5/million input tokens, $25/million output tokens\n- **Context window**: 200K tokens (1M tokens available in beta)\n- **Max output**: 128K tokens\n- **Knowledge cutoff**: Reliable through May 2025, training data through August 2025\n- Supports extended thinking and adaptive thinking\n- Best for: complex reasoning, multi-step coding tasks, agentic workflows, nuanced analysis, and tasks where accuracy is critical\n- Trade-off: moderate latency, highest computational cost\n\n**Claude Sonnet 4.5** (balanced):\n- The best combination of speed and intelligence for everyday tasks\n- **API pricing**: $3/million input tokens, $15/million output tokens\n- **Context window**: 200K tokens (1M tokens available in beta)\n- **Max output**: 64K tokens\n- **Knowledge cutoff**: Reliable through January 2025, training data through July 2025\n- Supports extended thinking\n- Best for: general coding, writing, analysis, and most professional tasks where you need strong performance with fast responses\n- Trade-off: slightly less capable than Opus on the hardest tasks\n\n**Claude Haiku 4.5** (fastest):\n- The fastest model with near-frontier intelligence at a fraction of the cost\n- **API pricing**: $1/million input tokens, $5/million output tokens\n- **Context window**: 200K tokens\n- **Max output**: 64K tokens\n- **Knowledge cutoff**: Reliable through February 2025, training data through July 2025\n- Supports extended thinking\n- Best for: simple questions, quick lookups, high-volume tasks, cost-sensitive applications, and situations where speed matters more than peak reasoning\n- Trade-off: less capable on complex, nuanced tasks\n\nAs a rule of thumb: start with **Sonnet** for most tasks, upgrade to **Opus** when you need peak reasoning or are working on complex agentic coding, and use **Haiku** for simple/fast tasks and cost-sensitive applications.",
+      "source_urls": [],
+      "last_verified_at": "2026-03-01",
       "source_file": "claude-usage.md"
     },
     {
@@ -1575,8 +1906,12 @@
       ],
       "category": "Claude's Capabilities & Usage",
       "subcategory": "Model Comparisons and Capabilities",
+      "category_slug": "claudes-capabilities-usage",
+      "subcategory_slug": "model-comparisons-and-capabilities",
       "question": "How does Claude compare to ChatGPT, Gemini, and other models for coding?",
       "answer": "Claude is widely regarded as one of the strongest AI models for coding tasks. On the **SWE-bench** benchmark (which measures real-world software engineering capability), Claude has consistently scored among the top models. Claude's specific coding strengths include:\n\n- **Code analysis and debugging**: Claude excels at tracing through code to find root causes of bugs and suggesting targeted fixes\n- **Multi-file refactoring**: With its large context window (200K-1M tokens), Claude can hold entire codebases in context and make coherent changes across multiple files\n- **Code review**: Provides thorough, nuanced feedback on code quality, security, and best practices\n- **Architecture and design**: Strong at discussing trade-offs between different approaches and recommending patterns\n- **Claude Code as an agentic tool**: Unlike ChatGPT's code interpreter (which runs isolated code snippets), Claude Code can read your actual project, edit files directly, run your tests and build commands, and create git commits and PRs\n\nCompared to **ChatGPT**: Claude tends to produce fewer errors on complex algorithms and is more conservative (it will tell you when it is unsure rather than generating confidently incorrect code). ChatGPT has a broader plugin ecosystem and can run code in a sandboxed environment. Compared to **Gemini**: Google's model offers deeper integration with Google services and a massive native context window, but Claude generally produces higher-quality code with fewer hallucinated API calls or non-existent methods.",
+      "source_urls": [],
+      "last_verified_at": "2026-03-01",
       "source_file": "claude-usage.md"
     },
     {
@@ -1600,8 +1935,12 @@
       ],
       "category": "Claude's Capabilities & Usage",
       "subcategory": "Model Comparisons and Capabilities",
+      "category_slug": "claudes-capabilities-usage",
+      "subcategory_slug": "model-comparisons-and-capabilities",
       "question": "How does Claude compare for creative writing and conversation?",
       "answer": "Claude has earned a strong reputation for **creative writing** quality. Its writing tends to feel more natural and human-like, with less of the \"AI voice\" that plagues some competitors. Specific strengths include:\n\n- **Nuanced, natural dialogue**: Claude produces conversational prose that reads as genuinely thoughtful rather than formulaic\n- **Long-form consistency**: With its large context window, Claude maintains character voices, plot threads, and thematic coherence across extended pieces\n- **Collaborative editing**: Claude is skilled at refining and improving existing writing while preserving the author's original voice and intent\n- **Analytical and technical writing**: Produces well-structured research summaries, technical documentation, and explanatory content\n- **Tone flexibility**: Can adapt to a wide range of styles from formal academic to casual blog to literary fiction\n\nCompared to **ChatGPT**, Claude's writing is often described as more subtle and less prone to repetitive patterns or the \"here are 5 things\" listicle structure. ChatGPT tends to be more enthusiastic and creative in brainstorming, while Claude provides more measured, thoughtful responses. Compared to **Gemini**, Claude generally produces more polished prose, though Gemini can draw on more current information through its Google integration. Claude's main limitation in creative writing is that it may be overly cautious with certain mature themes due to its safety guardrails.",
+      "source_urls": [],
+      "last_verified_at": "2026-03-01",
       "source_file": "claude-usage.md"
     },
     {
@@ -1625,8 +1964,12 @@
       ],
       "category": "Claude's Capabilities & Usage",
       "subcategory": "Model Comparisons and Capabilities",
+      "category_slug": "claudes-capabilities-usage",
+      "subcategory_slug": "model-comparisons-and-capabilities",
       "question": "Which programming languages does Claude perform best with?",
       "answer": "Claude performs well across a broad range of programming languages, with performance roughly correlating to the language's representation in training data. The strongest languages include:\n\n- **Python**: Excellent -- Claude's best language by most accounts. Strong across web development, data science, machine learning, scripting, and automation\n- **JavaScript / TypeScript**: Excellent -- comprehensive knowledge of modern frameworks (React, Next.js, Vue, Node.js, Bun), testing patterns, and the npm ecosystem\n- **Java / Kotlin**: Very good -- strong enterprise application knowledge, Spring framework, Android development\n- **C / C++**: Very good -- systems programming, embedded systems, performance-critical code\n- **Go**: Very good -- server-side development, concurrency patterns, cloud-native tooling\n- **Rust**: Good -- Claude understands ownership/borrowing and Rust idioms well, though it may occasionally suggest less idiomatic patterns on niche use cases since Rust has less training data than Python or JavaScript\n- **SQL**: Very good -- complex queries, database design, optimization across PostgreSQL, MySQL, SQLite, and others\n- **Swift / Objective-C**: Good -- iOS/macOS development\n- **Ruby, PHP, C#, Scala**: Good -- solid general knowledge with occasional gaps in framework-specific edge cases\n- **Shell (Bash/Zsh)**: Very good -- scripting, system administration, CLI tools\n\nPerformance may vary on less common languages (Haskell, Erlang, Elixir, Zig, etc.) due to smaller training data representation, but Claude can still be helpful for these languages, especially with provided documentation or examples.",
+      "source_urls": [],
+      "last_verified_at": "2026-03-01",
       "source_file": "claude-usage.md"
     },
     {
@@ -1650,8 +1993,12 @@
       ],
       "category": "Claude's Capabilities & Usage",
       "subcategory": "Model Comparisons and Capabilities",
+      "category_slug": "claudes-capabilities-usage",
+      "subcategory_slug": "model-comparisons-and-capabilities",
       "question": "Can Claude generate images?",
       "answer": "**No, Claude cannot generate, create, edit, or produce images.** This is one of Claude's most significant limitations compared to some competitors. Claude can only:\n\n- **Analyze images** you share with it (describe what it sees, answer questions about visual content)\n- **Read text** from images (OCR-like capabilities for screenshots, documents, signs)\n- **Discuss image concepts** and suggest ideas for images you could create with other tools\n- **Generate text-based visualizations** like ASCII art, Mermaid diagrams, or SVG code that renders as graphics\n\nFor actual image generation, you will need to use other AI tools such as **DALL-E / GPT-4o** (via ChatGPT), **Midjourney**, **Stable Diffusion**, **Flux**, **Google Gemini** (which has native image generation), or specialized tools like **Ideogram** or **Kontext**. If you need both image generation and Claude's text/coding capabilities, you could use Claude for the text/code work and a separate tool for image creation.",
+      "source_urls": [],
+      "last_verified_at": "2026-03-01",
       "source_file": "claude-usage.md"
     },
     {
@@ -1675,8 +2022,12 @@
       ],
       "category": "Claude's Capabilities & Usage",
       "subcategory": "Model Comparisons and Capabilities",
+      "category_slug": "claudes-capabilities-usage",
+      "subcategory_slug": "model-comparisons-and-capabilities",
       "question": "What is the Projects feature and how do I use it?",
       "answer": "**Projects** is a feature available on **Pro, Max, Team, and Enterprise** plans that lets you create persistent workspaces within Claude. Each Project can contain:\n\n- **Custom instructions**: Persistent guidance that applies to every conversation within the project (similar to a system prompt). For example, \"Always respond in a formal academic tone\" or \"You are an expert Python developer reviewing code for a healthcare application\"\n- **Uploaded knowledge**: Documents, code files, style guides, or reference materials that Claude can access throughout all conversations in the project. You can upload up to a certain file size limit per project\n- **Conversation history**: All conversations within a project are organized together for easy reference\n\nProjects are useful for ongoing work where you need Claude to maintain consistent context -- for example, a coding project where Claude needs to know your style guide and architecture, a writing project where Claude needs to maintain a character bible, or a research project where Claude needs access to specific papers. You **cannot** currently convert an existing standalone conversation into a Project -- you need to create the Project first and then start conversations within it. Projects are not available on the Free plan.",
+      "source_urls": [],
+      "last_verified_at": "2026-03-01",
       "source_file": "claude-usage.md"
     },
     {
@@ -1700,8 +2051,18 @@
       ],
       "category": "Claude's Capabilities & Usage",
       "subcategory": "API Implementation and Integration",
+      "category_slug": "claudes-capabilities-usage",
+      "subcategory_slug": "api-implementation-and-integration",
       "question": "What is the official starting point for Anthropic API implementation?",
       "answer": "Start with Anthropic's official API docs in this order:\n\n1. **Get API access and keys**: [console.anthropic.com](https://console.anthropic.com)\n2. **Messages API overview and reference**: [docs.anthropic.com/en/api/messages](https://docs.anthropic.com/en/api/messages)\n3. **Developer docs and guides**: [docs.anthropic.com/en/docs/welcome](https://docs.anthropic.com/en/docs/welcome)\n4. **Official client SDKs**: [github.com/anthropics/anthropic-sdk-typescript](https://github.com/anthropics/anthropic-sdk-typescript), [github.com/anthropics/anthropic-sdk-python](https://github.com/anthropics/anthropic-sdk-python)\n\nFor production integrations, make sure you implement retries, timeouts, rate-limit handling, structured logging, and cost/usage monitoring in the Anthropic Console.",
+      "source_urls": [
+        "https://console.anthropic.com",
+        "https://docs.anthropic.com/en/api/messages",
+        "https://docs.anthropic.com/en/docs/welcome",
+        "https://github.com/anthropics/anthropic-sdk-typescript",
+        "https://github.com/anthropics/anthropic-sdk-python"
+      ],
+      "last_verified_at": "2026-03-01",
       "source_file": "claude-usage.md"
     },
     {
@@ -1725,8 +2086,16 @@
       ],
       "category": "Claude's Capabilities & Usage",
       "subcategory": "API Implementation and Integration",
+      "category_slug": "claudes-capabilities-usage",
+      "subcategory_slug": "api-implementation-and-integration",
       "question": "Where can I find official guidance for automation and background workflows?",
       "answer": "For Claude Code automation and CI-style integrations, use Anthropic's official docs:\n\n- Claude Code SDK / programmatic control: [docs.anthropic.com/en/docs/claude-code/sdk](https://docs.anthropic.com/en/docs/claude-code/sdk)\n- GitHub Actions automation: [docs.anthropic.com/en/docs/claude-code/github-actions](https://docs.anthropic.com/en/docs/claude-code/github-actions)\n- Agent SDK overview: [docs.anthropic.com/en/docs/agent-sdk/overview](https://docs.anthropic.com/en/docs/agent-sdk/overview)",
+      "source_urls": [
+        "https://docs.anthropic.com/en/docs/claude-code/sdk",
+        "https://docs.anthropic.com/en/docs/claude-code/github-actions",
+        "https://docs.anthropic.com/en/docs/agent-sdk/overview"
+      ],
+      "last_verified_at": "2026-03-01",
       "source_file": "claude-usage.md"
     },
     {
@@ -1750,8 +2119,12 @@
       ],
       "category": "Claude's Capabilities & Usage",
       "subcategory": "Privacy and Data Safety",
+      "category_slug": "claudes-capabilities-usage",
+      "subcategory_slug": "privacy-and-data-safety",
       "question": "Is my data safe? Does Anthropic use my conversations for training?",
       "answer": "Anthropic's data handling policies differ significantly depending on how you use Claude:\n\n**Consumer plans (Free, Pro, Max)**: As of September 28, 2025, Anthropic updated its privacy policy to allow the use of consumer conversation data for model training **by default**. Users can **opt out** of data training in their account privacy settings. If you opt out, your data is retained for **30 days** (for trust and safety purposes) and then deleted. If you opt in (or do not change the default), your contributed data may be retained for up to **five years**. Deleted conversations are not used for future model training regardless of your opt-in status.\n\n**API usage**: Conversations through the Anthropic API are **never used for model training**. API data is retained for a limited period for abuse monitoring and then deleted. This includes Claude Code when used with an API key.\n\n**Business plans (Team, Enterprise, Claude for Work, Claude Gov, Claude for Education)**: These plans maintain stronger privacy protections. Data is **not used for training** and is subject to enterprise-grade data handling agreements.\n\n**Claude Code on consumer plans**: When using Claude Code through a Pro or Max subscription, the same consumer data policy applies -- your interactions may be used for training unless you opt out.\n\nTo maximize privacy: opt out of data training in your privacy settings, use the API for sensitive work, consider Team or Enterprise plans for business-critical data, and avoid sharing sensitive personal information, credentials, or proprietary code in conversations if data training is a concern.",
+      "source_urls": [],
+      "last_verified_at": "2026-03-01",
       "source_file": "claude-usage.md"
     },
     {
@@ -1775,8 +2148,15 @@
       ],
       "category": "Claude's Capabilities & Usage",
       "subcategory": "Privacy and Data Safety",
+      "category_slug": "claudes-capabilities-usage",
+      "subcategory_slug": "privacy-and-data-safety",
       "question": "What data does Anthropic collect and retain?",
       "answer": "Anthropic collects and retains different types of data depending on the context:\n\n- **Account information**: Email address, name, payment details, and account settings\n- **Conversation data**: Your messages and Claude's responses. Retention varies: 30 days if opted out of training, up to 5 years if opted in, different retention for API vs. consumer vs. business plans\n- **Usage metadata**: Information about how you use the service (which features, when, how often) for product improvement and analytics\n- **Feedback data**: Any ratings, bug reports, or feedback you provide\n- **Trust and safety logs**: Records retained for detecting and preventing misuse\n\nOn the API, conversations are retained for a short period (typically 30 days) for abuse monitoring and then deleted. On business plans, data retention is governed by your specific contract terms. Anthropic does **not** sell user data to third parties. For the most current and detailed information, review Anthropic's [Privacy Policy](https://www.anthropic.com/privacy) and [Terms of Service](https://www.anthropic.com/terms).",
+      "source_urls": [
+        "https://www.anthropic.com/privacy",
+        "https://www.anthropic.com/terms"
+      ],
+      "last_verified_at": "2026-03-01",
       "source_file": "claude-usage.md"
     },
     {
@@ -1800,8 +2180,12 @@
       ],
       "category": "Claude's Capabilities & Usage",
       "subcategory": "Privacy and Data Safety",
+      "category_slug": "claudes-capabilities-usage",
+      "subcategory_slug": "privacy-and-data-safety",
       "question": "How does Claude handle sensitive information like code, medical data, or personal details?",
       "answer": "Claude processes your inputs to generate responses but does not have persistent memory between conversations (unless you use Projects or CLAUDE.md features). For sensitive data:\n\n- **Proprietary code**: If using consumer plans with default settings, your code could be used for training. Use the API, opt out of training, or use Team/Enterprise plans for proprietary code\n- **Medical information**: Claude can discuss medical topics for informational purposes but is not a medical device or substitute for professional medical advice. Do not share real patient data without appropriate data handling agreements (Enterprise plan)\n- **Personal information**: Avoid sharing sensitive personal data (SSNs, financial account numbers, passwords) in conversations. Claude does not need this information to help you, and sharing it creates unnecessary risk\n- **Credentials and API keys**: Never paste API keys, passwords, or tokens into Claude conversations. If you accidentally share credentials, rotate them immediately\n\nFor organizations handling sensitive data at scale, the **Enterprise** plan provides custom data retention, compliance certifications (SOC 2, HIPAA eligibility), and dedicated security agreements.",
+      "source_urls": [],
+      "last_verified_at": "2026-03-01",
       "source_file": "claude-usage.md"
     },
     {
@@ -1825,9 +2209,1525 @@
       ],
       "category": "Claude's Capabilities & Usage",
       "subcategory": "Privacy and Data Safety",
+      "category_slug": "claudes-capabilities-usage",
+      "subcategory_slug": "privacy-and-data-safety",
       "question": "Is there a difference between how the API and claude.ai handle my data?",
       "answer": "Yes, there are significant differences:\n\n**claude.ai (consumer web/app)**:\n- Conversations may be used for model training (unless you opt out)\n- Data retained for 30 days (opted out) or up to 5 years (opted in)\n- Subject to consumer Terms of Service and Privacy Policy\n- Anthropic staff may review conversations for trust and safety purposes\n\n**Anthropic API (console.anthropic.com)**:\n- Conversations are **never** used for model training\n- Data retained for a short period (typically 30 days) for abuse monitoring only\n- Subject to API Terms of Service with stronger data protections\n- Zero-data-retention options available for eligible customers\n- Suitable for production applications that handle user data\n\n**Third-party platforms (AWS Bedrock, Google Vertex AI)**:\n- Data handling governed by the respective cloud provider's terms\n- Generally provide enterprise-grade data isolation\n- Data is not shared with Anthropic for training purposes\n\nIf data privacy is important to your use case, the API or a business plan provides stronger protections than the consumer web interface.",
+      "source_urls": [],
+      "last_verified_at": "2026-03-01",
       "source_file": "claude-usage.md"
+    },
+    {
+      "slug": "update-payment-method-email",
+      "tags": [
+        "account",
+        "support",
+        "payment",
+        "email",
+        "billing",
+        "paid",
+        "update",
+        "method",
+        "disabled",
+        "followups",
+        "cannot",
+        "access",
+        "tied",
+        "messenger",
+        "flow"
+      ],
+      "category": "Community Ingested Questions FAQ",
+      "subcategory": "Account, Billing, and Support Follow-ups",
+      "category_slug": "community-ingested-questions-faq",
+      "subcategory_slug": "account-billing-and-support-follow-ups",
+      "question": "How do I update my payment method if my email account is disabled?",
+      "answer": "If you cannot access the email tied to billing, use the support messenger flow and choose the login/access path so support can validate account ownership and payment details safely. Avoid creating duplicate paid accounts while this is unresolved.\n\nSee: [How to Get Support](https://support.claude.com/en/articles/9015913-how-to-get-support), [Cancel paid Claude subscription](https://support.claude.com/en/articles/8325617-how-do-i-cancel-my-paid-claude-subscription)",
+      "source_urls": [
+        "https://support.claude.com/en/articles/9015913-how-to-get-support",
+        "https://support.claude.com/en/articles/8325617-how-do-i-cancel-my-paid-claude-subscription"
+      ],
+      "last_verified_at": "2026-03-01",
+      "source_file": "community-ingested-faq.md"
+    },
+    {
+      "slug": "account-charged-850-hours",
+      "tags": [
+        "billing",
+        "account",
+        "support",
+        "charged",
+        "850",
+        "hours",
+        "followups",
+        "large",
+        "spikes",
+        "usually",
+        "come",
+        "overlapping",
+        "paid",
+        "surfaces",
+        "api"
+      ],
+      "category": "Community Ingested Questions FAQ",
+      "subcategory": "Account, Billing, and Support Follow-ups",
+      "category_slug": "community-ingested-questions-faq",
+      "subcategory_slug": "account-billing-and-support-follow-ups",
+      "question": "Why was my account charged $850 in 2 hours?",
+      "answer": "Large spikes usually come from overlapping paid surfaces: API usage, Claude consumer subscription billing, app-store billing, or automation loops. First isolate which billing surface generated the charge, then collect timestamps, receipts, and request/job IDs before opening support.\n\nSee: [How to Get Support](https://support.claude.com/en/articles/9015913-how-to-get-support), [Rate limits](https://docs.anthropic.com/en/api/rate-limits), [Create a Message Batch](https://docs.anthropic.com/en/api/creating-message-batches)",
+      "source_urls": [
+        "https://support.claude.com/en/articles/9015913-how-to-get-support",
+        "https://docs.anthropic.com/en/api/rate-limits",
+        "https://docs.anthropic.com/en/api/creating-message-batches"
+      ],
+      "last_verified_at": "2026-03-01",
+      "source_file": "community-ingested-faq.md"
+    },
+    {
+      "slug": "long-take-response-support",
+      "tags": [
+        "response",
+        "support",
+        "followups",
+        "long",
+        "take",
+        "account",
+        "billing",
+        "anthropic",
+        "publish",
+        "universal",
+        "sla",
+        "plansissues",
+        "speed",
+        "depends",
+        "plan"
+      ],
+      "category": "Community Ingested Questions FAQ",
+      "subcategory": "Account, Billing, and Support Follow-ups",
+      "category_slug": "community-ingested-questions-faq",
+      "subcategory_slug": "account-billing-and-support-follow-ups",
+      "question": "How long does it take to get a response from support?",
+      "answer": "Anthropic does not publish a universal response SLA for all plans/issues. Response speed depends on plan type, queue volume, and issue severity. For best triage, provide one clean ticket with complete details instead of many fragmented follow-ups.\n\nSee: [How to Get Support](https://support.claude.com/en/articles/9015913-how-to-get-support)",
+      "source_urls": [
+        "https://support.claude.com/en/articles/9015913-how-to-get-support"
+      ],
+      "last_verified_at": "2026-03-01",
+      "source_file": "community-ingested-faq.md"
+    },
+    {
+      "slug": "emails-supportanthropiccom-bounce",
+      "tags": [
+        "support",
+        "emails",
+        "supportanthropiccom",
+        "bounce",
+        "account",
+        "billing",
+        "followups",
+        "email",
+        "routing",
+        "fail",
+        "due",
+        "senderdomain",
+        "restrictions",
+        "mailbox",
+        "policies"
+      ],
+      "category": "Community Ingested Questions FAQ",
+      "subcategory": "Account, Billing, and Support Follow-ups",
+      "category_slug": "community-ingested-questions-faq",
+      "subcategory_slug": "account-billing-and-support-follow-ups",
+      "question": "Why do my emails to support@anthropic.com bounce?",
+      "answer": "Email routing can fail due to sender-domain restrictions, mailbox policies, or unsupported intake paths. The most reliable route is the in-product/help-center support messenger, which can escalate to the human Product Support team.\n\nSee: [How to Get Support](https://support.claude.com/en/articles/9015913-how-to-get-support)",
+      "source_urls": [
+        "https://support.claude.com/en/articles/9015913-how-to-get-support"
+      ],
+      "last_verified_at": "2026-03-01",
+      "source_file": "community-ingested-faq.md"
+    },
+    {
+      "slug": "often-support-take-respond",
+      "tags": [
+        "support",
+        "ticket",
+        "often",
+        "take",
+        "respond",
+        "account",
+        "billing",
+        "followups",
+        "timing",
+        "varies",
+        "queue",
+        "load",
+        "type",
+        "single",
+        "fixed"
+      ],
+      "category": "Community Ingested Questions FAQ",
+      "subcategory": "Account, Billing, and Support Follow-ups",
+      "category_slug": "community-ingested-questions-faq",
+      "subcategory_slug": "account-billing-and-support-follow-ups",
+      "question": "How often does support take to respond?",
+      "answer": "Support timing varies by queue load and ticket type. There is no single fixed response time for all users. If it is urgent, keep one canonical ticket and include clear evidence, exact timestamps, and reproduction details.\n\nSee: [How to Get Support](https://support.claude.com/en/articles/9015913-how-to-get-support)",
+      "source_urls": [
+        "https://support.claude.com/en/articles/9015913-how-to-get-support"
+      ],
+      "last_verified_at": "2026-03-01",
+      "source_file": "community-ingested-faq.md"
+    },
+    {
+      "slug": "often-claude-updated",
+      "tags": [
+        "claude",
+        "release",
+        "updates",
+        "changes",
+        "often",
+        "updated",
+        "account",
+        "billing",
+        "support",
+        "followups",
+        "fixed",
+        "public",
+        "cadence",
+        "happen",
+        "anthropic"
+      ],
+      "category": "Community Ingested Questions FAQ",
+      "subcategory": "Account, Billing, and Support Follow-ups",
+      "category_slug": "community-ingested-questions-faq",
+      "subcategory_slug": "account-billing-and-support-follow-ups",
+      "question": "How often does Claude get updated?",
+      "answer": "There is no fixed public release cadence. Updates happen when Anthropic ships model changes, app changes, and policy updates. Track release notes/changelog rather than assuming weekly or monthly schedules.\n\nSee: [Claude release notes](https://docs.anthropic.com/en/release-notes/claude-apps), [Claude changelog](https://claude.ai/changelog)",
+      "source_urls": [
+        "https://docs.anthropic.com/en/release-notes/claude-apps",
+        "https://claude.ai/changelog"
+      ],
+      "last_verified_at": "2026-03-01",
+      "source_file": "community-ingested-faq.md"
+    },
+    {
+      "slug": "claude-code-segfaulting-wsl",
+      "tags": [
+        "claude",
+        "code",
+        "wsl",
+        "shell",
+        "segfaulting",
+        "windows",
+        "subsystem",
+        "linux",
+        "installation",
+        "runtime",
+        "crashes",
+        "usually",
+        "environmentruntime",
+        "issues",
+        "incompatible"
+      ],
+      "category": "Community Ingested Questions FAQ",
+      "subcategory": "Claude Code Installation and Runtime",
+      "category_slug": "community-ingested-questions-faq",
+      "subcategory_slug": "claude-code-installation-and-runtime",
+      "question": "Why is Claude Code segfaulting on WSL (Windows Subsystem for Linux)?",
+      "answer": "WSL crashes are usually environment/runtime issues: incompatible shell setup, outdated dependencies, or corrupted installs. Start with `claude doctor`, update Claude Code, and test in a minimal WSL shell without heavy startup scripts.\n\nSee: [Set up Claude Code](https://docs.anthropic.com/en/docs/claude-code/getting-started), [Claude Code troubleshooting](https://docs.anthropic.com/en/docs/claude-code/troubleshooting)",
+      "source_urls": [
+        "https://docs.anthropic.com/en/docs/claude-code/getting-started",
+        "https://docs.anthropic.com/en/docs/claude-code/troubleshooting"
+      ],
+      "last_verified_at": "2026-03-01",
+      "source_file": "community-ingested-faq.md"
+    },
+    {
+      "slug": "whats-fix-bun-version",
+      "tags": [
+        "claude",
+        "code",
+        "bun",
+        "fix",
+        "runtime",
+        "whats",
+        "version",
+        "issue",
+        "1310",
+        "segfaults",
+        "installation",
+        "single",
+        "universal",
+        "published",
+        "segfault"
+      ],
+      "category": "Community Ingested Questions FAQ",
+      "subcategory": "Claude Code Installation and Runtime",
+      "category_slug": "community-ingested-questions-faq",
+      "subcategory_slug": "claude-code-installation-and-runtime",
+      "question": "What's the fix for the bun version issue (1.3.10 segfaults)?",
+      "answer": "There is no single universal fix published for every Bun segfault case. If a specific Bun build crashes on your system, test a known-good runtime path, reinstall Claude Code cleanly, capture `claude doctor` output, and file a bug with reproducible steps.\n\nSee: [Set up Claude Code](https://docs.anthropic.com/en/docs/claude-code/getting-started), [Claude Code troubleshooting](https://docs.anthropic.com/en/docs/claude-code/troubleshooting), [Claude Code issues](https://github.com/anthropics/claude-code/issues/new/choose)",
+      "source_urls": [
+        "https://docs.anthropic.com/en/docs/claude-code/getting-started",
+        "https://docs.anthropic.com/en/docs/claude-code/troubleshooting",
+        "https://github.com/anthropics/claude-code/issues/new/choose"
+      ],
+      "last_verified_at": "2026-03-01",
+      "source_file": "community-ingested-faq.md"
+    },
+    {
+      "slug": "install-claude-code-different",
+      "tags": [
+        "claude",
+        "code",
+        "install",
+        "different",
+        "operating",
+        "systems",
+        "installation",
+        "runtime",
+        "anthropics",
+        "setup",
+        "guide",
+        "osspecific",
+        "instructions",
+        "supported",
+        "paths"
+      ],
+      "category": "Community Ingested Questions FAQ",
+      "subcategory": "Claude Code Installation and Runtime",
+      "category_slug": "community-ingested-questions-faq",
+      "subcategory_slug": "claude-code-installation-and-runtime",
+      "question": "How do I install Claude Code on different operating systems?",
+      "answer": "Use Anthropic's setup guide for OS-specific instructions. Supported paths include macOS, Ubuntu/Debian Linux, and Windows (WSL or Git Bash based workflows).\n\nSee: [Set up Claude Code](https://docs.anthropic.com/en/docs/claude-code/getting-started)",
+      "source_urls": [
+        "https://docs.anthropic.com/en/docs/claude-code/getting-started"
+      ],
+      "last_verified_at": "2026-03-01",
+      "source_file": "community-ingested-faq.md"
+    },
+    {
+      "slug": "systems-nodejs-instead-bundled",
+      "tags": [
+        "claude",
+        "code",
+        "installation",
+        "runtime",
+        "systems",
+        "nodejs",
+        "instead",
+        "bundled",
+        "bun",
+        "official",
+        "guidance",
+        "npmnodebased",
+        "supported",
+        "installer",
+        "flows"
+      ],
+      "category": "Community Ingested Questions FAQ",
+      "subcategory": "Claude Code Installation and Runtime",
+      "category_slug": "community-ingested-questions-faq",
+      "subcategory_slug": "claude-code-installation-and-runtime",
+      "question": "How do I use my system's Node.js instead of the bundled bun?",
+      "answer": "Official installation guidance is npm/Node-based with supported installer flows. If you need a custom runtime arrangement, validate with `claude doctor` and use the documented install/migrate paths rather than ad-hoc binary swaps.\n\nSee: [Set up Claude Code](https://docs.anthropic.com/en/docs/claude-code/getting-started), [Claude Code troubleshooting](https://docs.anthropic.com/en/docs/claude-code/troubleshooting)",
+      "source_urls": [
+        "https://docs.anthropic.com/en/docs/claude-code/getting-started",
+        "https://docs.anthropic.com/en/docs/claude-code/troubleshooting"
+      ],
+      "last_verified_at": "2026-03-01",
+      "source_file": "community-ingested-faq.md"
+    },
+    {
+      "slug": "system-requirements-claude-code",
+      "tags": [
+        "claude",
+        "requirements",
+        "code",
+        "system",
+        "installation",
+        "runtime",
+        "current",
+        "documented",
+        "include",
+        "modern",
+        "macoslinuxwindows",
+        "support",
+        "nodejs",
+        "enough",
+        "memorycpu"
+      ],
+      "category": "Community Ingested Questions FAQ",
+      "subcategory": "Claude Code Installation and Runtime",
+      "category_slug": "community-ingested-questions-faq",
+      "subcategory_slug": "claude-code-installation-and-runtime",
+      "question": "What are the system requirements for Claude Code?",
+      "answer": "Current documented requirements include modern macOS/Linux/Windows support, Node.js 18+, and enough memory/CPU for local tooling. Network access is required for authentication and model interactions.\n\nSee: [Set up Claude Code](https://docs.anthropic.com/en/docs/claude-code/getting-started)",
+      "source_urls": [
+        "https://docs.anthropic.com/en/docs/claude-code/getting-started"
+      ],
+      "last_verified_at": "2026-03-01",
+      "source_file": "community-ingested-faq.md"
+    },
+    {
+      "slug": "claude-code-handle-file",
+      "tags": [
+        "claude",
+        "code",
+        "context",
+        "handle",
+        "file",
+        "indexing",
+        "workflow",
+        "capabilities",
+        "primarily",
+        "reads",
+        "files",
+        "demand",
+        "tool",
+        "calls",
+        "rather"
+      ],
+      "category": "Community Ingested Questions FAQ",
+      "subcategory": "Claude Code Workflow and Capabilities",
+      "category_slug": "community-ingested-questions-faq",
+      "subcategory_slug": "claude-code-workflow-and-capabilities",
+      "question": "How does Claude Code handle file indexing?",
+      "answer": "Claude Code primarily reads files and context on demand through tool calls rather than relying on a single permanent \"full-project index\" that always stays loaded. Large projects still need scope controls (`.claudeignore`, focused tasks, subagents) to keep context efficient.\n\nSee: [Set up Claude Code](https://docs.anthropic.com/en/docs/claude-code/getting-started), [Connect Claude Code to tools via MCP](https://docs.anthropic.com/en/docs/claude-code/mcp)",
+      "source_urls": [
+        "https://docs.anthropic.com/en/docs/claude-code/getting-started",
+        "https://docs.anthropic.com/en/docs/claude-code/mcp"
+      ],
+      "last_verified_at": "2026-03-01",
+      "source_file": "community-ingested-faq.md"
+    },
+    {
+      "slug": "claude-code-automatically-accept",
+      "tags": [
+        "claude",
+        "code",
+        "prompting",
+        "automatically",
+        "accept",
+        "permissions",
+        "without",
+        "workflow",
+        "capabilities",
+        "care",
+        "configure",
+        "permission",
+        "behavior",
+        "broad",
+        "autoapproval"
+      ],
+      "category": "Community Ingested Questions FAQ",
+      "subcategory": "Claude Code Workflow and Capabilities",
+      "category_slug": "community-ingested-questions-faq",
+      "subcategory_slug": "claude-code-workflow-and-capabilities",
+      "question": "Can Claude Code automatically accept permissions without prompting?",
+      "answer": "Yes, with care. You can configure permission behavior, but broad auto-approval increases risk. Prefer narrower modes (for example auto-accepting edits while still prompting for shell commands) instead of blanket command execution approval.\n\nSee: [Claude Code troubleshooting](https://docs.anthropic.com/en/docs/claude-code/troubleshooting)",
+      "source_urls": [
+        "https://docs.anthropic.com/en/docs/claude-code/troubleshooting"
+      ],
+      "last_verified_at": "2026-03-01",
+      "source_file": "community-ingested-faq.md"
+    },
+    {
+      "slug": "claude-code-different-databases",
+      "tags": [
+        "code",
+        "claude",
+        "databases",
+        "via",
+        "different",
+        "firebase",
+        "postgresql",
+        "etc",
+        "workflow",
+        "capabilities",
+        "work",
+        "many",
+        "editing",
+        "app",
+        "directly"
+      ],
+      "category": "Community Ingested Questions FAQ",
+      "subcategory": "Claude Code Workflow and Capabilities",
+      "category_slug": "community-ingested-questions-faq",
+      "subcategory_slug": "claude-code-workflow-and-capabilities",
+      "question": "Can I use Claude Code with different databases (Firebase, PostgreSQL, etc.)?",
+      "answer": "Yes. Claude Code can work with many databases by editing your app code directly, using CLI tooling, or connecting external systems via MCP servers. Practical reliability depends on your own project architecture, credentials handling, and migration discipline.\n\nSee: [Connect Claude Code to tools via MCP](https://docs.anthropic.com/en/docs/claude-code/mcp)",
+      "source_urls": [
+        "https://docs.anthropic.com/en/docs/claude-code/mcp"
+      ],
+      "last_verified_at": "2026-03-01",
+      "source_file": "community-ingested-faq.md"
+    },
+    {
+      "slug": "whats-best-way-structure",
+      "tags": [
+        "claude",
+        "code",
+        "whats",
+        "best",
+        "way",
+        "structure",
+        "projects",
+        "workflow",
+        "capabilities",
+        "keep",
+        "one",
+        "repositoryworktree",
+        "per",
+        "task",
+        "add"
+      ],
+      "category": "Community Ingested Questions FAQ",
+      "subcategory": "Claude Code Workflow and Capabilities",
+      "category_slug": "community-ingested-questions-faq",
+      "subcategory_slug": "claude-code-workflow-and-capabilities",
+      "question": "What's the best way to structure projects in Claude Code?",
+      "answer": "Keep one repository/worktree per task, add a clear `CLAUDE.md` with coding conventions, and separate planning/implementation/verification sessions to limit context drift. For teams, standardize scripts and acceptance criteria so agent output is predictable.\n\nSee: [Claude Code tutorials](https://docs.anthropic.com/en/docs/claude-code/tutorials), [Set up Claude Code](https://docs.anthropic.com/en/docs/claude-code/getting-started)",
+      "source_urls": [
+        "https://docs.anthropic.com/en/docs/claude-code/tutorials",
+        "https://docs.anthropic.com/en/docs/claude-code/getting-started"
+      ],
+      "last_verified_at": "2026-03-01",
+      "source_file": "community-ingested-faq.md"
+    },
+    {
+      "slug": "permissions-claude-code-need",
+      "tags": [
+        "claude",
+        "code",
+        "access",
+        "permissions",
+        "need",
+        "workflow",
+        "capabilities",
+        "minimum",
+        "filesystem",
+        "project",
+        "shell",
+        "commands",
+        "approve",
+        "network",
+        "apitool"
+      ],
+      "category": "Community Ingested Questions FAQ",
+      "subcategory": "Claude Code Workflow and Capabilities",
+      "category_slug": "community-ingested-questions-faq",
+      "subcategory_slug": "claude-code-workflow-and-capabilities",
+      "question": "What permissions does Claude Code need?",
+      "answer": "At minimum: filesystem access to your project, shell access for commands you approve, and network access for API/tool operations. Least-privilege is best: restrict scope, avoid dangerous persistent permissions, and review command execution settings regularly.\n\nSee: [Claude Code troubleshooting](https://docs.anthropic.com/en/docs/claude-code/troubleshooting)",
+      "source_urls": [
+        "https://docs.anthropic.com/en/docs/claude-code/troubleshooting"
+      ],
+      "last_verified_at": "2026-03-01",
+      "source_file": "community-ingested-faq.md"
+    },
+    {
+      "slug": "automate-permission-acceptance",
+      "tags": [
+        "permission",
+        "claude",
+        "code",
+        "automate",
+        "acceptance",
+        "workflow",
+        "capabilities",
+        "reduce",
+        "prompts",
+        "via",
+        "configuration",
+        "full",
+        "unattended",
+        "command",
+        "reserved"
+      ],
+      "category": "Community Ingested Questions FAQ",
+      "subcategory": "Claude Code Workflow and Capabilities",
+      "category_slug": "community-ingested-questions-faq",
+      "subcategory_slug": "claude-code-workflow-and-capabilities",
+      "question": "Can I automate permission acceptance?",
+      "answer": "You can reduce prompts via permission configuration, but full unattended command permission should be reserved for tightly controlled automation contexts. In most development sessions, keep shell execution gated and explicit.\n\nSee: [Claude Code troubleshooting](https://docs.anthropic.com/en/docs/claude-code/troubleshooting)",
+      "source_urls": [
+        "https://docs.anthropic.com/en/docs/claude-code/troubleshooting"
+      ],
+      "last_verified_at": "2026-03-01",
+      "source_file": "community-ingested-faq.md"
+    },
+    {
+      "slug": "share-projects-built-claude",
+      "tags": [
+        "claude",
+        "code",
+        "share",
+        "projects",
+        "built",
+        "workflow",
+        "capabilities",
+        "normal",
+        "softwaresharing",
+        "channels",
+        "githubgitlab",
+        "repos",
+        "demos",
+        "docs",
+        "deployment"
+      ],
+      "category": "Community Ingested Questions FAQ",
+      "subcategory": "Claude Code Workflow and Capabilities",
+      "category_slug": "community-ingested-questions-faq",
+      "subcategory_slug": "claude-code-workflow-and-capabilities",
+      "question": "How do I share projects built with Claude Code?",
+      "answer": "Use normal software-sharing channels: GitHub/GitLab repos, demos, docs, and deployment URLs. Claude Code is a development tool, so project sharing is typically done through source control and release pipelines.\n\nSee: [Claude Code tutorials](https://docs.anthropic.com/en/docs/claude-code/tutorials)",
+      "source_urls": [
+        "https://docs.anthropic.com/en/docs/claude-code/tutorials"
+      ],
+      "last_verified_at": "2026-03-01",
+      "source_file": "community-ingested-faq.md"
+    },
+    {
+      "slug": "paymentidentity-tools-work-claude",
+      "tags": [
+        "claude",
+        "paymentidentity",
+        "tools",
+        "code",
+        "via",
+        "work",
+        "workflow",
+        "capabilities",
+        "itself",
+        "modelapi",
+        "infrastructure",
+        "stacks",
+        "selected",
+        "app",
+        "architecture"
+      ],
+      "category": "Community Ingested Questions FAQ",
+      "subcategory": "Claude Code Workflow and Capabilities",
+      "category_slug": "community-ingested-questions-faq",
+      "subcategory_slug": "claude-code-workflow-and-capabilities",
+      "question": "What payment/identity tools work with Claude?",
+      "answer": "Claude itself is model/API infrastructure; payment/identity stacks are selected by your app architecture. Common integrations are done via your backend or MCP-based tool connections, with security and compliance handled by your system design.\n\nSee: [Connect Claude Code to tools via MCP](https://docs.anthropic.com/en/docs/claude-code/mcp), [Messages API](https://docs.anthropic.com/en/api/messages)",
+      "source_urls": [
+        "https://docs.anthropic.com/en/docs/claude-code/mcp",
+        "https://docs.anthropic.com/en/api/messages"
+      ],
+      "last_verified_at": "2026-03-01",
+      "source_file": "community-ingested-faq.md"
+    },
+    {
+      "slug": "integrate-claude-telegram",
+      "tags": [
+        "claude",
+        "telegram",
+        "bot",
+        "api",
+        "messages",
+        "service",
+        "rate",
+        "integrate",
+        "code",
+        "workflow",
+        "capabilities",
+        "side",
+        "call",
+        "anthropics",
+        "backend"
+      ],
+      "category": "Community Ingested Questions FAQ",
+      "subcategory": "Claude Code Workflow and Capabilities",
+      "category_slug": "community-ingested-questions-faq",
+      "subcategory_slug": "claude-code-workflow-and-capabilities",
+      "question": "Can I integrate Claude with Telegram?",
+      "answer": "Yes. Use Telegram Bot API on your side and call Anthropic's Messages API from your backend service. Handle rate limits, retries, moderation, and logging explicitly in your bot service layer.\n\nSee: [Messages API](https://docs.anthropic.com/en/api/messages), [Rate limits](https://docs.anthropic.com/en/api/rate-limits)",
+      "source_urls": [
+        "https://docs.anthropic.com/en/api/messages",
+        "https://docs.anthropic.com/en/api/rate-limits"
+      ],
+      "last_verified_at": "2026-03-01",
+      "source_file": "community-ingested-faq.md"
+    },
+    {
+      "slug": "whats-latest-claude-model",
+      "tags": [
+        "models",
+        "claude",
+        "model",
+        "release",
+        "whats",
+        "latest",
+        "available",
+        "updates",
+        "safety",
+        "availability",
+        "changes",
+        "over",
+        "time",
+        "anthropics",
+        "page"
+      ],
+      "category": "Community Ingested Questions FAQ",
+      "subcategory": "Models, Updates, and Safety",
+      "category_slug": "community-ingested-questions-faq",
+      "subcategory_slug": "models-updates-and-safety",
+      "question": "What's the latest Claude model available?",
+      "answer": "Model availability changes over time. Use Anthropic's models page and release notes for the current answer rather than relying on static community posts.\n\nSee: [Models overview](https://docs.anthropic.com/en/docs/about-claude/models/all-models), [Claude release notes](https://docs.anthropic.com/en/release-notes/claude-apps)",
+      "source_urls": [
+        "https://docs.anthropic.com/en/docs/about-claude/models/all-models",
+        "https://docs.anthropic.com/en/release-notes/claude-apps"
+      ],
+      "last_verified_at": "2026-03-01",
+      "source_file": "community-ingested-faq.md"
+    },
+    {
+      "slug": "claude-new-updatesversions",
+      "tags": [
+        "claude",
+        "release",
+        "new",
+        "updatesversions",
+        "models",
+        "updates",
+        "safety",
+        "anthropic",
+        "publish",
+        "fixed",
+        "public",
+        "schedule",
+        "model",
+        "app",
+        "surface"
+      ],
+      "category": "Community Ingested Questions FAQ",
+      "subcategory": "Models, Updates, and Safety",
+      "category_slug": "community-ingested-questions-faq",
+      "subcategory_slug": "models-updates-and-safety",
+      "question": "When will Claude get new updates/versions?",
+      "answer": "Anthropic does not publish a fixed public release schedule for every model or app surface. Monitor release notes/changelog for authoritative timing.\n\nSee: [Claude release notes](https://docs.anthropic.com/en/release-notes/claude-apps), [Claude changelog](https://claude.ai/changelog)",
+      "source_urls": [
+        "https://docs.anthropic.com/en/release-notes/claude-apps",
+        "https://claude.ai/changelog"
+      ],
+      "last_verified_at": "2026-03-01",
+      "source_file": "community-ingested-faq.md"
+    },
+    {
+      "slug": "claude-handle-political-nuanced",
+      "tags": [
+        "safety",
+        "claude",
+        "handle",
+        "nuanced",
+        "topics",
+        "political",
+        "models",
+        "updates",
+        "designed",
+        "guardrails",
+        "aims",
+        "balanced",
+        "policyaligned",
+        "responses",
+        "refuse"
+      ],
+      "category": "Community Ingested Questions FAQ",
+      "subcategory": "Models, Updates, and Safety",
+      "category_slug": "community-ingested-questions-faq",
+      "subcategory_slug": "models-updates-and-safety",
+      "question": "How does Claude handle political or nuanced topics?",
+      "answer": "Claude is designed to handle nuanced topics with safety guardrails. It aims for balanced, policy-aligned responses and may refuse or constrain outputs that violate safety rules.\n\nSee: [Constitutional AI and safety research](https://www.anthropic.com/news), [Model behavior docs](https://docs.anthropic.com/en/docs/welcome)",
+      "source_urls": [
+        "https://www.anthropic.com/news",
+        "https://docs.anthropic.com/en/docs/welcome"
+      ],
+      "last_verified_at": "2026-03-01",
+      "source_file": "community-ingested-faq.md"
+    },
+    {
+      "slug": "claudes-vision-capabilities",
+      "tags": [
+        "models",
+        "claude",
+        "claudes",
+        "vision",
+        "capabilities",
+        "updates",
+        "safety",
+        "supports",
+        "image",
+        "understanding",
+        "example",
+        "screenshotsdocumentsphotos",
+        "reason",
+        "over",
+        "visual"
+      ],
+      "category": "Community Ingested Questions FAQ",
+      "subcategory": "Models, Updates, and Safety",
+      "category_slug": "community-ingested-questions-faq",
+      "subcategory_slug": "models-updates-and-safety",
+      "question": "What are Claude's vision capabilities?",
+      "answer": "Claude supports image understanding (for example screenshots/documents/photos) and can reason over visual inputs provided in supported surfaces/APIs. Claude does not natively generate images.\n\nSee: [Models overview](https://docs.anthropic.com/en/docs/about-claude/models/all-models), [Messages API](https://docs.anthropic.com/en/api/messages)",
+      "source_urls": [
+        "https://docs.anthropic.com/en/docs/about-claude/models/all-models",
+        "https://docs.anthropic.com/en/api/messages"
+      ],
+      "last_verified_at": "2026-03-01",
+      "source_file": "community-ingested-faq.md"
+    },
+    {
+      "slug": "ai-development-governed-regulated",
+      "tags": [
+        "safety",
+        "policy",
+        "anthropic",
+        "governance",
+        "development",
+        "governed",
+        "regulated",
+        "models",
+        "updates",
+        "question",
+        "product",
+        "toggle",
+        "many",
+        "organizations",
+        "including"
+      ],
+      "category": "Community Ingested Questions FAQ",
+      "subcategory": "Models, Updates, and Safety",
+      "category_slug": "community-ingested-questions-faq",
+      "subcategory_slug": "models-updates-and-safety",
+      "question": "Should AI development be governed or regulated?",
+      "answer": "This is a policy question, not a product toggle. Many organizations, including Anthropic, publish safety frameworks and support risk-based governance discussions. Practical governance depends on jurisdiction and use case.\n\nSee: [Anthropic news and policy posts](https://www.anthropic.com/news)",
+      "source_urls": [
+        "https://www.anthropic.com/news"
+      ],
+      "last_verified_at": "2026-03-01",
+      "source_file": "community-ingested-faq.md"
+    },
+    {
+      "slug": "claude-forced-break-guidelines",
+      "tags": [
+        "claude",
+        "safety",
+        "forced",
+        "break",
+        "guidelines",
+        "models",
+        "updates",
+        "reliable",
+        "method",
+        "assumed",
+        "includes",
+        "training",
+        "policy",
+        "enforcement",
+        "attempts"
+      ],
+      "category": "Community Ingested Questions FAQ",
+      "subcategory": "Models, Updates, and Safety",
+      "category_slug": "community-ingested-questions-faq",
+      "subcategory_slug": "models-updates-and-safety",
+      "question": "Can Claude be forced to break its guidelines?",
+      "answer": "No reliable method should be assumed. Claude includes safety training and policy enforcement; attempts to bypass guardrails are expected to fail or be constrained.\n\nSee: [Model behavior docs](https://docs.anthropic.com/en/docs/welcome)",
+      "source_urls": [
+        "https://docs.anthropic.com/en/docs/welcome"
+      ],
+      "last_verified_at": "2026-03-01",
+      "source_file": "community-ingested-faq.md"
+    },
+    {
+      "slug": "1m-token-context-window",
+      "tags": [
+        "context",
+        "window",
+        "token",
+        "work",
+        "caching",
+        "streaming",
+        "modelsurface",
+        "dependent",
+        "limited",
+        "specific",
+        "betas",
+        "product",
+        "configurations",
+        "always",
+        "confirm"
+      ],
+      "category": "Community Ingested Questions FAQ",
+      "subcategory": "Context Window, Caching, and Streaming",
+      "category_slug": "community-ingested-questions-faq",
+      "subcategory_slug": "context-window-caching-and-streaming",
+      "question": "How does the 1M token context window work?",
+      "answer": "1M context is model/surface dependent and may be limited to specific betas or product configurations. Always confirm support in the model docs for your exact environment before planning around it.\n\nSee: [Models overview](https://docs.anthropic.com/en/docs/about-claude/models/all-models)",
+      "source_urls": [
+        "https://docs.anthropic.com/en/docs/about-claude/models/all-models"
+      ],
+      "last_verified_at": "2026-03-01",
+      "source_file": "community-ingested-faq.md"
+    },
+    {
+      "slug": "whats-prompt-caching",
+      "tags": [
+        "prompt",
+        "caching",
+        "api",
+        "whats",
+        "context",
+        "window",
+        "streaming",
+        "lets",
+        "reuse",
+        "stable",
+        "prefixes",
+        "reduce",
+        "latency",
+        "cost",
+        "repeated"
+      ],
+      "category": "Community Ingested Questions FAQ",
+      "subcategory": "Context Window, Caching, and Streaming",
+      "category_slug": "community-ingested-questions-faq",
+      "subcategory_slug": "context-window-caching-and-streaming",
+      "question": "What's prompt caching and how do I use it?",
+      "answer": "Prompt caching lets the API reuse stable prompt prefixes to reduce latency and cost on repeated workloads. You enable it by adding `cache_control` blocks in the Messages API request.\n\nSee: [Prompt caching](https://docs.anthropic.com/en/docs/build-with-claude/prompt-caching)",
+      "source_urls": [
+        "https://docs.anthropic.com/en/docs/build-with-claude/prompt-caching"
+      ],
+      "last_verified_at": "2026-03-01",
+      "source_file": "community-ingested-faq.md"
+    },
+    {
+      "slug": "prompt-caching-work",
+      "tags": [
+        "prompt",
+        "caching",
+        "work",
+        "context",
+        "window",
+        "streaming",
+        "api",
+        "stores",
+        "reusable",
+        "prefixes",
+        "short",
+        "lifetime",
+        "reads",
+        "matching",
+        "followup"
+      ],
+      "category": "Community Ingested Questions FAQ",
+      "subcategory": "Context Window, Caching, and Streaming",
+      "category_slug": "community-ingested-questions-faq",
+      "subcategory_slug": "context-window-caching-and-streaming",
+      "question": "How does prompt caching work?",
+      "answer": "The API stores reusable prompt prefixes for a short lifetime and reads them on matching follow-up requests. Cache effectiveness depends on how consistently you structure the prefix and reuse it across calls.\n\nSee: [Prompt caching](https://docs.anthropic.com/en/docs/build-with-claude/prompt-caching)",
+      "source_urls": [
+        "https://docs.anthropic.com/en/docs/build-with-claude/prompt-caching"
+      ],
+      "last_verified_at": "2026-03-01",
+      "source_file": "community-ingested-faq.md"
+    },
+    {
+      "slug": "cache-usage-high",
+      "tags": [
+        "cache",
+        "usage",
+        "high",
+        "caching",
+        "prefixes",
+        "prompt",
+        "context",
+        "window",
+        "streaming",
+        "usually",
+        "means",
+        "application",
+        "large",
+        "frequently",
+        "refreshing"
+      ],
+      "category": "Community Ingested Questions FAQ",
+      "subcategory": "Context Window, Caching, and Streaming",
+      "category_slug": "community-ingested-questions-faq",
+      "subcategory_slug": "context-window-caching-and-streaming",
+      "question": "Why is my cache usage so high?",
+      "answer": "High cache usage usually means your application is caching large prefixes frequently or refreshing many near-duplicate contexts. Audit prompt layout and only cache truly stable prefixes.\n\nSee: [Prompt caching](https://docs.anthropic.com/en/docs/build-with-claude/prompt-caching)",
+      "source_urls": [
+        "https://docs.anthropic.com/en/docs/build-with-claude/prompt-caching"
+      ],
+      "last_verified_at": "2026-03-01",
+      "source_file": "community-ingested-faq.md"
+    },
+    {
+      "slug": "reduce-token-usage-caching",
+      "tags": [
+        "caching",
+        "prompt",
+        "cache",
+        "reduce",
+        "token",
+        "usage",
+        "context",
+        "window",
+        "streaming",
+        "move",
+        "stable",
+        "instructionscontext",
+        "cached",
+        "prefixes",
+        "minimize"
+      ],
+      "category": "Community Ingested Questions FAQ",
+      "subcategory": "Context Window, Caching, and Streaming",
+      "category_slug": "community-ingested-questions-faq",
+      "subcategory_slug": "context-window-caching-and-streaming",
+      "question": "How can I reduce token usage with caching?",
+      "answer": "Move stable instructions/context to cached prefixes, minimize prompt churn before cache breakpoints, and avoid repeatedly sending large variable blocks that invalidate cache reuse.\n\nSee: [Prompt caching](https://docs.anthropic.com/en/docs/build-with-claude/prompt-caching), [Manage costs effectively](https://docs.anthropic.com/en/docs/claude-code/costs)",
+      "source_urls": [
+        "https://docs.anthropic.com/en/docs/build-with-claude/prompt-caching",
+        "https://docs.anthropic.com/en/docs/claude-code/costs"
+      ],
+      "last_verified_at": "2026-03-01",
+      "source_file": "community-ingested-faq.md"
+    },
+    {
+      "slug": "whats-cache-drive-feature",
+      "tags": [
+        "cache",
+        "drive",
+        "feature",
+        "caching",
+        "prompt",
+        "whats",
+        "context",
+        "window",
+        "streaming",
+        "widely",
+        "documented",
+        "official",
+        "anthropic",
+        "named",
+        "time"
+      ],
+      "category": "Community Ingested Questions FAQ",
+      "subcategory": "Context Window, Caching, and Streaming",
+      "category_slug": "community-ingested-questions-faq",
+      "subcategory_slug": "context-window-caching-and-streaming",
+      "question": "What's the cache drive feature?",
+      "answer": "There is no widely documented official Anthropic feature named \"cache drive\" at this time. Most references are to API prompt caching behavior, not a separate storage product.\n\nSee: [Prompt caching](https://docs.anthropic.com/en/docs/build-with-claude/prompt-caching)",
+      "source_urls": [
+        "https://docs.anthropic.com/en/docs/build-with-claude/prompt-caching"
+      ],
+      "last_verified_at": "2026-03-01",
+      "source_file": "community-ingested-faq.md"
+    },
+    {
+      "slug": "streaming-mode-claude",
+      "tags": [
+        "streaming",
+        "api",
+        "messages",
+        "mode",
+        "claude",
+        "context",
+        "window",
+        "caching",
+        "calls",
+        "set",
+        "consume",
+        "serversent",
+        "events",
+        "sse",
+        "incrementally"
+      ],
+      "category": "Community Ingested Questions FAQ",
+      "subcategory": "Context Window, Caching, and Streaming",
+      "category_slug": "community-ingested-questions-faq",
+      "subcategory_slug": "context-window-caching-and-streaming",
+      "question": "How do I use streaming mode with Claude?",
+      "answer": "For API calls, set streaming in Messages API and consume server-sent events (SSE) incrementally. SDKs provide helper abstractions for streaming text/events.\n\nSee: [Streaming](https://docs.anthropic.com/en/docs/build-with-claude/streaming), [Messages API](https://docs.anthropic.com/en/api/messages)",
+      "source_urls": [
+        "https://docs.anthropic.com/en/docs/build-with-claude/streaming",
+        "https://docs.anthropic.com/en/api/messages"
+      ],
+      "last_verified_at": "2026-03-01",
+      "source_file": "community-ingested-faq.md"
+    },
+    {
+      "slug": "whats-stream-json-interface",
+      "tags": [
+        "streaming",
+        "streamjson",
+        "anthropic",
+        "whats",
+        "interface",
+        "context",
+        "window",
+        "caching",
+        "usually",
+        "applicationside",
+        "parser",
+        "pattern",
+        "separate",
+        "product",
+        "surface"
+      ],
+      "category": "Community Ingested Questions FAQ",
+      "subcategory": "Context Window, Caching, and Streaming",
+      "category_slug": "community-ingested-questions-faq",
+      "subcategory_slug": "context-window-caching-and-streaming",
+      "question": "What's the stream-json interface?",
+      "answer": "\"stream-json\" is usually an application-side streaming parser pattern, not a separate Anthropic product surface. Anthropic officially documents SSE-based streaming events; JSON chunk handling is implemented in your client code.\n\nSee: [Streaming](https://docs.anthropic.com/en/docs/build-with-claude/streaming)",
+      "source_urls": [
+        "https://docs.anthropic.com/en/docs/build-with-claude/streaming"
+      ],
+      "last_verified_at": "2026-03-01",
+      "source_file": "community-ingested-faq.md"
+    },
+    {
+      "slug": "real-time-responses-claude",
+      "tags": [
+        "streaming",
+        "responses",
+        "realtime",
+        "claude",
+        "context",
+        "window",
+        "caching",
+        "api",
+        "tokensevents",
+        "arrive",
+        "progressively",
+        "chat",
+        "products",
+        "combine",
+        "backpressure"
+      ],
+      "category": "Community Ingested Questions FAQ",
+      "subcategory": "Context Window, Caching, and Streaming",
+      "category_slug": "community-ingested-questions-faq",
+      "subcategory_slug": "context-window-caching-and-streaming",
+      "question": "Can I get real-time responses from Claude?",
+      "answer": "Yes. Use streaming API responses so tokens/events arrive progressively. For chat products, combine streaming with backpressure handling and reconnect-safe client logic.\n\nSee: [Streaming](https://docs.anthropic.com/en/docs/build-with-claude/streaming), [Messages API](https://docs.anthropic.com/en/api/messages)",
+      "source_urls": [
+        "https://docs.anthropic.com/en/docs/build-with-claude/streaming",
+        "https://docs.anthropic.com/en/api/messages"
+      ],
+      "last_verified_at": "2026-03-01",
+      "source_file": "community-ingested-faq.md"
+    },
+    {
+      "slug": "create-session-type-profiles-different",
+      "tags": [
+        "claude",
+        "create",
+        "sessiontype",
+        "profiles",
+        "different",
+        "cases",
+        "context",
+        "window",
+        "caching",
+        "streaming",
+        "via",
+        "projectlevel",
+        "instructions",
+        "claudemd",
+        "custom"
+      ],
+      "category": "Community Ingested Questions FAQ",
+      "subcategory": "Context Window, Caching, and Streaming",
+      "category_slug": "community-ingested-questions-faq",
+      "subcategory_slug": "context-window-caching-and-streaming",
+      "question": "Can I create session-type profiles for different use cases?",
+      "answer": "Yes, via project-level instructions (`CLAUDE.md`), custom subagents, and task-specific workflows. Keep each profile narrowly scoped (for example reviewer, planner, implementer) to improve consistency.\n\nSee: [Set up Claude Code](https://docs.anthropic.com/en/docs/claude-code/getting-started), [Claude Code tutorials](https://docs.anthropic.com/en/docs/claude-code/tutorials)",
+      "source_urls": [
+        "https://docs.anthropic.com/en/docs/claude-code/getting-started",
+        "https://docs.anthropic.com/en/docs/claude-code/tutorials"
+      ],
+      "last_verified_at": "2026-03-01",
+      "source_file": "community-ingested-faq.md"
+    },
+    {
+      "slug": "firebase-look-alternatives",
+      "tags": [
+        "firebase",
+        "alternatives",
+        "requirements",
+        "look",
+        "databases",
+        "backend",
+        "architecture",
+        "depends",
+        "fast",
+        "start",
+        "teams",
+        "stricter",
+        "sql",
+        "workflows",
+        "compliance"
+      ],
+      "category": "Community Ingested Questions FAQ",
+      "subcategory": "Databases and Backend Architecture",
+      "category_slug": "community-ingested-questions-faq",
+      "subcategory_slug": "databases-and-backend-architecture",
+      "question": "Should I use Firebase or look for alternatives?",
+      "answer": "It depends on requirements: Firebase is fast to start, but teams with stricter SQL workflows, compliance rules, or lock-in concerns may prefer alternatives. Decide from requirements first (auth model, query patterns, portability, cost envelope).\n\nSee: [Messages API](https://docs.anthropic.com/en/api/messages)",
+      "source_urls": [
+        "https://docs.anthropic.com/en/api/messages"
+      ],
+      "last_verified_at": "2026-03-01",
+      "source_file": "community-ingested-faq.md"
+    },
+    {
+      "slug": "security-issues-firebase",
+      "tags": [
+        "security",
+        "firebase",
+        "rules",
+        "issues",
+        "databases",
+        "backend",
+        "architecture",
+        "largest",
+        "risk",
+        "usually",
+        "misconfigured",
+        "overly",
+        "permissive",
+        "client",
+        "access"
+      ],
+      "category": "Community Ingested Questions FAQ",
+      "subcategory": "Databases and Backend Architecture",
+      "category_slug": "community-ingested-questions-faq",
+      "subcategory_slug": "databases-and-backend-architecture",
+      "question": "What are the security issues with Firebase?",
+      "answer": "The largest risk is usually misconfigured security rules and overly permissive client access, not Firebase itself. Treat rules, auth boundaries, and privileged operations as production security controls.\n\nSee: [Firebase security rules docs](https://firebase.google.com/docs/rules)",
+      "source_urls": [
+        "https://firebase.google.com/docs/rules"
+      ],
+      "last_verified_at": "2026-03-01",
+      "source_file": "community-ingested-faq.md"
+    },
+    {
+      "slug": "set-database-claude-code",
+      "tags": [
+        "claude",
+        "code",
+        "set",
+        "database",
+        "databases",
+        "backend",
+        "architecture",
+        "scaffold",
+        "schemamigrationsconfig",
+        "apply",
+        "standard",
+        "engineering",
+        "controls",
+        "migrations",
+        "version"
+      ],
+      "category": "Community Ingested Questions FAQ",
+      "subcategory": "Databases and Backend Architecture",
+      "category_slug": "community-ingested-questions-faq",
+      "subcategory_slug": "databases-and-backend-architecture",
+      "question": "How do I set up a database with Claude Code?",
+      "answer": "Use Claude Code to scaffold schema/migrations/config, but apply standard engineering controls: migrations in version control, environment-specific secrets, and staged deployment validation.\n\nSee: [Claude Code tutorials](https://docs.anthropic.com/en/docs/claude-code/tutorials), [Connect Claude Code to tools via MCP](https://docs.anthropic.com/en/docs/claude-code/mcp)",
+      "source_urls": [
+        "https://docs.anthropic.com/en/docs/claude-code/tutorials",
+        "https://docs.anthropic.com/en/docs/claude-code/mcp"
+      ],
+      "last_verified_at": "2026-03-01",
+      "source_file": "community-ingested-faq.md"
+    },
+    {
+      "slug": "build-full-stack-app-claude",
+      "tags": [
+        "claude",
+        "code",
+        "firebase",
+        "backend",
+        "architecture",
+        "build",
+        "fullstack",
+        "app",
+        "databases",
+        "many",
+        "teams",
+        "accelerate",
+        "both",
+        "frontend",
+        "tasks"
+      ],
+      "category": "Community Ingested Questions FAQ",
+      "subcategory": "Databases and Backend Architecture",
+      "category_slug": "community-ingested-questions-faq",
+      "subcategory_slug": "databases-and-backend-architecture",
+      "question": "Can I build a full-stack app with Claude Code and Firebase?",
+      "answer": "Yes. Many teams use Claude Code to accelerate both frontend and backend tasks with Firebase. Reliability still depends on your architecture, testing, and security rule quality.\n\nSee: [Claude Code tutorials](https://docs.anthropic.com/en/docs/claude-code/tutorials), [Firebase docs](https://firebase.google.com/docs)",
+      "source_urls": [
+        "https://docs.anthropic.com/en/docs/claude-code/tutorials",
+        "https://firebase.google.com/docs"
+      ],
+      "last_verified_at": "2026-03-01",
+      "source_file": "community-ingested-faq.md"
+    },
+    {
+      "slug": "whats-cheapest-database-option",
+      "tags": [
+        "cheapest",
+        "whats",
+        "database",
+        "option",
+        "claude",
+        "code",
+        "projects",
+        "databases",
+        "backend",
+        "architecture",
+        "tiny",
+        "prototypes",
+        "local",
+        "sqlite",
+        "often"
+      ],
+      "category": "Community Ingested Questions FAQ",
+      "subcategory": "Databases and Backend Architecture",
+      "category_slug": "community-ingested-questions-faq",
+      "subcategory_slug": "databases-and-backend-architecture",
+      "question": "What's the cheapest database option for Claude Code projects?",
+      "answer": "For tiny prototypes, local SQLite is often cheapest. For hosted workloads, \"cheapest\" depends on traffic pattern, egress, and operational overhead. Estimate total cost of ownership, not only the entry-tier price.\n\nSee: [Manage costs effectively](https://docs.anthropic.com/en/docs/claude-code/costs)",
+      "source_urls": [
+        "https://docs.anthropic.com/en/docs/claude-code/costs"
+      ],
+      "last_verified_at": "2026-03-01",
+      "source_file": "community-ingested-faq.md"
+    },
+    {
+      "slug": "firebase-free-tier-security",
+      "tags": [
+        "firebase",
+        "free",
+        "tier",
+        "security",
+        "rules",
+        "concerns",
+        "databases",
+        "backend",
+        "architecture",
+        "inherently",
+        "mean",
+        "insecure",
+        "risk",
+        "appears",
+        "developers"
+      ],
+      "category": "Community Ingested Questions FAQ",
+      "subcategory": "Databases and Backend Architecture",
+      "category_slug": "community-ingested-questions-faq",
+      "subcategory_slug": "databases-and-backend-architecture",
+      "question": "Why does Firebase free tier have security concerns?",
+      "answer": "Free tier does not inherently mean insecure. Risk appears when developers treat prototype defaults as production policy and leave permissive rules in place.\n\nSee: [Firebase security rules docs](https://firebase.google.com/docs/rules)",
+      "source_urls": [
+        "https://firebase.google.com/docs/rules"
+      ],
+      "last_verified_at": "2026-03-01",
+      "source_file": "community-ingested-faq.md"
+    },
+    {
+      "slug": "batch-job-stuck-loop",
+      "tags": [
+        "batch",
+        "job",
+        "stuck",
+        "loop",
+        "processing",
+        "cost",
+        "control",
+        "loops",
+        "orchestration",
+        "bugs",
+        "retry",
+        "logic",
+        "without",
+        "idempotency",
+        "missing"
+      ],
+      "category": "Community Ingested Questions FAQ",
+      "subcategory": "Batch Processing and Cost Control",
+      "category_slug": "community-ingested-questions-faq",
+      "subcategory_slug": "batch-processing-and-cost-control",
+      "question": "Why did my batch job get stuck in a loop?",
+      "answer": "Most loops are orchestration bugs: retry logic without idempotency, missing terminal-state checks, or duplicate scheduler triggers. Add explicit run-state tracking and hard stop conditions.\n\nSee: [Create a Message Batch](https://docs.anthropic.com/en/api/creating-message-batches)",
+      "source_urls": [
+        "https://docs.anthropic.com/en/api/creating-message-batches"
+      ],
+      "last_verified_at": "2026-03-01",
+      "source_file": "community-ingested-faq.md"
+    },
+    {
+      "slug": "prevent-batch-processing-loops",
+      "tags": [
+        "batch",
+        "processing",
+        "counts",
+        "states",
+        "prevent",
+        "loops",
+        "cost",
+        "control",
+        "idempotency",
+        "keyscustom",
+        "ids",
+        "enforce",
+        "max",
+        "retry",
+        "persist"
+      ],
+      "category": "Community Ingested Questions FAQ",
+      "subcategory": "Batch Processing and Cost Control",
+      "category_slug": "community-ingested-questions-faq",
+      "subcategory_slug": "batch-processing-and-cost-control",
+      "question": "How do I prevent batch processing loops?",
+      "answer": "Use idempotency keys/custom IDs, enforce max retry counts, persist job states, and disable requeue paths once terminal states are reached. Add alerts for unusual repeat counts.\n\nSee: [Create a Message Batch](https://docs.anthropic.com/en/api/creating-message-batches), [Rate limits](https://docs.anthropic.com/en/api/rate-limits)",
+      "source_urls": [
+        "https://docs.anthropic.com/en/api/creating-message-batches",
+        "https://docs.anthropic.com/en/api/rate-limits"
+      ],
+      "last_verified_at": "2026-03-01",
+      "source_file": "community-ingested-faq.md"
+    },
+    {
+      "slug": "happened-batch-job-ran",
+      "tags": [
+        "batch",
+        "happened",
+        "job",
+        "ran",
+        "times",
+        "processing",
+        "cost",
+        "control",
+        "usually",
+        "indicates",
+        "duplicate",
+        "schedulingretry",
+        "logic",
+        "rather",
+        "one"
+      ],
+      "category": "Community Ingested Questions FAQ",
+      "subcategory": "Batch Processing and Cost Control",
+      "category_slug": "community-ingested-questions-faq",
+      "subcategory_slug": "batch-processing-and-cost-control",
+      "question": "What happened to my batch job that ran 46 times?",
+      "answer": "Usually this indicates duplicate scheduling/retry logic rather than one Anthropic-side execution. Audit scheduler, webhook handling, and retry middleware to find the repeat trigger.\n\nSee: [Create a Message Batch](https://docs.anthropic.com/en/api/creating-message-batches)",
+      "source_urls": [
+        "https://docs.anthropic.com/en/api/creating-message-batches"
+      ],
+      "last_verified_at": "2026-03-01",
+      "source_file": "community-ingested-faq.md"
+    },
+    {
+      "slug": "batch-jobs-billed",
+      "tags": [
+        "batch",
+        "billed",
+        "cost",
+        "jobs",
+        "processing",
+        "control",
+        "calls",
+        "token",
+        "usage",
+        "underlying",
+        "requests",
+        "flat",
+        "container",
+        "fee",
+        "large"
+      ],
+      "category": "Community Ingested Questions FAQ",
+      "subcategory": "Batch Processing and Cost Control",
+      "category_slug": "community-ingested-questions-faq",
+      "subcategory_slug": "batch-processing-and-cost-control",
+      "question": "How are batch jobs billed?",
+      "answer": "Batch calls are billed by token usage for the underlying requests, not by a flat \"batch container\" fee. Large repeated retries can therefore multiply cost quickly.\n\nSee: [Create a Message Batch](https://docs.anthropic.com/en/api/creating-message-batches), [Pricing](https://docs.anthropic.com/en/docs/about-claude/pricing)",
+      "source_urls": [
+        "https://docs.anthropic.com/en/api/creating-message-batches",
+        "https://docs.anthropic.com/en/docs/about-claude/pricing"
+      ],
+      "last_verified_at": "2026-03-01",
+      "source_file": "community-ingested-faq.md"
+    },
+    {
+      "slug": "access-specific-discord-channels",
+      "tags": [
+        "discord",
+        "access",
+        "permissions",
+        "channel",
+        "specific",
+        "server",
+        "channels",
+        "controlled",
+        "roles",
+        "claude",
+        "itself",
+        "contact",
+        "moderatorsadmins",
+        "role",
+        "issue"
+      ],
+      "category": "Community Ingested Questions FAQ",
+      "subcategory": "Permissions and Channel Access",
+      "category_slug": "community-ingested-questions-faq",
+      "subcategory_slug": "permissions-and-channel-access",
+      "question": "How do I get access to specific Discord channels?",
+      "answer": "Discord channel access is controlled by Discord server roles and permissions, not Claude itself. Contact server moderators/admins with the specific channel and role issue.\n\nSee: [Discord permissions docs](https://support.discord.com/hc/en-us/articles/206029707-Setting-Up-Permissions-FAQ)",
+      "source_urls": [
+        "https://support.discord.com/hc/en-us/articles/206029707-Setting-Up-Permissions-FAQ"
+      ],
+      "last_verified_at": "2026-03-01",
+      "source_file": "community-ingested-faq.md"
+    },
+    {
+      "slug": "permission-reply-threads",
+      "tags": [
+        "permissions",
+        "permission",
+        "reply",
+        "thread",
+        "discord",
+        "threads",
+        "channel",
+        "access",
+        "usually",
+        "controlled",
+        "channelthreadlevel",
+        "settings",
+        "hostplatform",
+        "problem",
+        "unless"
+      ],
+      "category": "Community Ingested Questions FAQ",
+      "subcategory": "Permissions and Channel Access",
+      "category_slug": "community-ingested-questions-faq",
+      "subcategory_slug": "permissions-and-channel-access",
+      "question": "Why don't I have permission to reply in threads?",
+      "answer": "Thread reply permissions are usually controlled by channel/thread-level Discord settings. This is a host-platform permission problem unless an integration app specifically denies actions.\n\nSee: [Discord thread permissions docs](https://support.discord.com/hc/en-us/articles/4403205878423-Threads-FAQ)",
+      "source_urls": [
+        "https://support.discord.com/hc/en-us/articles/4403205878423-Threads-FAQ"
+      ],
+      "last_verified_at": "2026-03-01",
+      "source_file": "community-ingested-faq.md"
     },
     {
       "slug": "claude-ignore-instructions",
@@ -1850,8 +3750,12 @@
       ],
       "category": "General Questions About Claude",
       "subcategory": "Understanding Claude's Behavior",
+      "category_slug": "general-questions-about-claude",
+      "subcategory_slug": "understanding-claudes-behavior",
       "question": "Why does Claude ignore my instructions?",
       "answer": "Claude is designed to follow clear instructions, but there are several reasons it may appear to ignore what you ask. First, Claude has **safety guidelines** and an Acceptable Use Policy that take precedence over user instructions -- if your request conflicts with these guardrails, Claude will decline or modify its response rather than comply. Second, if your prompt contains contradictory or ambiguous instructions, Claude may prioritize one part over another based on its interpretation. Third, very long or complex system prompts can cause Claude to lose track of specific instructions buried within them, especially if they conflict with other directives. To get Claude to follow your instructions more reliably, be explicit and specific about what you want, place the most important instructions prominently (at the beginning or end of your prompt), use structured formatting like numbered lists or XML tags to separate instructions, and test iteratively to see how Claude interprets your phrasing.",
+      "source_urls": [],
+      "last_verified_at": "2026-03-01",
       "source_file": "general-faq.md"
     },
     {
@@ -1875,8 +3779,12 @@
       ],
       "category": "General Questions About Claude",
       "subcategory": "Understanding Claude's Behavior",
+      "category_slug": "general-questions-about-claude",
+      "subcategory_slug": "understanding-claudes-behavior",
       "question": "Why does Claude \"lie\" or make things up (hallucinate)?",
       "answer": "Claude does not intentionally lie, but it can generate information that sounds confident yet is factually incorrect -- a phenomenon known as **hallucination**. This happens because Claude is a language model that predicts the most likely next tokens based on patterns in its training data, not a database that retrieves verified facts. Claude may hallucinate when it lacks sufficient training data on a topic, when it attempts to fill gaps in its knowledge with plausible-sounding details, when it misinterprets your question and answers something slightly different, or when asked about events after its **knowledge cutoff date**. What looks like lying is often Claude constructing a plausible answer rather than admitting uncertainty. To reduce hallucinations: explicitly give Claude permission to say \"I don't know,\" ask it to cite direct quotes from provided documents, request step-by-step reasoning so you can spot faulty logic, verify critical claims independently, and use grounding techniques like providing reference documents for Claude to draw from rather than relying on its general knowledge.",
+      "source_urls": [],
+      "last_verified_at": "2026-03-01",
       "source_file": "general-faq.md"
     },
     {
@@ -1900,8 +3808,12 @@
       ],
       "category": "General Questions About Claude",
       "subcategory": "Understanding Claude's Behavior",
+      "category_slug": "general-questions-about-claude",
+      "subcategory_slug": "understanding-claudes-behavior",
       "question": "What is Claude's \"personality\" and why does it sometimes change?",
       "answer": "Claude is designed to be helpful, harmless, and honest -- these are the core values from Anthropic's **Constitutional AI** approach. Claude aims to be thoughtful, nuanced, and direct without being overly agreeable or sycophantic. However, Claude's personality can appear to shift between conversations or after model updates. Anthropic periodically releases updated model versions that may adjust tone, verbosity, or how Claude handles certain types of requests. The persona you experience also depends on the **system prompt** being used -- different applications may configure Claude with different instructions about tone and style. Within a single conversation, Claude adapts to context, so a technical coding discussion will feel different from a casual brainstorming session. If Claude feels noticeably different, it may be due to a recent model update, different system prompt settings, or simply different conversational context.",
+      "source_urls": [],
+      "last_verified_at": "2026-03-01",
       "source_file": "general-faq.md"
     },
     {
@@ -1925,8 +3837,12 @@
       ],
       "category": "General Questions About Claude",
       "subcategory": "Understanding Claude's Behavior",
+      "category_slug": "general-questions-about-claude",
+      "subcategory_slug": "understanding-claudes-behavior",
       "question": "How do system prompts work, and can I customize how Claude responds?",
       "answer": "A **system prompt** is a set of instructions provided to Claude before your conversation begins that shapes how it behaves, responds, and what persona it adopts. On the Claude web app, Anthropic sets a default system prompt, but developers using the API have full control over the system prompt. You cannot directly edit the system prompt on claude.ai, but you can influence Claude's behavior by providing clear instructions in your messages, such as \"Respond in a formal academic tone\" or \"Keep all answers under 3 sentences.\" On the API, system prompts support detailed customization including persona definition, response formatting rules, domain-specific knowledge boundaries, and conversation guidelines. If you use Claude through third-party applications, those applications may use custom system prompts that change Claude's default behavior. The **Projects** feature on claude.ai allows Pro and higher-tier users to set custom instructions that function similarly to a system prompt for all conversations within that project.",
+      "source_urls": [],
+      "last_verified_at": "2026-03-01",
       "source_file": "general-faq.md"
     },
     {
@@ -1950,8 +3866,12 @@
       ],
       "category": "General Questions About Claude",
       "subcategory": "Understanding Claude's Behavior",
+      "category_slug": "general-questions-about-claude",
+      "subcategory_slug": "understanding-claudes-behavior",
       "question": "What are the best tips for getting good responses from Claude?",
       "answer": "The quality of Claude's output is heavily influenced by the quality of your input. Here are key strategies for better results:\n\n- **Be specific and explicit**: Instead of \"help me with my code,\" say \"Review this Python function for edge cases and suggest error handling improvements\"\n- **Provide context**: Share relevant background information, constraints, and goals\n- **Use structured prompts**: Numbered steps, XML tags, and clear sections help Claude parse complex requests\n- **Set the output format**: Tell Claude exactly how you want the response (bullet points, code blocks, tables, specific length)\n- **Iterate**: If the first response is not quite right, provide feedback and refine -- Claude improves with guidance\n- **Use examples**: Show Claude one or two examples of what you want, and it will follow the pattern\n- **Break complex tasks into steps**: Rather than one massive request, chain smaller focused prompts together\n- **Place important instructions at the beginning or end of your prompt**, as information in the middle of very long prompts can get less attention",
+      "source_urls": [],
+      "last_verified_at": "2026-03-01",
       "source_file": "general-faq.md"
     },
     {
@@ -1975,8 +3895,12 @@
       ],
       "category": "General Questions About Claude",
       "subcategory": "Claude's Capabilities",
+      "category_slug": "general-questions-about-claude",
+      "subcategory_slug": "claudes-capabilities",
       "question": "What can Claude do?",
       "answer": "Claude is a versatile AI assistant with a broad range of capabilities. Claude can **analyze and generate text** across many domains including writing, coding, math, research, and creative work. It can **process images** (photos, screenshots, diagrams, documents) and answer questions about their content. It can **analyze uploaded documents** including PDFs, spreadsheets, and code files. Claude supports **extended thinking** for complex reasoning tasks, can **search the web** for current information (on supported plans), and can work with **200K tokens of context** (approximately 150,000 words) in a single conversation, with up to **1M tokens** available in beta for certain models. Claude excels at **coding** across many programming languages, **creative writing**, **summarization**, **translation**, **data analysis**, and **step-by-step problem solving**. Through Claude Code, it can directly read codebases, edit files, run commands, and create pull requests.",
+      "source_urls": [],
+      "last_verified_at": "2026-03-01",
       "source_file": "general-faq.md"
     },
     {
@@ -2000,8 +3924,12 @@
       ],
       "category": "General Questions About Claude",
       "subcategory": "Claude's Capabilities",
+      "category_slug": "general-questions-about-claude",
+      "subcategory_slug": "claudes-capabilities",
       "question": "What can't Claude do?",
       "answer": "Despite its broad capabilities, Claude has several important limitations. Claude **cannot generate, create, or edit images** -- it can only analyze images provided to it. Claude **cannot access the internet in real time** on all plans (web search availability depends on your plan and the specific model). Claude **cannot remember information between separate conversations** unless you use features like Projects or CLAUDE.md files in Claude Code. Claude **cannot execute code on its own** outside of Claude Code (it can write code but not run it in the standard chat interface). Claude has a **knowledge cutoff date** (which varies by model -- for example, Claude Opus 4.6 has a reliable knowledge cutoff of May 2025 and training data through August 2025), so it may not know about very recent events. Claude **cannot make phone calls, send emails, or take actions in the real world** unless connected to tools through MCP integrations or API tool use. Claude also **cannot process audio or video files** directly.",
+      "source_urls": [],
+      "last_verified_at": "2026-03-01",
       "source_file": "general-faq.md"
     },
     {
@@ -2025,8 +3953,12 @@
       ],
       "category": "General Questions About Claude",
       "subcategory": "Claude's Capabilities",
+      "category_slug": "general-questions-about-claude",
+      "subcategory_slug": "claudes-capabilities",
       "question": "What is Claude's knowledge cutoff date?",
       "answer": "Claude's knowledge cutoff depends on the specific model version you are using. For the latest models: **Claude Opus 4.6** has a reliable knowledge cutoff of **May 2025** (with training data through August 2025), **Claude Sonnet 4.5** has a reliable knowledge cutoff of **January 2025** (training data through July 2025), and **Claude Haiku 4.5** has a reliable knowledge cutoff of **February 2025** (training data through July 2025). The \"reliable knowledge cutoff\" means that information through that date is the most extensive and dependable, while the \"training data cutoff\" indicates the broader range of data used in training. For events or information after these dates, Claude may not have accurate knowledge. On supported plans, Claude can use **web search** to find current information beyond its training data, but it will typically indicate when it is drawing from search results versus its built-in knowledge.",
+      "source_urls": [],
+      "last_verified_at": "2026-03-01",
       "source_file": "general-faq.md"
     },
     {
@@ -2050,8 +3982,12 @@
       ],
       "category": "General Questions About Claude",
       "subcategory": "Claude's Capabilities",
+      "category_slug": "general-questions-about-claude",
+      "subcategory_slug": "claudes-capabilities",
       "question": "How does Claude differ from ChatGPT and Gemini?",
       "answer": "Each AI assistant has distinct strengths and design philosophies. **Claude** (by Anthropic) emphasizes safety, nuanced reasoning, and long-document analysis. It excels at complex coding tasks (leading on benchmarks like SWE-bench), thoughtful writing with a natural tone, extended context processing (200K-1M tokens), and has strong ethical guardrails as part of Anthropic's safety-focused mission. Claude tends to be more conservative -- it will refuse uncertain queries rather than confidently hallucinate. **ChatGPT** (by OpenAI) has the largest user base, a broad plugin/integration ecosystem, strong voice mode, image generation via DALL-E/GPT-4o, and broad general knowledge. It tends to attempt answers more frequently but can sometimes be confidently incorrect. **Gemini** (by Google) offers deep Google Workspace integration, the fastest response times, a massive 1M token context window natively, strong multimodal capabilities (especially audio and video), and the best integration with Google's product ecosystem. In general, choose Claude for precision writing and complex coding, ChatGPT for general-purpose versatility and creative tasks with the broadest ecosystem, and Gemini for Google-integrated workflows and multimodal processing.",
+      "source_urls": [],
+      "last_verified_at": "2026-03-01",
       "source_file": "general-faq.md"
     },
     {
@@ -2075,8 +4011,12 @@
       ],
       "category": "General Questions About Claude",
       "subcategory": "Limitations and Safety",
+      "category_slug": "general-questions-about-claude",
+      "subcategory_slug": "limitations-and-safety",
       "question": "Why does Claude refuse certain requests?",
       "answer": "Claude's refusal behavior stems from Anthropic's **Constitutional AI** training approach and Acceptable Use Policy. Claude is designed to decline requests that could lead to harm, including generating dangerous instructions (weapons, drugs, self-harm), producing content that exploits minors, assisting with fraud or deception, creating malware or cyberattack tools, and generating content that violates privacy or enables harassment. Claude may also refuse requests that seem harmless if they contain keywords or patterns that trigger safety filters -- this is sometimes called a \"false positive.\" If your legitimate request is being refused, try rephrasing it to clarify your benign intent, provide context about why you need the information (e.g., \"I'm writing a novel\" or \"This is for academic research\"), and avoid language patterns that might be associated with harmful use cases. Anthropic continuously refines these filters to reduce over-refusal while maintaining safety. Claude's latest models are calibrated to refuse less on benign topics while maintaining strong guardrails where they matter most.",
+      "source_urls": [],
+      "last_verified_at": "2026-03-01",
       "source_file": "general-faq.md"
     },
     {
@@ -2100,8 +4040,12 @@
       ],
       "category": "General Questions About Claude",
       "subcategory": "Limitations and Safety",
+      "category_slug": "general-questions-about-claude",
+      "subcategory_slug": "limitations-and-safety",
       "question": "Does Claude have biases?",
       "answer": "Like all AI systems trained on human-generated data, Claude can exhibit biases present in its training data. Anthropic actively works to reduce harmful biases through its Constitutional AI approach, reinforcement learning from human feedback (RLHF), and ongoing evaluation. Claude may still show subtle biases in areas like cultural assumptions, gender stereotypes, or Western-centric perspectives. Anthropic publishes model cards and safety evaluations that document known limitations and bias assessments. If you notice biased behavior in Claude's responses, you can point it out directly in the conversation (Claude will often acknowledge and correct it), report it through Anthropic's feedback mechanisms, and use specific prompts to request multiple perspectives on a topic. Anthropic's approach is to make Claude transparent about uncertainty and limitations rather than hiding them.",
+      "source_urls": [],
+      "last_verified_at": "2026-03-01",
       "source_file": "general-faq.md"
     },
     {
@@ -2125,8 +4069,12 @@
       ],
       "category": "General Questions About Claude",
       "subcategory": "Limitations and Safety",
+      "category_slug": "general-questions-about-claude",
+      "subcategory_slug": "limitations-and-safety",
       "question": "What is Anthropic's approach to AI safety?",
       "answer": "Anthropic was founded specifically to advance **AI safety research** and describes itself as a safety-focused AI company. Their core methodology is **Constitutional AI (CAI)**, which trains Claude using a set of principles (a \"constitution\") rather than relying solely on human preference ratings. In January 2026, Anthropic released an updated 80-page constitution that shifted from rule-based to reason-based alignment, teaching models the underlying ethical reasoning behind guidelines rather than just a list of rules. Anthropic also conducts extensive red-teaming and publishes **Responsible Scaling Policies** that define safety evaluations required before deploying more capable models. They participate in joint safety evaluations with other labs (including a collaborative test with OpenAI) and publish research through their **Transparency Hub**. Anthropic's safety work includes evaluating models for deception, scheming, and harmful capabilities before release, and they commit to not deploying models that exceed defined risk thresholds.",
+      "source_urls": [],
+      "last_verified_at": "2026-03-01",
       "source_file": "general-faq.md"
     },
     {
@@ -2150,8 +4098,12 @@
       ],
       "category": "General Questions About Claude",
       "subcategory": "Limitations and Safety",
+      "category_slug": "general-questions-about-claude",
+      "subcategory_slug": "limitations-and-safety",
       "question": "Why does Claude sometimes give different answers to the same question?",
       "answer": "Claude's responses are generated with a degree of **randomness** (controlled by a parameter called \"temperature\"), which means asking the same question twice may produce different but equally valid responses. This is by design -- it allows Claude to be creative and avoid repetitive outputs. Additionally, conversation context matters: the same question asked at the beginning of a conversation versus after a long discussion will have different surrounding context that influences the response. Model updates also play a role -- Anthropic regularly improves Claude's models, so behavior can change subtly over time. On the API, developers can adjust the temperature parameter (lower values produce more consistent outputs, higher values produce more varied ones). If you need consistent, reproducible answers, provide very specific instructions, keep the conversation context minimal, and consider using the API with a low temperature setting.",
+      "source_urls": [],
+      "last_verified_at": "2026-03-01",
       "source_file": "general-faq.md"
     }
   ],
@@ -2229,25 +4181,256 @@
     "data-anthropic-collect-retain": 70,
     "claude-handle-sensitive-information": 71,
     "difference-api-claudeai-handle": 72,
-    "claude-ignore-instructions": 73,
-    "claude-lie-things-hallucinate": 74,
-    "claudes-personality-sometimes-change": 75,
-    "system-prompts-work-customize": 76,
-    "best-tips-getting-good": 77,
-    "claude-general-faq": 78,
-    "claude-general-faq-2": 79,
-    "claudes-knowledge-cutoff-date": 80,
-    "claude-differ-chatgpt-gemini": 81,
-    "claude-refuse-certain-requests": 82,
-    "claude-biases": 83,
-    "anthropics-approach-ai-safety": 84,
-    "claude-sometimes-give-different": 85
+    "update-payment-method-email": 73,
+    "account-charged-850-hours": 74,
+    "long-take-response-support": 75,
+    "emails-supportanthropiccom-bounce": 76,
+    "often-support-take-respond": 77,
+    "often-claude-updated": 78,
+    "claude-code-segfaulting-wsl": 79,
+    "whats-fix-bun-version": 80,
+    "install-claude-code-different": 81,
+    "systems-nodejs-instead-bundled": 82,
+    "system-requirements-claude-code": 83,
+    "claude-code-handle-file": 84,
+    "claude-code-automatically-accept": 85,
+    "claude-code-different-databases": 86,
+    "whats-best-way-structure": 87,
+    "permissions-claude-code-need": 88,
+    "automate-permission-acceptance": 89,
+    "share-projects-built-claude": 90,
+    "paymentidentity-tools-work-claude": 91,
+    "integrate-claude-telegram": 92,
+    "whats-latest-claude-model": 93,
+    "claude-new-updatesversions": 94,
+    "claude-handle-political-nuanced": 95,
+    "claudes-vision-capabilities": 96,
+    "ai-development-governed-regulated": 97,
+    "claude-forced-break-guidelines": 98,
+    "1m-token-context-window": 99,
+    "whats-prompt-caching": 100,
+    "prompt-caching-work": 101,
+    "cache-usage-high": 102,
+    "reduce-token-usage-caching": 103,
+    "whats-cache-drive-feature": 104,
+    "streaming-mode-claude": 105,
+    "whats-stream-json-interface": 106,
+    "real-time-responses-claude": 107,
+    "create-session-type-profiles-different": 108,
+    "firebase-look-alternatives": 109,
+    "security-issues-firebase": 110,
+    "set-database-claude-code": 111,
+    "build-full-stack-app-claude": 112,
+    "whats-cheapest-database-option": 113,
+    "firebase-free-tier-security": 114,
+    "batch-job-stuck-loop": 115,
+    "prevent-batch-processing-loops": 116,
+    "happened-batch-job-ran": 117,
+    "batch-jobs-billed": 118,
+    "access-specific-discord-channels": 119,
+    "permission-reply-threads": 120,
+    "claude-ignore-instructions": 121,
+    "claude-lie-things-hallucinate": 122,
+    "claudes-personality-sometimes-change": 123,
+    "system-prompts-work-customize": 124,
+    "best-tips-getting-good": 125,
+    "claude-general-faq": 126,
+    "claude-general-faq-2": 127,
+    "claudes-knowledge-cutoff-date": 128,
+    "claude-differ-chatgpt-gemini": 129,
+    "claude-refuse-certain-requests": 130,
+    "claude-biases": 131,
+    "anthropics-approach-ai-safety": 132,
+    "claude-sometimes-give-different": 133
   },
   "categories": [
     "Account Issues FAQ",
     "Billing & Plans FAQ",
     "Claude Code FAQ",
     "Claude's Capabilities & Usage",
+    "Community Ingested Questions FAQ",
     "General Questions About Claude"
-  ]
+  ],
+  "category_index": [
+    {
+      "name": "Account Issues FAQ",
+      "slug": "account-issues-faq",
+      "entry_count": 15,
+      "subcategories": [
+        {
+          "name": "Account Bans and Suspensions",
+          "slug": "account-bans-and-suspensions",
+          "entry_count": 3
+        },
+        {
+          "name": "Login and Access Problems",
+          "slug": "login-and-access-problems",
+          "entry_count": 6
+        },
+        {
+          "name": "Account Recovery",
+          "slug": "account-recovery",
+          "entry_count": 3
+        },
+        {
+          "name": "Profile and Settings",
+          "slug": "profile-and-settings",
+          "entry_count": 3
+        }
+      ]
+    },
+    {
+      "name": "Billing & Plans FAQ",
+      "slug": "billing-plans-faq",
+      "entry_count": 18,
+      "subcategories": [
+        {
+          "name": "Plan Comparisons and Pricing",
+          "slug": "plan-comparisons-and-pricing",
+          "entry_count": 4
+        },
+        {
+          "name": "Payment and Billing Issues",
+          "slug": "payment-and-billing-issues",
+          "entry_count": 7
+        },
+        {
+          "name": "Usage and Features",
+          "slug": "usage-and-features",
+          "entry_count": 3
+        },
+        {
+          "name": "Account Management",
+          "slug": "account-management",
+          "entry_count": 4
+        }
+      ]
+    },
+    {
+      "name": "Claude Code FAQ",
+      "slug": "claude-code-faq",
+      "entry_count": 28,
+      "subcategories": [
+        {
+          "name": "Getting Started & Best Practices",
+          "slug": "getting-started-best-practices",
+          "entry_count": 6
+        },
+        {
+          "name": "Context, Memory, and Limits",
+          "slug": "context-memory-and-limits",
+          "entry_count": 5
+        },
+        {
+          "name": "Advanced Features (Agents & MCPs)",
+          "slug": "advanced-features-agents-mcps",
+          "entry_count": 4
+        },
+        {
+          "name": "Troubleshooting, Bugs, and Performance Issues",
+          "slug": "troubleshooting-bugs-and-performance-issues",
+          "entry_count": 13
+        }
+      ]
+    },
+    {
+      "name": "Claude's Capabilities & Usage",
+      "slug": "claudes-capabilities-usage",
+      "entry_count": 12,
+      "subcategories": [
+        {
+          "name": "Model Comparisons and Capabilities",
+          "slug": "model-comparisons-and-capabilities",
+          "entry_count": 6
+        },
+        {
+          "name": "API Implementation and Integration",
+          "slug": "api-implementation-and-integration",
+          "entry_count": 2
+        },
+        {
+          "name": "Privacy and Data Safety",
+          "slug": "privacy-and-data-safety",
+          "entry_count": 4
+        }
+      ]
+    },
+    {
+      "name": "Community Ingested Questions FAQ",
+      "slug": "community-ingested-questions-faq",
+      "entry_count": 48,
+      "subcategories": [
+        {
+          "name": "Account, Billing, and Support Follow-ups",
+          "slug": "account-billing-and-support-follow-ups",
+          "entry_count": 6
+        },
+        {
+          "name": "Claude Code Installation and Runtime",
+          "slug": "claude-code-installation-and-runtime",
+          "entry_count": 5
+        },
+        {
+          "name": "Claude Code Workflow and Capabilities",
+          "slug": "claude-code-workflow-and-capabilities",
+          "entry_count": 9
+        },
+        {
+          "name": "Models, Updates, and Safety",
+          "slug": "models-updates-and-safety",
+          "entry_count": 6
+        },
+        {
+          "name": "Context Window, Caching, and Streaming",
+          "slug": "context-window-caching-and-streaming",
+          "entry_count": 10
+        },
+        {
+          "name": "Databases and Backend Architecture",
+          "slug": "databases-and-backend-architecture",
+          "entry_count": 6
+        },
+        {
+          "name": "Batch Processing and Cost Control",
+          "slug": "batch-processing-and-cost-control",
+          "entry_count": 4
+        },
+        {
+          "name": "Permissions and Channel Access",
+          "slug": "permissions-and-channel-access",
+          "entry_count": 2
+        }
+      ]
+    },
+    {
+      "name": "General Questions About Claude",
+      "slug": "general-questions-about-claude",
+      "entry_count": 13,
+      "subcategories": [
+        {
+          "name": "Understanding Claude's Behavior",
+          "slug": "understanding-claudes-behavior",
+          "entry_count": 5
+        },
+        {
+          "name": "Claude's Capabilities",
+          "slug": "claudes-capabilities",
+          "entry_count": 4
+        },
+        {
+          "name": "Limitations and Safety",
+          "slug": "limitations-and-safety",
+          "entry_count": 4
+        }
+      ]
+    }
+  ],
+  "category_slugs": {
+    "account-issues-faq": "Account Issues FAQ",
+    "billing-plans-faq": "Billing & Plans FAQ",
+    "claude-code-faq": "Claude Code FAQ",
+    "claudes-capabilities-usage": "Claude's Capabilities & Usage",
+    "community-ingested-questions-faq": "Community Ingested Questions FAQ",
+    "general-questions-about-claude": "General Questions About Claude"
+  }
 }

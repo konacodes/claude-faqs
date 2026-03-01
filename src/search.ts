@@ -29,6 +29,8 @@ export function tagSearch(entries: FAQEntry[], query: string, limit = 5): FAQEnt
       }
       if (entry.question.toLowerCase().includes(term)) score += 2;
       if (entry.subcategory.toLowerCase().includes(term)) score += 1;
+      if (entry.category_slug.includes(term)) score += 1.5;
+      if (entry.subcategory_slug.includes(term)) score += 1.5;
     }
 
     return { entry, score };

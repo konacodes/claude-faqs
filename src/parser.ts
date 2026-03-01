@@ -29,6 +29,17 @@ export function generateSlug(question: string): string {
   return words.slice(0, 4).join("-") || "untitled";
 }
 
+// Creates stable slugs for category/subcategory labels (keeps stop words).
+export function slugifyLabel(text: string): string {
+  const slug = text
+    .toLowerCase()
+    .replace(/[^a-z0-9\s-]/g, "")
+    .trim()
+    .replace(/\s+/g, "-")
+    .replace(/-+/g, "-");
+  return slug || "untitled";
+}
+
 // Extracts keyword tags from the question, subcategory, and answer text.
 // Uses frequency analysis: words that appear more often across these fields
 // are considered more relevant as search tags.
@@ -55,6 +66,53 @@ interface ParsedAnswer {
   text: string;
   hasContent: boolean;
   answeredBy?: string;
+  sourceUrls: string[];
+  lastVerifiedAt?: string;
+}
+
+function normalizeUrl(url: string): string {
+  return url.replace(/[),.;]+$/, "");
+}
+
+function extractUrls(text: string): string[] {
+  const urls: string[] = [];
+
+  // Markdown links: [label](https://example.com)
+  const mdLinkRegex = /\[[^\]]+\]\((https?:\/\/[^)\s]+)\)/g;
+  for (const match of text.matchAll(mdLinkRegex)) {
+    urls.push(normalizeUrl(match[1]));
+  }
+
+  // Bare URLs in plain text
+  const bareUrlRegex = /https?:\/\/[^\s<>"']+/g;
+  for (const match of text.matchAll(bareUrlRegex)) {
+    urls.push(normalizeUrl(match[0]));
+  }
+
+  const seen = new Set<string>();
+  const deduped: string[] = [];
+  for (const url of urls) {
+    if (!url || seen.has(url)) continue;
+    seen.add(url);
+    deduped.push(url);
+  }
+
+  return deduped;
+}
+
+function parseMetadataUrls(value: string): string[] {
+  const rawParts = value.split(/[,\s]+/).map(v => v.trim()).filter(Boolean);
+  const direct = rawParts.filter(v => /^https?:\/\//i.test(v)).map(normalizeUrl);
+  const fromMarkdown = extractUrls(value);
+  const combined = [...direct, ...fromMarkdown];
+  const seen = new Set<string>();
+  const deduped: string[] = [];
+  for (const url of combined) {
+    if (!url || seen.has(url)) continue;
+    seen.add(url);
+    deduped.push(url);
+  }
+  return deduped;
 }
 
 // Cleans raw answer text. Filters out stub entries (empty or "</>") and
@@ -63,7 +121,7 @@ function parseAnswer(raw: string): ParsedAnswer {
   const trimmed = raw.trim();
 
   if (!trimmed || trimmed === "</>") {
-    return { text: "", hasContent: false };
+    return { text: "", hasContent: false, sourceUrls: [] };
   }
 
   let cleaned = trimmed
@@ -72,21 +130,68 @@ function parseAnswer(raw: string): ParsedAnswer {
     .trim();
 
   let answeredBy: string | undefined;
+  let lastVerifiedAt: string | undefined;
+  const metadataSourceUrls: string[] = [];
+
   const lines = cleaned.split("\n");
-  const firstContentIndex = lines.findIndex(line => line.trim().length > 0);
-  if (firstContentIndex >= 0) {
-    const first = lines[firstContentIndex].trim();
-    const m = first.match(/^(?:\*\*)?answered by(?:\*\*)?\s*:\s*(.+)$/i)
-      || first.match(/^_?answered by\s*:\s*(.+)_?$/i)
-      || first.match(/^answered_by\s*:\s*(.+)$/i);
-    if (m) {
-      answeredBy = m[1].trim();
-      lines.splice(firstContentIndex, 1);
-      cleaned = lines.join("\n").trim();
-    }
+  let cursor = 0;
+  while (cursor < lines.length && lines[cursor].trim().length === 0) {
+    cursor++;
   }
 
-  return { text: cleaned, hasContent: cleaned.length > 0, answeredBy };
+  while (cursor < lines.length) {
+    const line = lines[cursor].trim();
+    if (!line) {
+      cursor++;
+      continue;
+    }
+
+    const answeredMatch = line.match(/^(?:\*\*)?answered by(?:\*\*)?\s*:\s*(.+)$/i)
+      || line.match(/^_?answered by\s*:\s*(.+)_?$/i)
+      || line.match(/^answered_by\s*:\s*(.+)$/i);
+    if (answeredMatch) {
+      answeredBy = answeredMatch[1].trim();
+      cursor++;
+      continue;
+    }
+
+    const lastVerifiedMatch = line.match(/^(?:\*\*)?last verified(?:\*\*)?\s*:\s*(.+)$/i)
+      || line.match(/^last_verified_at\s*:\s*(.+)$/i);
+    if (lastVerifiedMatch) {
+      lastVerifiedAt = lastVerifiedMatch[1].trim();
+      cursor++;
+      continue;
+    }
+
+    const sourcesMatch = line.match(/^(?:\*\*)?sources?(?:\*\*)?\s*:\s*(.+)$/i);
+    if (sourcesMatch) {
+      metadataSourceUrls.push(...parseMetadataUrls(sourcesMatch[1]));
+      cursor++;
+      continue;
+    }
+
+    break;
+  }
+
+  cleaned = lines.slice(cursor).join("\n").trim();
+
+  const bodyUrls = extractUrls(cleaned);
+  const sourceUrls = [...metadataSourceUrls, ...bodyUrls];
+  const seen = new Set<string>();
+  const dedupedSourceUrls: string[] = [];
+  for (const url of sourceUrls) {
+    if (!url || seen.has(url)) continue;
+    seen.add(url);
+    dedupedSourceUrls.push(url);
+  }
+
+  return {
+    text: cleaned,
+    hasContent: cleaned.length > 0,
+    answeredBy,
+    sourceUrls: dedupedSourceUrls,
+    lastVerifiedAt,
+  };
 }
 
 function isQuestionHeading(heading: string): boolean {
@@ -101,6 +206,8 @@ function isQuestionHeading(heading: string): boolean {
 //   ## Subcategory Name        -> sets subcategory (or question in general-faq.md)
 //   ### Question text?         -> starts a new entry
 //   Answered by: Name          -> optional first answer line (parsed as answered_by)
+//   Last verified: YYYY-MM-DD  -> optional first answer line (parsed as last_verified_at)
+//   Sources: https://...       -> optional first answer line (parsed as source_urls)
 //   Answer content...          -> collected until next heading
 //
 // Special handling:
@@ -121,7 +228,7 @@ export function parseMarkdownFile(content: string, filename: string): FAQEntry[]
     if (!currentQuestion) return;
 
     const rawAnswer = currentAnswerLines.join("\n").trim();
-    const { text, hasContent, answeredBy } = parseAnswer(rawAnswer);
+    const { text, hasContent, answeredBy, sourceUrls, lastVerifiedAt } = parseAnswer(rawAnswer);
 
     if (!hasContent) return;
 
@@ -132,9 +239,13 @@ export function parseMarkdownFile(content: string, filename: string): FAQEntry[]
       tags: extractTags(currentQuestion, sub, text),
       category,
       subcategory: sub,
+      category_slug: "",
+      subcategory_slug: "",
       question: currentQuestion,
       answer: text,
       answered_by: answeredBy,
+      source_urls: sourceUrls,
+      last_verified_at: lastVerifiedAt || "",
       source_file: filename,
     });
 

@@ -7,10 +7,27 @@ export interface FAQEntry {
   tags: string[];
   category: string;
   subcategory: string;
+  category_slug: string;
+  subcategory_slug: string;
   question: string;
   answer: string;
   answered_by?: string;
+  source_urls: string[];
+  last_verified_at: string;
   source_file: string;
+}
+
+export interface FAQSubcategoryMeta {
+  name: string;
+  slug: string;
+  entry_count: number;
+}
+
+export interface FAQCategoryMeta {
+  name: string;
+  slug: string;
+  entry_count: number;
+  subcategories: FAQSubcategoryMeta[];
 }
 
 // The full FAQ dataset loaded from faq-index.json at startup.
@@ -22,6 +39,8 @@ export interface FAQData {
   entries: FAQEntry[];
   slugs: Record<string, number>;
   categories: string[];
+  category_index: FAQCategoryMeta[];
+  category_slugs: Record<string, string>;
 }
 
 // Discord embed format — matches Discord's embed object structure.

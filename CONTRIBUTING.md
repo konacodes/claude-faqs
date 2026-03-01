@@ -29,10 +29,12 @@ We welcome all kinds of contributions to make this FAQ more helpful for the Clau
 - Answer text is clear and actionable
 - Links point to official docs/support pages where possible
 - Optional per-answer credit is set when desired (`Answered by: YourName`)
+- Time-sensitive answers include at least one official source link
 
 ## Need Help Contributing?
 
 - Open an issue on this repository
+- Use the GitHub issue form **Suggest FAQ** for non-code submissions
 - Ask in community channels if you are unsure about GitHub flow
 - Share feedback in Reddit/Discord communities
 
@@ -47,6 +49,7 @@ We welcome all kinds of contributions to make this FAQ more helpful for the Clau
 ## FAQ File Structure
 
 FAQ entries live in `faq-content/` as markdown files. New `.md` files in that folder are automatically included when you run the build script.
+Category and subcategory slugs are generated automatically from markdown headings during build.
 
 Supported structures:
 
@@ -60,6 +63,7 @@ Supported structures:
 ### Question goes here?
 
 Answered by: YourName
+Sources: https://docs.anthropic.com/...
 
 Answer content goes here. Supports **markdown formatting**,
 links, lists, and code blocks.
@@ -91,6 +95,14 @@ You can also add per-question credits in FAQ content with an optional first line
 ```markdown
 Answered by: YourName
 ```
+
+You can add source metadata with:
+
+```markdown
+Sources: https://docs.anthropic.com/..., https://support.claude.com/...
+```
+
+`last_verified_at` is automatically set during index build using Anthropic HQ timezone (`America/Los_Angeles`).
 
 ---
 

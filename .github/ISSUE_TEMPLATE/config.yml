@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: API Documentation
+    url: https://api.kcodes.me/claude-faqs/v1
+    about: Check current endpoints and response formats before filing an issue.

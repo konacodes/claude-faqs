@@ -37,6 +37,13 @@ function toDiscordEmbed(entry: FAQEntry): DiscordEmbed {
           inline: true,
         }]
         : []),
+      ...(entry.last_verified_at
+        ? [{
+          name: "Last Verified",
+          value: entry.last_verified_at,
+          inline: true,
+        }]
+        : []),
     ],
     footer: { text: "Claude Community FAQ | api.kcodes.me" },
   };
@@ -209,6 +216,7 @@ export default {
         generated_at: FAQ_DATA.generated_at,
         entry_count: FAQ_DATA.entry_count,
         categories: FAQ_DATA.categories,
+        category_slugs: FAQ_DATA.category_slugs,
         endpoints: {
           "GET /claude-faqs/v1/{slug}": "Get FAQ entry by slug (direct lookup)",
           "GET /claude-faqs/v1/{slug}?format=discord": "Get as Discord embed",
@@ -216,6 +224,7 @@ export default {
           "GET /claude-faqs/v1/search?q={query}&mode=semantic": "AI semantic search (embeddings)",
           "POST /claude-faqs/v1/ask": "AI-powered answer (body: { question: '...' })",
           "GET /claude-faqs/v1/categories": "List categories",
+          "GET /claude-faqs/v1/category/{category_slug}": "List entries in a category slug",
           "GET /claude-faqs/v1/entries": "List entries (?category=, filter)",
           "GET /claude-faqs/v1/slugs": "List all slugs",
         },
@@ -274,9 +283,13 @@ export default {
           question: e.question,
           tags: e.tags.slice(0, 5),
           answered_by: e.answered_by,
+          source_urls: e.source_urls,
+          last_verified_at: e.last_verified_at,
           answer_preview: e.answer.slice(0, 200) + (e.answer.length > 200 ? "..." : ""),
           category: e.category,
+          category_slug: e.category_slug,
           subcategory: e.subcategory,
+          subcategory_slug: e.subcategory_slug,
         })),
       });
     }
@@ -357,16 +370,46 @@ export default {
     // ── Categories ──
     // Returns each category with its entry count and list of subcategories.
     if (subPath === "/categories") {
+      const slugFilter = url.searchParams.get("slug");
+      let categories = FAQ_DATA.category_index;
+      if (slugFilter) {
+        categories = categories.filter(c => c.slug === slugFilter);
+      }
       return respond({
-        count: FAQ_DATA.categories.length,
-        categories: FAQ_DATA.categories.map(cat => {
-          const entries = FAQ_DATA.entries.filter(e => e.category === cat);
-          return {
-            name: cat,
-            entry_count: entries.length,
-            subcategories: [...new Set(entries.map(e => e.subcategory))],
-          };
-        }),
+        count: categories.length,
+        categories,
+      });
+    }
+
+    // ── Category slug lookup ──
+    // Returns entry summaries for one category slug.
+    if (subPath.startsWith("/category/")) {
+      const categorySlug = subPath.slice("/category/".length).trim();
+      if (!categorySlug || categorySlug.includes("/")) {
+        return respond({ error: "Not Found", message: `Unknown endpoint: ${path}` }, 404);
+      }
+
+      const categoryMeta = FAQ_DATA.category_index.find(c => c.slug === categorySlug);
+      if (!categoryMeta) {
+        return respond({ error: "Category not found", category_slug: categorySlug }, 404);
+      }
+
+      const entries = FAQ_DATA.entries.filter(e => e.category_slug === categorySlug);
+      return respond({
+        category: categoryMeta,
+        count: entries.length,
+        entries: entries.map(e => ({
+          slug: e.slug,
+          question: e.question,
+          tags: e.tags.slice(0, 5),
+          answered_by: e.answered_by,
+          source_urls: e.source_urls,
+          last_verified_at: e.last_verified_at,
+          category: e.category,
+          category_slug: e.category_slug,
+          subcategory: e.subcategory,
+          subcategory_slug: e.subcategory_slug,
+        })),
       });
     }
 
@@ -381,7 +424,9 @@ export default {
       if (category) {
         entries = entries.filter(e =>
           e.category.toLowerCase().includes(category) ||
-          e.subcategory.toLowerCase().includes(category)
+          e.subcategory.toLowerCase().includes(category) ||
+          e.category_slug === category ||
+          e.subcategory_slug === category
         );
       }
 
@@ -392,8 +437,12 @@ export default {
           question: e.question,
           tags: e.tags.slice(0, 5),
           answered_by: e.answered_by,
+          source_urls: e.source_urls,
+          last_verified_at: e.last_verified_at,
           category: e.category,
+          category_slug: e.category_slug,
           subcategory: e.subcategory,
+          subcategory_slug: e.subcategory_slug,
         })),
       });
     }
