@@ -43,6 +43,42 @@ Refunds are **generally not provided** for Claude subscriptions. Anthropic's ter
 
 If you see a charge after canceling, it is most likely because your cancellation takes effect at the **end of the current billing cycle**, not immediately. When you cancel, you retain access to your paid plan features until the end of the period you already paid for, and no further charges should occur after that. If you were charged for a new billing cycle after canceling, this may be a billing error -- contact **support@anthropic.com** with your cancellation confirmation and the unexpected charge details. Also verify that you canceled the correct subscription, as having both a consumer plan and API billing can sometimes cause confusion about which charges belong to which service.
 
+### Can I transfer my Claude subscription from iOS to Web and upgrade to Max without getting double-charged?
+
+As of **March 1, 2026**, Anthropic does not publish a one-click "subscription transfer" flow between Apple in-app billing and direct web billing. Officially, subscriptions are managed on the platform where they were purchased:
+
+- If purchased on iOS, manage/cancel via Apple subscriptions
+- If purchased on web, manage through Claude account settings
+
+Best-practice migration path:
+
+1. Cancel the iOS subscription first (it usually remains active until period end)
+2. Wait for that billing period to end
+3. Start the new web subscription/upgrade on Claude web
+
+If you overlap periods and see unexpected charges, request review through support/refund channels. References: [support.claude.com/en/articles/8325617-how-do-i-cancel-my-paid-claude-subscription](https://support.claude.com/en/articles/8325617-how-do-i-cancel-my-paid-claude-subscription), [support.claude.com/en/articles/10177702-how-do-i-upgrade-my-claude-plan](https://support.claude.com/en/articles/10177702-how-do-i-upgrade-my-claude-plan), [support.claude.com/en/articles/9836398-how-do-i-request-a-refund-for-my-claude-subscription](https://support.claude.com/en/articles/9836398-how-do-i-request-a-refund-for-my-claude-subscription).
+
+### I have unexpected charges or a billing dispute. What is the official process?
+
+Use Anthropic's documented support/refund path:
+
+1. Contact support with your account email, charge date/amount, receipt, and last 4 card digits
+2. Include whether the charge came from web billing, API usage, or Apple/Google app-store billing
+3. Request refund review if applicable
+
+Official references: [support.claude.com/en/articles/9836398-how-do-i-request-a-refund-for-my-claude-subscription](https://support.claude.com/en/articles/9836398-how-do-i-request-a-refund-for-my-claude-subscription), [support.claude.com/en/articles/9017053-how-can-i-contact-support](https://support.claude.com/en/articles/9017053-how-can-i-contact-support).
+
+### Support has not responded about very large unknown charges. Is there an escalation path?
+
+Anthropic's public support docs do not list a separate "high-dollar fast lane" escalation tier. The official path is still the support messenger/email workflow. To improve triage:
+
+- Keep one ticket thread (avoid fragmented duplicates)
+- Include a concise charge table (date, amount, provider, receipt ID)
+- Attach supporting evidence (invoices, screenshots, bank statement excerpts)
+- Explicitly state risk and urgency (for example: "multiple unauthorized charges totaling $10,000+")
+
+If a charge appears fraudulent, contact your payment provider immediately in parallel with support. Official contact guidance: [support.claude.com/en/articles/9017053-how-can-i-contact-support](https://support.claude.com/en/articles/9017053-how-can-i-contact-support).
+
 ## Usage and Features
 
 ### What counts toward my usage limits?
@@ -92,6 +128,19 @@ To cancel your subscription, go to **account settings** on [claude.ai](https://c
 ### How do I upgrade my plan?
 
 To upgrade, visit your **account settings** on [claude.ai](https://claude.ai) and select the plan you want to move to. Upgrades take effect **immediately** -- you gain instant access to higher limits and additional features. You will be charged a prorated amount for the remainder of your current billing cycle at the new plan's rate. If you are upgrading from Free to Pro, you will need to provide payment information. If moving from Pro to Max, or between Max tiers, the price difference is applied to your existing billing cycle. Team plan upgrades require administrator action and may involve minimum seat requirements.
+
+### How do I manage a Claude Max subscription?
+
+Answered by: claude-faqs maintainers
+
+Manage Max from Claude account billing settings (or from Apple/Google subscriptions if purchased in-app). Typical actions:
+
+- Upgrade from Pro to Max
+- Switch Max tiers (5x <-> 20x)
+- Downgrade from Max to Pro at period end
+- Cancel renewal
+
+Official docs: [support.claude.com/en/articles/10177702-how-do-i-upgrade-my-claude-plan](https://support.claude.com/en/articles/10177702-how-do-i-upgrade-my-claude-plan), [support.claude.com/en/articles/8325617-how-do-i-cancel-my-paid-claude-subscription](https://support.claude.com/en/articles/8325617-how-do-i-cancel-my-paid-claude-subscription), [support.claude.com/en/articles/8570727-what-payment-methods-can-i-use](https://support.claude.com/en/articles/8570727-what-payment-methods-can-i-use).
 
 ## Still Need Help?
 

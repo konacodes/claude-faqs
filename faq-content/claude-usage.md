@@ -100,6 +100,27 @@ For actual image generation, you will need to use other AI tools such as **DALL-
 
 Projects are useful for ongoing work where you need Claude to maintain consistent context -- for example, a coding project where Claude needs to know your style guide and architecture, a writing project where Claude needs to maintain a character bible, or a research project where Claude needs access to specific papers. You **cannot** currently convert an existing standalone conversation into a Project -- you need to create the Project first and then start conversations within it. Projects are not available on the Free plan.
 
+## API Implementation and Integration
+
+### What is the official starting point for Anthropic API implementation?
+
+Start with Anthropic's official API docs in this order:
+
+1. **Get API access and keys**: [console.anthropic.com](https://console.anthropic.com)
+2. **Messages API overview and reference**: [docs.anthropic.com/en/api/messages](https://docs.anthropic.com/en/api/messages)
+3. **Developer docs and guides**: [docs.anthropic.com/en/docs/welcome](https://docs.anthropic.com/en/docs/welcome)
+4. **Official client SDKs**: [github.com/anthropics/anthropic-sdk-typescript](https://github.com/anthropics/anthropic-sdk-typescript), [github.com/anthropics/anthropic-sdk-python](https://github.com/anthropics/anthropic-sdk-python)
+
+For production integrations, make sure you implement retries, timeouts, rate-limit handling, structured logging, and cost/usage monitoring in the Anthropic Console.
+
+### Where can I find official guidance for automation and background workflows?
+
+For Claude Code automation and CI-style integrations, use Anthropic's official docs:
+
+- Claude Code SDK / programmatic control: [docs.anthropic.com/en/docs/claude-code/sdk](https://docs.anthropic.com/en/docs/claude-code/sdk)
+- GitHub Actions automation: [docs.anthropic.com/en/docs/claude-code/github-actions](https://docs.anthropic.com/en/docs/claude-code/github-actions)
+- Agent SDK overview: [docs.anthropic.com/en/docs/agent-sdk/overview](https://docs.anthropic.com/en/docs/agent-sdk/overview)
+
 ## Privacy and Data Safety
 
 ### Is my data safe? Does Anthropic use my conversations for training?

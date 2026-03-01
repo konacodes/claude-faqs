@@ -30,6 +30,13 @@ function toDiscordEmbed(entry: FAQEntry): DiscordEmbed {
         value: entry.tags.slice(0, 5).join(", "),
         inline: true,
       },
+      ...(entry.answered_by
+        ? [{
+          name: "Answered By",
+          value: entry.answered_by,
+          inline: true,
+        }]
+        : []),
     ],
     footer: { text: "Claude Community FAQ | api.kcodes.me" },
   };
@@ -266,6 +273,7 @@ export default {
           slug: e.slug,
           question: e.question,
           tags: e.tags.slice(0, 5),
+          answered_by: e.answered_by,
           answer_preview: e.answer.slice(0, 200) + (e.answer.length > 200 ? "..." : ""),
           category: e.category,
           subcategory: e.subcategory,
@@ -383,6 +391,7 @@ export default {
           slug: e.slug,
           question: e.question,
           tags: e.tags.slice(0, 5),
+          answered_by: e.answered_by,
           category: e.category,
           subcategory: e.subcategory,
         })),

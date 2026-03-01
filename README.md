@@ -64,6 +64,15 @@ bun install
 # Rebuild the FAQ index after editing markdown files
 bun scripts/build-faq-index.ts
 
+# Any new .md file added to faq-content/ is auto-discovered
+# (no need to edit the build script)
+
+# Optional per-question credit line:
+# Answered by: YourName
+
+# Validate FAQ content (detect unanswered placeholders / duplicate questions)
+bun run check:faq
+
 # Run locally
 bun run dev
 

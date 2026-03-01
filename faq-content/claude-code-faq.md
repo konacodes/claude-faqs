@@ -219,6 +219,83 @@ Claude's safety filters can sometimes produce **false positives**, blocking legi
 - **Avoid red-flag keywords** that might be associated with harmful intent, even in benign contexts
 - If the issue persists and you believe it is a genuine false positive, **report it** through Anthropic's support channels or the feedback button -- this helps improve the filters for everyone
 
+### What are best practices for Remote Control when Claude Code runs on an Ubuntu box?
+
+Anthropic's official **Remote Control** workflow is to run Claude Code on a remote machine and control it from your local device. Recommended setup:
+
+- Follow the official setup guide for Linux first, then enable remote control: [docs.anthropic.com/en/docs/claude-code/setup](https://docs.anthropic.com/en/docs/claude-code/setup) and [docs.anthropic.com/en/docs/claude-code/remote-control](https://docs.anthropic.com/en/docs/claude-code/remote-control)
+- Use one repo checkout per task (via `git worktree`) so concurrent sessions do not mutate the same working tree
+- Keep long-running remote sessions inside `tmux`/`screen` so connection drops do not kill your active run
+- Use strict permissions (`/permissions`) and avoid broad "always allow" shell rules on shared or production boxes
+- Prefer a stable network path (SSH/VPN) and confirm service health at [status.anthropic.com](https://status.anthropic.com) when remote calls fail
+
+If your workflow is primarily automation (non-interactive), use Anthropic's official CI/automation docs first: [docs.anthropic.com/en/docs/claude-code/github-actions](https://docs.anthropic.com/en/docs/claude-code/github-actions) and [docs.anthropic.com/en/docs/claude-code/sdk](https://docs.anthropic.com/en/docs/claude-code/sdk).
+
+### What is the proper branching setup for parallel agent workstreams?
+
+Anthropic's official tutorial recommends **parallel Claude sessions with Git worktrees**. The safest pattern is:
+
+1. Keep your main branch clean (`main`/`develop`)
+2. Create one feature branch per task
+3. Create one worktree per branch
+4. Run one Claude session per worktree
+5. Merge each branch via PR after tests pass
+
+This avoids cross-task file collisions and is the most reliable way to run multiple agents in parallel. Reference: [docs.anthropic.com/en/docs/claude-code/tutorials](https://docs.anthropic.com/en/docs/claude-code/tutorials) (parallel sessions with worktrees).
+
+### We saw Git index corruption after parallel agent setups. How should we handle it?
+
+There is no Claude-specific official doc for "Git index corruption," but the usual root cause is multiple processes writing to the **same** `.git/index` in one working tree. The practical fix is to adopt Anthropic's worktree pattern for parallel runs so each agent has an isolated Git index: [docs.anthropic.com/en/docs/claude-code/tutorials](https://docs.anthropic.com/en/docs/claude-code/tutorials).
+
+If corruption already happened:
+
+- Stop all concurrent sessions touching that repo
+- Validate repo health (`git fsck`)
+- Rebuild index from `HEAD` if needed (`rm .git/index && git reset`)
+- Move future parallel tasks to separate worktrees
+
+### I'm getting "upstream connect error or disconnect/reset before headers." What should I do?
+
+This usually indicates a network path or upstream service failure, not an application-level code error. Triage in this order:
+
+1. Check Anthropic service health first: [status.anthropic.com](https://status.anthropic.com)
+2. Retry from a clean session and stable network (disable flaky VPN/proxy hops)
+3. Run Claude Code diagnostics (`claude doctor`) and collect environment details
+4. If the issue persists, file a bug report with logs (`/bug`) and contact support with timestamps
+
+Official troubleshooting paths: [docs.anthropic.com/en/docs/claude-code/troubleshooting](https://docs.anthropic.com/en/docs/claude-code/troubleshooting), [support.claude.com/en/articles/9017053-how-can-i-contact-support](https://support.claude.com/en/articles/9017053-how-can-i-contact-support).
+
+### I'm seeing segmentation faults or system-specific crashes in Claude Code. What are the official next steps?
+
+Use the official troubleshooting flow:
+
+- Update Claude Code to the latest version
+- Run `claude doctor`
+- Reproduce in a minimal shell/session (to isolate local environment issues)
+- Capture logs and open a bug report with repro steps
+
+Official references: [docs.anthropic.com/en/docs/claude-code/troubleshooting](https://docs.anthropic.com/en/docs/claude-code/troubleshooting), [github.com/anthropics/claude-code/issues/new/choose](https://github.com/anthropics/claude-code/issues/new/choose).
+
+### The 1S8XB4M error persists. Is there an official fix?
+
+As of **March 1, 2026**, there is no public Anthropic document that maps `1S8XB4M` to a published root cause or one-click fix. Treat it as a support/debug signal and escalate with full context:
+
+- Exact timestamp and timezone
+- Surface used (CLI, desktop, web, remote control, API)
+- Repro steps and frequency
+- Output of `claude doctor`
+- Relevant logs and request IDs
+
+Then submit through `/bug` and support: [docs.anthropic.com/en/docs/claude-code/troubleshooting](https://docs.anthropic.com/en/docs/claude-code/troubleshooting), [support.claude.com/en/articles/9017053-how-can-i-contact-support](https://support.claude.com/en/articles/9017053-how-can-i-contact-support).
+
+### Where should I submit Claude Code feature requests, wishlists, and bug reports?
+
+Use these official channels:
+
+- **Claude Code product bugs/features**: GitHub issues and feature requests at [github.com/anthropics/claude-code/issues/new/choose](https://github.com/anthropics/claude-code/issues/new/choose)
+- **Runtime bug report from the CLI**: use `/bug` and include reproducible steps
+- **Account, subscription, or billing matters**: Anthropic support messenger at [support.claude.com/en/articles/9017053-how-can-i-contact-support](https://support.claude.com/en/articles/9017053-how-can-i-contact-support)
+
 ## Still Need Help?
 
 If your Claude Code question isn't answered here:

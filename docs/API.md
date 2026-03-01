@@ -107,6 +107,7 @@ curl -H "Authorization: Bearer $KEY" https://api.kcodes.me/claude-faqs/v1/accoun
   "subcategory": "Account Bans and Suspensions",
   "question": "My account was banned! What can I do?",
   "answer": "If your account has been disabled, you will typically see a message stating...",
+  "answered_by": "konacodes",
   "source_file": "account-issues-faqs.md"
 }
 ```
@@ -121,6 +122,7 @@ curl -H "Authorization: Bearer $KEY" https://api.kcodes.me/claude-faqs/v1/accoun
 | `subcategory` | string | More specific grouping within the category |
 | `question` | string | The FAQ question |
 | `answer` | string | Full answer text. May contain markdown formatting (`**bold**`, links, lists) |
+| `answered_by` | string \| null | Optional credit for who wrote the answer |
 | `source_file` | string | Which markdown file this entry was parsed from |
 
 **If the slug doesn't exist (404):**
@@ -182,7 +184,7 @@ curl -H "Authorization: Bearer $KEY" https://api.kcodes.me/claude-faqs/v1/accoun
 | `title` | string | The FAQ question (max 256 chars per Discord limits) |
 | `description` | string | The answer text, truncated to 4096 chars if needed |
 | `color` | number | Embed accent color as decimal integer (7886330 = `#7855FA`, our purple) |
-| `fields` | array | Category and tags as inline fields |
+| `fields` | array | Category and tags as inline fields, plus optional "Answered By" |
 | `footer.text` | string | Attribution footer |
 
 **Usage in discord.py:**
@@ -232,6 +234,7 @@ curl -H "Authorization: Bearer $KEY" "https://api.kcodes.me/claude-faqs/v1/searc
       "slug": "refund-subscription",
       "question": "Can I get a refund for my subscription?",
       "tags": ["subscription", "billing", "refunds", "anthropics", "service"],
+      "answered_by": "konacodes",
       "answer_preview": "Refunds are **generally not provided** for Claude subscriptions. Anthropic's terms of service typically state that subscription fees are non-refundable. However, there are some circumstances where ref...",
       "category": "Billing & Plans FAQ",
       "subcategory": "Payment and Billing Issues"
@@ -247,6 +250,7 @@ curl -H "Authorization: Bearer $KEY" "https://api.kcodes.me/claude-faqs/v1/searc
 | `slug` | string | Use this to fetch the full entry via `GET /{slug}` |
 | `question` | string | The FAQ question |
 | `tags` | string[] | Top 5 tags for this entry |
+| `answered_by` | string \| null | Optional answer credit |
 | `answer_preview` | string | First 200 characters of the answer, truncated with `...` |
 | `category` | string | Top-level category |
 | `subcategory` | string | Subcategory within the category |

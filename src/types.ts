@@ -9,6 +9,7 @@ export interface FAQEntry {
   subcategory: string;
   question: string;
   answer: string;
+  answered_by?: string;
   source_file: string;
 }
 

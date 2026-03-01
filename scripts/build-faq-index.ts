@@ -7,26 +7,27 @@
 import { parseMarkdownFile, assignSlugs } from "../src/parser";
 import type { FAQData } from "../src/types";
 import { resolve } from "path";
+import { readdir } from "fs/promises";
 
 const SCRIPT_DIR = import.meta.dir;
 const PROJECT_ROOT = resolve(SCRIPT_DIR, "..");
 const FAQ_DIR = process.argv[2] || resolve(PROJECT_ROOT, "faq-content");
 const OUTPUT = resolve(PROJECT_ROOT, "faq-index.json");
 
-const FAQ_FILES = [
-  "account-issues-faqs.md",
-  "general-faq.md",
-  "billing-faq.md",
-  "claude-code-faq.md",
-  "claude-usage.md",
-];
-
 async function build() {
   console.log(`Reading FAQ files from: ${FAQ_DIR}`);
+  const faqFiles = (await readdir(FAQ_DIR))
+    .filter(filename => filename.endsWith(".md"))
+    .sort((a, b) => a.localeCompare(b));
+
+  if (faqFiles.length === 0) {
+    console.error("\n✗ No markdown files found in faq-content.");
+    process.exit(1);
+  }
 
   const allEntries: ReturnType<typeof parseMarkdownFile> = [];
 
-  for (const filename of FAQ_FILES) {
+  for (const filename of faqFiles) {
     const filepath = resolve(FAQ_DIR, filename);
     const file = Bun.file(filepath);
 
@@ -74,6 +75,7 @@ async function build() {
   await Bun.write(OUTPUT, JSON.stringify(indexData, null, 2));
   console.log(`\n✓ Generated ${OUTPUT}`);
   console.log(`  ${allEntries.length} entries across ${categories.length} categories`);
+  console.log(`  Source files: ${faqFiles.length}`);
 
   console.log("\nSlug table:");
   for (const entry of allEntries) {

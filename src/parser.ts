@@ -54,6 +54,7 @@ function extractTags(question: string, subcategory: string, answer: string): str
 interface ParsedAnswer {
   text: string;
   hasContent: boolean;
+  answeredBy?: string;
 }
 
 // Cleans raw answer text. Filters out stub entries (empty or "</>") and
@@ -65,12 +66,32 @@ function parseAnswer(raw: string): ParsedAnswer {
     return { text: "", hasContent: false };
   }
 
-  const cleaned = trimmed
+  let cleaned = trimmed
     .replace(/^\*\*\[temp answer\]\*\*\s*/i, "")
     .replace(/^\[temp answer\]\s*/i, "")
     .trim();
 
-  return { text: cleaned, hasContent: cleaned.length > 0 };
+  let answeredBy: string | undefined;
+  const lines = cleaned.split("\n");
+  const firstContentIndex = lines.findIndex(line => line.trim().length > 0);
+  if (firstContentIndex >= 0) {
+    const first = lines[firstContentIndex].trim();
+    const m = first.match(/^(?:\*\*)?answered by(?:\*\*)?\s*:\s*(.+)$/i)
+      || first.match(/^_?answered by\s*:\s*(.+)_?$/i)
+      || first.match(/^answered_by\s*:\s*(.+)$/i);
+    if (m) {
+      answeredBy = m[1].trim();
+      lines.splice(firstContentIndex, 1);
+      cleaned = lines.join("\n").trim();
+    }
+  }
+
+  return { text: cleaned, hasContent: cleaned.length > 0, answeredBy };
+}
+
+function isQuestionHeading(heading: string): boolean {
+  const trimmed = heading.trim();
+  return trimmed.endsWith("?") || trimmed.endsWith("？");
 }
 
 // Parses a FAQ markdown file into structured FAQ entries.
@@ -79,6 +100,7 @@ function parseAnswer(raw: string): ParsedAnswer {
 //   # Category Name            -> sets category
 //   ## Subcategory Name        -> sets subcategory (or question in general-faq.md)
 //   ### Question text?         -> starts a new entry
+//   Answered by: Name          -> optional first answer line (parsed as answered_by)
 //   Answer content...          -> collected until next heading
 //
 // Special handling:
@@ -94,17 +116,16 @@ export function parseMarkdownFile(content: string, filename: string): FAQEntry[]
   let subcategory = "";
   let currentQuestion = "";
   let currentAnswerLines: string[] = [];
-  const isGeneralFaq = filename === "general-faq.md";
 
   function flushEntry() {
     if (!currentQuestion) return;
 
     const rawAnswer = currentAnswerLines.join("\n").trim();
-    const { text, hasContent } = parseAnswer(rawAnswer);
+    const { text, hasContent, answeredBy } = parseAnswer(rawAnswer);
 
     if (!hasContent) return;
 
-    const sub = isGeneralFaq ? category : subcategory;
+    const sub = subcategory || category;
 
     entries.push({
       slug: "",
@@ -113,6 +134,7 @@ export function parseMarkdownFile(content: string, filename: string): FAQEntry[]
       subcategory: sub,
       question: currentQuestion,
       answer: text,
+      answered_by: answeredBy,
       source_file: filename,
     });
 
@@ -125,6 +147,7 @@ export function parseMarkdownFile(content: string, filename: string): FAQEntry[]
     if (h1Match) {
       flushEntry();
       category = h1Match[1].trim();
+      subcategory = "";
       continue;
     }
 
@@ -135,11 +158,12 @@ export function parseMarkdownFile(content: string, filename: string): FAQEntry[]
         flushEntry();
         break;
       }
-      if (isGeneralFaq) {
-        flushEntry();
+      flushEntry();
+      if (isQuestionHeading(heading)) {
+        // Support simplified files where H2 is the question.
+        subcategory = category;
         currentQuestion = heading;
       } else {
-        flushEntry();
         subcategory = heading;
       }
       continue;

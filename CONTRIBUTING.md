@@ -28,7 +28,11 @@ We welcome all kinds of contributions to make this FAQ more helpful for the Clau
 
 ## FAQ File Structure
 
-FAQ entries live in `faq-content/` as markdown files. The parser expects this structure:
+FAQ entries live in `faq-content/` as markdown files. New `.md` files in that folder are automatically included when you run the build script.
+
+Supported structures:
+
+### Structure A (recommended for grouped topics)
 
 ```markdown
 # Category Name
@@ -37,8 +41,20 @@ FAQ entries live in `faq-content/` as markdown files. The parser expects this st
 
 ### Question goes here?
 
+Answered by: YourName
+
 Answer content goes here. Supports **markdown formatting**,
 links, lists, and code blocks.
+```
+
+### Structure B (simple flat file)
+
+```markdown
+# Category Name
+
+## Question goes here?
+
+Answer content goes here.
 ```
 
 After editing, rebuild the index:
@@ -50,6 +66,12 @@ bun scripts/build-faq-index.ts
 ## Recognition
 
 All contributors are recognized on our [Wall of Fame](#wall-of-fame). Make your first contribution and we'll add you!
+
+You can also add per-question credits in FAQ content with an optional first line:
+
+```markdown
+Answered by: YourName
+```
 
 ---
 

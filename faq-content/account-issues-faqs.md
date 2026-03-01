@@ -20,6 +20,10 @@ Temporary suspensions are different from permanent bans and are typically issued
 
 Start by confirming you are using the correct email address and password combination at [claude.ai](https://claude.ai). Check if you are using the right authentication method -- Claude supports email/password login, Google OAuth, and Apple Sign-In, and you must use the same method you originally signed up with. Clear your browser cache and cookies, or try a different browser or incognito/private window. Ensure you are not using a VPN or proxy, as some IP addresses and regions may be blocked or flagged. If you are on a corporate or school network, firewall rules may be blocking access to Claude's servers. Check [status.anthropic.com](https://status.anthropic.com) to see if there is an ongoing service outage. If none of these steps resolve the issue, contact support at [support.claude.com](https://support.claude.com) with details about the error message you are receiving.
 
+### How do I check if Claude.ai is down or having system issues?
+
+Use Anthropic's official status page first: [status.anthropic.com](https://status.anthropic.com). It shows current status and incident history for Claude services. If status is green but your issue persists, collect your error message, timestamp, region/network details, and browser/app version, then contact support: [support.claude.com/en/articles/9017053-how-can-i-contact-support](https://support.claude.com/en/articles/9017053-how-can-i-contact-support).
+
 ### I forgot my password. How do I reset it?
 
 On the Claude login page at [claude.ai](https://claude.ai), click the **"Forgot password?"** link. Enter the email address associated with your account, and Anthropic will send a password reset link to that email. The reset link is time-sensitive, so use it promptly after receiving it. Check your spam or junk folder if you do not see the email within a few minutes. If you signed up using Google OAuth or Apple Sign-In, you do not have a Claude-specific password -- use the respective "Continue with Google" or "Continue with Apple" button instead. If you no longer have access to the email address on your account, you will need to contact Anthropic support for manual account recovery assistance.
@@ -31,6 +35,16 @@ This error usually means the credentials you entered do not match an existing ac
 ### Claude says I don't have access. What does this mean?
 
 An "access denied" or "you don't have access" message can appear for several reasons. You may be trying to use a feature that requires a paid subscription (such as certain models or Claude Code features) while on the Free plan. If you are on a Team or Enterprise plan, your administrator may not have provisioned access for your account. Some features may be region-restricted or in limited rollout, meaning they are not yet available in your geographic area. If you recently upgraded your plan, try logging out and back in to refresh your session. If you believe you should have access based on your plan, check your account settings to confirm your subscription is active and contact support with the specific error message and the feature you are trying to access.
+
+### I can't reply to messages in a channel. Is this a Claude permission issue?
+
+Usually this is a **workspace/channel permission** issue in the host platform (for example Slack/Discord), not a Claude model failure. Check:
+
+- Your role and posting permissions in that specific channel
+- Whether a workspace admin restricted replies, bots, or app actions
+- Whether your Claude plan/workspace entitlement includes that integration feature
+
+If this only fails inside Claude surfaces (web/app) and not the host platform itself, treat it as an access issue and contact support with the exact error text and screenshot. Official support path: [support.claude.com/en/articles/9017053-how-can-i-contact-support](https://support.claude.com/en/articles/9017053-how-can-i-contact-support).
 
 ## Account Recovery
 
